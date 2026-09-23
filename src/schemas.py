@@ -115,6 +115,7 @@ class Project(BaseModel):
         description="0-10 depth score for the project as a real system.",
     )
     quality_rationale: str | None = None
+    cited_evidence: str | None = None
     signals: AIProjectSignals = Field(default_factory=AIProjectSignals)
     is_thin_wrapper: bool = False
     is_tutorial: bool = False

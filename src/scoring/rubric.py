@@ -243,7 +243,10 @@ def score_ai_project_depth(
     signal_points = (best_signals / 8.0) * 0.15 * w.ai_project_depth
 
     for p, q in zip(ai_projects, qualities):
-        rationale.append(f"{p.name or 'untitled'}: depth {q:.1f}/10")
+        line = f"{p.name or 'untitled'}: depth {q:.1f}/10"
+        if p.quality_rationale:
+            line += f" — {p.quality_rationale}"
+        rationale.append(line)
     rationale.append(
         f"best-depth {depth_points:.1f} + breadth {breadth_points:.1f} "
         f"({len(solid)} solid project(s)) + signals {signal_points:.1f}"

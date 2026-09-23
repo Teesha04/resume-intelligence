@@ -237,6 +237,10 @@ The LLM is an **optional accelerator, never a dependency**:
   AI project and returns a short **rationale** plus the **cited evidence** that
   justifies the score. Python/cloud/engineering stay deterministic. A score
   without a rationale/citation is discarded and the deterministic value is used.
+- **Small prompts**: the scoring call receives only the **PROJECTS + EXPERIENCE
+  context**, not the whole resume (the deterministic pass already extracted the
+  candidate fields), and returns only project scores — smaller input and output
+  than full extraction.
 - **Rate limiting**: free LLM tiers enforce a low requests-per-minute quota, so
   the adapter paces calls (`LLM_REQUESTS_PER_MINUTE`) and, on a quota error,
   **waits for the reset and resumes the same request** rather than falling back

@@ -22,7 +22,12 @@ from pathlib import Path
 
 from .config import Settings, get_settings
 from .eligibility import evaluate_eligibility
-from .extract import NullLLMClient, build_llm_client, deterministic_extract, refine_with_llm
+from .extract import (
+    NullLLMClient,
+    build_llm_client,
+    deterministic_extract,
+    score_projects_with_llm,
+)
 from .github import GitHubClient
 from .ingest import load_documents
 from .schemas import (
@@ -97,15 +102,16 @@ def _process_document(
         result.github = github
         result.github_summary = github.summary
 
-        # 4) LLM refinement/scoring — only for gate survivors. Adds project
-        #    quality + evidence on top of the deterministic baseline.
-        refined = refine_with_llm(extracted, doc.text, llm_client)
+        # 4) LLM project scoring — only for gate survivors. Sends just the
+        #    projects/experience context (small prompt), adds project quality
+        #    with rationale + cited evidence on top of the deterministic base.
+        refined = score_projects_with_llm(extracted, doc.text, llm_client)
         result.warnings = list(refined.warnings)
-        result.candidate_name = refined.candidate_name
         result.project_summary = _project_summary(refined)
         result.llm_applied = llm_client is not None and not isinstance(
             llm_client, NullLLMClient
-        ) and not any(w.startswith("llm_extraction_failed") for w in refined.warnings)
+        ) and not any(w.startswith(("llm_extraction_failed", "llm_scoring_failed"))
+                      for w in refined.warnings)
 
         # 5) Score (eligibility stays frozen from step 2).
         breakdown = score_candidate(refined, eligibility, github, settings)

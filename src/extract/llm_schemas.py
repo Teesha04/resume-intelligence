@@ -29,6 +29,9 @@ class LLMProject(BaseModel):
         description="Depth as a real system (see rubric in the prompt).",
     )
     quality_rationale: str = Field(default="", description="One sentence citing resume evidence.")
+    cited_evidence: str = Field(
+        default="", description="Short verbatim snippet from the resume supporting the score."
+    )
     is_thin_wrapper: bool = Field(
         default=False,
         description="True if this is only a single LLM/API call with no meaningful workflow.",
@@ -44,3 +47,13 @@ class LLMExtraction(BaseModel):
     skills: list[str] = Field(default_factory=list)
     projects: list[LLMProject] = Field(default_factory=list)
     experience_highlights: list[str] = Field(default_factory=list)
+
+
+class LLMProjectAssessment(BaseModel):
+    """Response schema for the project-scoring-only LLM call.
+
+    Smaller than LLMExtraction: the deterministic pass already extracted the
+    candidate fields, so the model only judges project quality.
+    """
+
+    projects: list[LLMProject] = Field(default_factory=list)
