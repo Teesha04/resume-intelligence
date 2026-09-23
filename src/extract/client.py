@@ -15,6 +15,9 @@ from __future__ import annotations
 
 import json
 import logging
+import re
+import threading
+import time
 from typing import Any, Protocol, runtime_checkable
 
 from pydantic import BaseModel
@@ -26,6 +29,42 @@ log = logging.getLogger(__name__)
 
 class LLMError(RuntimeError):
     """Raised when an LLM call cannot produce usable structured output."""
+
+
+class _RateLimiter:
+    """Simple thread-safe limiter keeping calls under N per minute.
+
+    Free LLM tiers enforce a low requests-per-minute quota; without pacing, a
+    50-resume batch trips 429s and silently falls back to deterministic scoring
+    for most candidates (inconsistent results). Pacing is the reliable fix.
+    """
+
+    def __init__(self, per_minute: int) -> None:
+        self.min_interval = 60.0 / per_minute if per_minute and per_minute > 0 else 0.0
+        self._lock = threading.Lock()
+        self._next_allowed = 0.0
+
+    def wait(self) -> None:
+        if self.min_interval <= 0:
+            return
+        with self._lock:
+            now = time.monotonic()
+            if now < self._next_allowed:
+                time.sleep(self._next_allowed - now)
+                now = time.monotonic()
+            self._next_allowed = now + self.min_interval
+
+
+def _retry_delay_seconds(error: str) -> float | None:
+    """Extract a retry delay from a provider error message, if present."""
+    for pattern in (r"retry in (\d+(?:\.\d+)?)s", r"retryDelay'?:\s*'?(\d+)s"):
+        m = re.search(pattern, error)
+        if m:
+            try:
+                return float(m.group(1))
+            except ValueError:
+                return None
+    return None
 
 
 @runtime_checkable
@@ -59,10 +98,11 @@ class GeminiClient:
     def __init__(
         self,
         api_key: str,
-        model: str = "gemini-2.0-flash",
+        model: str = "gemini-3.1-flash-lite",
         *,
         timeout: float = 20.0,
         max_retries: int = 2,
+        requests_per_minute: int = 12,
         cache: DiskCache | None = None,
     ) -> None:
         self.api_key = api_key
@@ -70,6 +110,7 @@ class GeminiClient:
         self.timeout = timeout
         self.max_retries = max_retries
         self.cache = cache
+        self._limiter = _RateLimiter(requests_per_minute)
         self._client = None
 
     def _get_client(self):
@@ -119,6 +160,7 @@ class GeminiClient:
 
         for config_kwargs in attempts:
             for attempt in range(self.max_retries + 1):
+                self._limiter.wait()
                 try:
                     response = client.models.generate_content(
                         model=self.model,
@@ -131,13 +173,18 @@ class GeminiClient:
                     return parsed
                 except Exception as exc:  # noqa: BLE001 - adapter boundary
                     last_error = exc
+                    message = str(exc).lower()
                     transient = any(
-                        token in str(exc).lower()
-                        for token in ("429", "rate", "timeout", "unavailable", "503", "500")
+                        token in message
+                        for token in ("429", "rate", "timeout", "unavailable", "503", "500", "quota")
                     )
                     if not transient or attempt == self.max_retries:
                         break  # schema problem or exhausted retries: next strategy
-                    log.debug("Gemini transient error, retrying (%s): %s", attempt + 1, exc)
+                    delay = _retry_delay_seconds(str(exc))
+                    if delay:
+                        # Respect the server's own backoff hint (capped).
+                        time.sleep(min(delay, 60.0))
+                    log.debug("LLM transient error, retrying (%s): %s", attempt + 1, exc)
 
         raise LLMError(f"Gemini call failed: {type(last_error).__name__}: {last_error}")
 
@@ -167,6 +214,7 @@ def build_llm_client(
     model: str,
     timeout: float,
     max_retries: int,
+    requests_per_minute: int = 12,
     cache: DiskCache | None = None,
 ) -> LLMClient:
     """Factory. Returns a NullLLMClient when no key is available."""
@@ -174,6 +222,12 @@ def build_llm_client(
         log.info("No LLM API key configured; running in deterministic-only mode.")
         return NullLLMClient()
     if provider.lower() in {"gemini", "google"}:
-        return GeminiClient(api_key, model, timeout=timeout, max_retries=max_retries, cache=cache)
+        return GeminiClient(
+            api_key, model,
+            timeout=timeout,
+            max_retries=max_retries,
+            requests_per_minute=requests_per_minute,
+            cache=cache,
+        )
     log.warning("Unknown LLM provider %r; falling back to deterministic-only.", provider)
     return NullLLMClient()

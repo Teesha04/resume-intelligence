@@ -91,3 +91,20 @@ def test_matched_skills_present_for_rejected_candidate():
     result = _elig(JS_ONLY)
     assert "Java" in result.matched_skills
     assert "React" in result.matched_skills
+
+
+def test_llm_produced_projects_do_not_affect_eligibility():
+    """Eligibility must depend only on raw-text evidence, never LLM projects."""
+    from src.schemas import Evidence, ExtractedResume, Project, ProjectDomain
+
+    extracted = ExtractedResume(
+        candidate_name="X",
+        skills=["Python"],
+        python_evidence=[Evidence(term="Python")],
+        ai_evidence=[],  # no raw-text AI evidence
+        projects=[Project(name="An AI agent", domain=ProjectDomain.AI_AGENTIC)],
+    )
+    result = evaluate_eligibility(extracted, has_text=True)
+    assert result.has_python is True
+    assert result.has_ai is False
+    assert result.eligible is False

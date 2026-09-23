@@ -16,7 +16,7 @@ Design notes:
 
 from __future__ import annotations
 
-from ..schemas import Eligibility, Evidence, ExtractedResume, ProjectDomain
+from ..schemas import Eligibility, Evidence, EvidenceSource, ExtractedResume
 from ..vocab import AGENTIC_CORE_TERMS, GENERAL_AI_TERMS
 
 
@@ -25,29 +25,40 @@ def _python_matches(extracted: ExtractedResume) -> list[Evidence]:
 
 
 def _agentic_matches(extracted: ExtractedResume) -> list[Evidence]:
+    """Core LLM/agentic signals found in the raw resume text (any section)."""
     return [e for e in extracted.ai_evidence if e.term in AGENTIC_CORE_TERMS]
 
 
-def _ai_projects(extracted: ExtractedResume) -> list:
+def _general_ai_in_project(extracted: ExtractedResume) -> list[Evidence]:
+    """General ML/CV/NLP terms, but only where attached to a project or job.
+
+    A classical-ML *project* counts as an AI project; the same word appearing
+    only in a skills list or coursework does not.
+    """
     return [
-        p for p in extracted.projects
-        if p.domain in (ProjectDomain.AI_AGENTIC, ProjectDomain.AI_GENERAL)
+        e for e in extracted.ai_evidence
+        if e.term in GENERAL_AI_TERMS
+        and e.source in (EvidenceSource.PROJECT, EvidenceSource.EXPERIENCE)
     ]
 
 
 def evaluate_eligibility(extracted: ExtractedResume, *, has_text: bool = True) -> Eligibility:
-    """Return an Eligibility verdict with explicit rejection reasons."""
+    """Return an Eligibility verdict with explicit rejection reasons.
+
+    IMPORTANT: this is deliberately based only on `python_evidence` and
+    `ai_evidence`, which come from deterministic scanning of the *raw resume
+    text*. It never consults LLM-produced projects, so eligibility cannot be
+    influenced by the model (spec section 6).
+    """
     rejection_reasons: list[str] = []
 
     python_ev = _python_matches(extracted)
     agentic_ev = _agentic_matches(extracted)
-    general_ev = [e for e in extracted.ai_evidence if e.term in GENERAL_AI_TERMS]
-    ai_projects = _ai_projects(extracted)
+    general_project_ev = _general_ai_in_project(extracted)
 
     has_python = bool(python_ev)
-    # AI evidence = a core agentic/LLM signal, or a genuine AI project.
-    # A general-AI *skill* with no project is intentionally not enough.
-    has_ai = bool(agentic_ev) or bool(ai_projects)
+    # AI evidence = a core agentic/LLM signal, or a genuine AI/ML project.
+    has_ai = bool(agentic_ev) or bool(general_project_ev)
 
     if not has_text:
         rejection_reasons.append("No extractable resume text")
@@ -56,14 +67,12 @@ def evaluate_eligibility(extracted: ExtractedResume, *, has_text: bool = True) -
     if not has_ai:
         rejection_reasons.append("No AI/agentic project evidence")
 
-    matched_skills = list(extracted.skills)
-
     eligible = has_python and has_ai and has_text
 
     return Eligibility(
         eligible=eligible,
         rejection_reasons=rejection_reasons,
-        matched_skills=matched_skills,
+        matched_skills=list(extracted.skills),
         has_python=has_python,
         has_ai=has_ai,
     )

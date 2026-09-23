@@ -143,6 +143,7 @@ def run_screening(
         model=settings.llm_model,
         timeout=settings.request_timeout_seconds,
         max_retries=settings.llm_max_retries,
+        requests_per_minute=settings.llm_requests_per_minute,
         cache=cache,
     )
     owns_github = github_client is None

@@ -80,9 +80,11 @@ class Settings(BaseSettings):
     # --- LLM ---
     llm_provider: str = "gemini"
     gemini_api_key: str | None = None
-    llm_model: str = "gemini-2.0-flash"
+    llm_model: str = "gemini-3.1-flash-lite"
     llm_enabled: bool = True
     llm_max_retries: int = 2
+    # Free tiers enforce a low requests-per-minute quota; pace to stay under it.
+    llm_requests_per_minute: int = 12
 
     # --- GitHub ---
     github_token: str | None = None

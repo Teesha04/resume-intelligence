@@ -218,9 +218,17 @@ The LLM is an **optional accelerator, never a dependency**:
 - **Adapter pattern**: all provider-specific code lives in
   `src/extract/client.py` behind a one-method interface; adding OpenAI/Claude is
   a new class, nothing else changes.
+- **Rate limiting**: free LLM tiers enforce a low requests-per-minute quota, so
+  the adapter paces calls (`LLM_REQUESTS_PER_MINUTE`) and honours the server's
+  own `retryDelay` on 429s. Without this, a 50-resume batch trips the quota and
+  silently falls back to deterministic scoring for most candidates, producing
+  inconsistent results.
+- **Response caching**: successful extractions are cached by content hash, so
+  reruns and re-scoring are near-instant and don't re-spend quota.
 - **Failure isolation**: `LLMError`/validation errors are caught per resume; one
   bad call never fails the batch.
 - **Keys from env only** (`GEMINI_API_KEY`); nothing is hard-coded.
+- Default model: `gemini-3.1-flash-lite` (fast, cheap, structured-output capable).
 
 Deterministic mode still produces a full ranking via a transparent
 signal-based quality estimate, so the system is fully usable with zero keys.
