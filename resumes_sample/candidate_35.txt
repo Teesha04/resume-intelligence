@@ -1,0 +1,12 @@
+Karan Nair
+karan.nair@example.com
+github.com/karan35dev
+
+Skills: Python, PyTorch, OpenCV, NumPy, Pandas, scikit-learn
+
+Experience
+ML Intern - Trained CNNs for image classification; built data preprocessing pipelines.
+
+Projects
+Defect Detection
+Trained a CNN in PyTorch with OpenCV preprocessing to classify manufacturing defects.

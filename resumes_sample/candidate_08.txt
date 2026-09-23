@@ -1,0 +1,12 @@
+Sara Sharma
+sara.sharma@example.com
+github.com/sara08dev
+
+Skills: Python, FastAPI, React, Next.js, Docker, Supabase, LangChain, PostgreSQL
+
+Experience
+Full Stack Intern - Built React frontends over FastAPI backends with PostgreSQL.
+
+Projects
+AI Study Buddy
+Next.js frontend over a Python FastAPI LangChain service with embeddings, vector search and a tool-calling agent for flashcards. Dockerized end to end.

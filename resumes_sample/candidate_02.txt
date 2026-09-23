@@ -1,0 +1,12 @@
+Meera Gupta
+meera.gupta@example.com
+github.com/meera02dev
+
+Skills: Python, Django, Flask, PostgreSQL, MySQL, Redis, Docker, SQL
+
+Experience
+Backend Intern - Built Django REST APIs with PostgreSQL, Redis caching, Celery background jobs and pytest test suites.
+
+Projects
+Inventory API
+REST API in Django with PostgreSQL, JWT auth, caching and pagination.

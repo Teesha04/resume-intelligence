@@ -1,0 +1,3292 @@
+{
+  "summary": {
+    "total_resumes": 53,
+    "parsed_ok": 50,
+    "parse_failed": 2,
+    "duplicates_skipped": 1,
+    "eligible": 38,
+    "rejected": 15,
+    "llm_used": false,
+    "github_enriched": 0,
+    "github_failures": 35,
+    "duration_seconds": 0.91
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "candidate_name": "Diego Sharma",
+      "eligible": true,
+      "total_score": 73.69,
+      "score_breakdown": {
+        "ai_project_depth": 33.7,
+        "python_backend": 24.3,
+        "cloud_fullstack": 10.69,
+        "github": 0.0,
+        "engineering_depth": 5.0,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "Agentic Support Triage: depth 9.0/10",
+            "RAG Knowledge Assistant: depth 7.5/10",
+            "best-depth 25.2 + breadth 4.0 (2 solid project(s)) + signals 4.5"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (context), FastAPI (project), pytest (skills (list-only)), PostgreSQL (experience), Redis (project)"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: GCP (project), Docker (experience)"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Caching, Concurrency, Observability, Testing"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "matched_skills": [
+        "Python",
+        "FastAPI",
+        "pytest",
+        "LangChain",
+        "LangGraph",
+        "RAG",
+        "Embeddings",
+        "Vector Search",
+        "pgvector",
+        "Tool Calling",
+        "Multi-Agent",
+        "AI Agents",
+        "LLM",
+        "Evaluation",
+        "PostgreSQL",
+        "Redis",
+        "GCP",
+        "Docker",
+        "Testing",
+        "Caching",
+        "Observability",
+        "Concurrency"
+      ],
+      "project_summary": "Agentic Support Triage: Built a multi-agent workflow in LangGraph that retrieves over 50k support docs using pgvector embeddings, calls internal ticketing tools, and maintains conversation state. Added an evaluation harness with regression tests and guardrails. De",
+      "github_summary": "GitHub rate limit already hit this run",
+      "strengths": [
+        "Strong AI/agentic project depth",
+        "Solid Python/backend engineering evidence",
+        "Cloud/deployment and full-stack exposure"
+      ],
+      "concerns": [
+        "GitHub not enriched (rate_limited)"
+      ],
+      "rejection_reasons": [],
+      "github": {
+        "status": "rate_limited",
+        "username": "diego28dev",
+        "summary": "GitHub rate limit already hit this run",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_28.docx",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": 2,
+      "candidate_name": "Tara Iyer",
+      "eligible": true,
+      "total_score": 73.69,
+      "score_breakdown": {
+        "ai_project_depth": 33.7,
+        "python_backend": 24.3,
+        "cloud_fullstack": 10.69,
+        "github": 0.0,
+        "engineering_depth": 5.0,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "Agentic Support Triage: depth 9.0/10",
+            "RAG Knowledge Assistant: depth 7.5/10",
+            "best-depth 25.2 + breadth 4.0 (2 solid project(s)) + signals 4.5"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (context), FastAPI (project), pytest (skills (list-only)), PostgreSQL (experience), Redis (project)"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: GCP (project), Docker (experience)"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Caching, Concurrency, Observability, Testing"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "matched_skills": [
+        "Python",
+        "FastAPI",
+        "pytest",
+        "LangChain",
+        "LangGraph",
+        "RAG",
+        "Embeddings",
+        "Vector Search",
+        "pgvector",
+        "Tool Calling",
+        "Multi-Agent",
+        "AI Agents",
+        "LLM",
+        "Evaluation",
+        "PostgreSQL",
+        "Redis",
+        "GCP",
+        "Docker",
+        "Testing",
+        "Caching",
+        "Observability",
+        "Concurrency"
+      ],
+      "project_summary": "Agentic Support Triage: Built a multi-agent workflow in LangGraph that retrieves over 50k support docs using pgvector embeddings, calls internal ticketing tools, and maintains conversation state. Added an evaluation harness with regression tests and guardrails. De",
+      "github_summary": "GitHub rate limit already hit this run",
+      "strengths": [
+        "Strong AI/agentic project depth",
+        "Solid Python/backend engineering evidence",
+        "Cloud/deployment and full-stack exposure"
+      ],
+      "concerns": [
+        "GitHub not enriched (rate_limited)"
+      ],
+      "rejection_reasons": [],
+      "github": {
+        "status": "rate_limited",
+        "username": "tara14dev",
+        "summary": "GitHub rate limit already hit this run",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_14.txt",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": 3,
+      "candidate_name": "Asha Rao",
+      "eligible": true,
+      "total_score": 72.44,
+      "score_breakdown": {
+        "ai_project_depth": 33.7,
+        "python_backend": 24.3,
+        "cloud_fullstack": 10.69,
+        "github": 0.0,
+        "engineering_depth": 3.75,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "Agentic Support Triage: depth 9.0/10",
+            "RAG Knowledge Assistant: depth 6.5/10",
+            "best-depth 25.2 + breadth 4.0 (2 solid project(s)) + signals 4.5"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (context), FastAPI (project), pytest (skills (list-only)), PostgreSQL (experience), Redis (project)"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: GCP (project), Docker (experience)"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Concurrency, Observability, Testing"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "matched_skills": [
+        "Python",
+        "FastAPI",
+        "pytest",
+        "LangChain",
+        "LangGraph",
+        "RAG",
+        "Vector Search",
+        "pgvector",
+        "Multi-Agent",
+        "AI Agents",
+        "LLM",
+        "Evaluation",
+        "PostgreSQL",
+        "Redis",
+        "GCP",
+        "Docker",
+        "Testing",
+        "Observability",
+        "Concurrency"
+      ],
+      "project_summary": "Agentic Support Triage: Built a multi-agent workflow in LangGraph that retrieves over 50k support docs using pgvector e mbeddings, calls internal ticketing tools, and maintains conversation state. Added an evaluatio n harness with regression tests and guardrails. ",
+      "github_summary": "GitHub API rate limited",
+      "strengths": [
+        "Strong AI/agentic project depth",
+        "Solid Python/backend engineering evidence",
+        "Cloud/deployment and full-stack exposure"
+      ],
+      "concerns": [
+        "GitHub not enriched (rate_limited)"
+      ],
+      "rejection_reasons": [],
+      "github": {
+        "status": "rate_limited",
+        "username": "asha00dev",
+        "summary": "GitHub API rate limited",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_00.pdf",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": 4,
+      "candidate_name": "Isha Gupta",
+      "eligible": true,
+      "total_score": 72.44,
+      "score_breakdown": {
+        "ai_project_depth": 33.7,
+        "python_backend": 24.3,
+        "cloud_fullstack": 10.69,
+        "github": 0.0,
+        "engineering_depth": 3.75,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "Agentic Support Triage: depth 9.0/10",
+            "RAG Knowledge Assistant: depth 6.5/10",
+            "best-depth 25.2 + breadth 4.0 (2 solid project(s)) + signals 4.5"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (context), FastAPI (project), pytest (skills (list-only)), PostgreSQL (experience), Redis (project)"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: GCP (project), Docker (experience)"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Concurrency, Observability, Testing"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "matched_skills": [
+        "Python",
+        "FastAPI",
+        "pytest",
+        "LangChain",
+        "LangGraph",
+        "RAG",
+        "Vector Search",
+        "pgvector",
+        "Multi-Agent",
+        "AI Agents",
+        "LLM",
+        "Evaluation",
+        "PostgreSQL",
+        "Redis",
+        "GCP",
+        "Docker",
+        "Testing",
+        "Observability",
+        "Concurrency"
+      ],
+      "project_summary": "Agentic Support Triage: Built a multi-agent workflow in LangGraph that retrieves over 50k support docs using pgvector e mbeddings, calls internal ticketing tools, and maintains conversation state. Added an evaluatio n harness with regression tests and guardrails. ",
+      "github_summary": "GitHub rate limit already hit this run",
+      "strengths": [
+        "Strong AI/agentic project depth",
+        "Solid Python/backend engineering evidence",
+        "Cloud/deployment and full-stack exposure"
+      ],
+      "concerns": [
+        "GitHub not enriched (rate_limited)"
+      ],
+      "rejection_reasons": [],
+      "github": {
+        "status": "rate_limited",
+        "username": "isha42dev",
+        "summary": "GitHub rate limit already hit this run",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_42.pdf",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": 5,
+      "candidate_name": "Farah Singh",
+      "eligible": true,
+      "total_score": 57.99,
+      "score_breakdown": {
+        "ai_project_depth": 26.75,
+        "python_backend": 17.49,
+        "cloud_fullstack": 11.25,
+        "github": 0.0,
+        "engineering_depth": 2.5,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "Enterprise RAG Search: depth 7.5/10",
+            "best-depth 21.0 + breadth 2.0 (1 solid project(s)) + signals 3.8"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (experience), FastAPI (project), asyncio (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: AWS (project), Docker (project)"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Concurrency, Queues"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "matched_skills": [
+        "Python",
+        "FastAPI",
+        "asyncio",
+        "LlamaIndex",
+        "RAG",
+        "Embeddings",
+        "Vector Search",
+        "Qdrant",
+        "Evaluation",
+        "AWS",
+        "Docker",
+        "Queues",
+        "Concurrency"
+      ],
+      "project_summary": "Enterprise RAG Search: Built a retrieval pipeline using LlamaIndex with embeddings and vector search over internal wikis, plus an evaluation pipeline measuring answer relevance. FastAPI service deployed with Docker on AWS.",
+      "github_summary": "GitHub rate limit already hit this run",
+      "strengths": [
+        "Strong AI/agentic project depth",
+        "Cloud/deployment and full-stack exposure"
+      ],
+      "concerns": [
+        "GitHub not enriched (rate_limited)"
+      ],
+      "rejection_reasons": [],
+      "github": {
+        "status": "rate_limited",
+        "username": "farah29dev",
+        "summary": "GitHub rate limit already hit this run",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_29.txt",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": 6,
+      "candidate_name": "Nikhil Reddy",
+      "eligible": true,
+      "total_score": 57.99,
+      "score_breakdown": {
+        "ai_project_depth": 26.75,
+        "python_backend": 17.49,
+        "cloud_fullstack": 11.25,
+        "github": 0.0,
+        "engineering_depth": 2.5,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "Enterprise RAG Search: depth 7.5/10",
+            "best-depth 21.0 + breadth 2.0 (1 solid project(s)) + signals 3.8"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (experience), FastAPI (project), asyncio (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: AWS (project), Docker (project)"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Concurrency, Queues"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "matched_skills": [
+        "Python",
+        "FastAPI",
+        "asyncio",
+        "LlamaIndex",
+        "RAG",
+        "Embeddings",
+        "Vector Search",
+        "Qdrant",
+        "Evaluation",
+        "AWS",
+        "Docker",
+        "Queues",
+        "Concurrency"
+      ],
+      "project_summary": "Enterprise RAG Search: Built a retrieval pipeline using LlamaIndex with embeddings and vector search over internal wikis, plus an evaluation pipeline measuring answer relevance. FastAPI service deployed with Docker on AWS.",
+      "github_summary": "GitHub rate limit already hit this run",
+      "strengths": [
+        "Strong AI/agentic project depth",
+        "Cloud/deployment and full-stack exposure"
+      ],
+      "concerns": [
+        "GitHub not enriched (rate_limited)"
+      ],
+      "rejection_reasons": [],
+      "github": {
+        "status": "rate_limited",
+        "username": "nikhil43dev",
+        "summary": "GitHub rate limit already hit this run",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_43.docx",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": 7,
+      "candidate_name": "Ravi Kapoor",
+      "eligible": true,
+      "total_score": 57.99,
+      "score_breakdown": {
+        "ai_project_depth": 26.75,
+        "python_backend": 17.49,
+        "cloud_fullstack": 11.25,
+        "github": 0.0,
+        "engineering_depth": 2.5,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "Enterprise RAG Search: depth 7.5/10",
+            "best-depth 21.0 + breadth 2.0 (1 solid project(s)) + signals 3.8"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (experience), FastAPI (project), asyncio (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: AWS (project), Docker (project)"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Concurrency, Queues"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "matched_skills": [
+        "Python",
+        "FastAPI",
+        "asyncio",
+        "LlamaIndex",
+        "RAG",
+        "Embeddings",
+        "Vector Search",
+        "Qdrant",
+        "Evaluation",
+        "AWS",
+        "Docker",
+        "Queues",
+        "Concurrency"
+      ],
+      "project_summary": "Enterprise RAG Search: Built a retrieval pipeline using LlamaIndex with embeddings and vector search over internal wikis, plus an evaluation pipeline measuring answer relevance. FastAPI service deployed with Docker on AWS.",
+      "github_summary": "GitHub API rate limited",
+      "strengths": [
+        "Strong AI/agentic project depth",
+        "Cloud/deployment and full-stack exposure"
+      ],
+      "concerns": [
+        "GitHub not enriched (rate_limited)"
+      ],
+      "rejection_reasons": [],
+      "github": {
+        "status": "rate_limited",
+        "username": "ravi01dev",
+        "summary": "GitHub API rate limited",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_01.docx",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": 8,
+      "candidate_name": "Yash Nair",
+      "eligible": true,
+      "total_score": 54.62,
+      "score_breakdown": {
+        "ai_project_depth": 26.75,
+        "python_backend": 17.49,
+        "cloud_fullstack": 7.88,
+        "github": 0.0,
+        "engineering_depth": 2.5,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "Enterprise RAG Search: depth 7.5/10",
+            "best-depth 21.0 + breadth 2.0 (1 solid project(s)) + signals 3.8"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (experience), FastAPI (project), asyncio (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: AWS (project), Docker (skills (list-only))"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Concurrency, Queues"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "matched_skills": [
+        "Python",
+        "FastAPI",
+        "asyncio",
+        "LlamaIndex",
+        "RAG",
+        "Embeddings",
+        "Vector Search",
+        "Qdrant",
+        "Evaluation",
+        "AWS",
+        "Docker",
+        "Queues",
+        "Concurrency"
+      ],
+      "project_summary": "Enterprise RAG Search: Built a retrieval pipeline using LlamaIndex with embeddings and vector search over internal wik is, plus an evaluation pipeline measuring answer relevance. FastAPI service deployed with Docke r on AWS.",
+      "github_summary": "GitHub rate limit already hit this run",
+      "strengths": [
+        "Strong AI/agentic project depth"
+      ],
+      "concerns": [
+        "GitHub not enriched (rate_limited)"
+      ],
+      "rejection_reasons": [],
+      "github": {
+        "status": "rate_limited",
+        "username": "yash15dev",
+        "summary": "GitHub rate limit already hit this run",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_15.pdf",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": 9,
+      "candidate_name": "Pooja Gupta",
+      "eligible": true,
+      "total_score": 53.72,
+      "score_breakdown": {
+        "ai_project_depth": 24.6,
+        "python_backend": 22.07,
+        "cloud_fullstack": 7.05,
+        "github": 0.0,
+        "engineering_depth": 0.0,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "AI Study Buddy: depth 7.0/10",
+            "best-depth 19.6 + breadth 2.0 (1 solid project(s)) + signals 3.0"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (project), FastAPI (project), PostgreSQL (experience)"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: Docker (skills (list-only)), React (experience), Next.js (project), Supabase (skills (list-only))"
+          ],
+          "engineering_depth": [
+            "No engineering-depth signals found"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "matched_skills": [
+        "Python",
+        "FastAPI",
+        "LangChain",
+        "Embeddings",
+        "Vector Search",
+        "Tool Calling",
+        "AI Agents",
+        "PostgreSQL",
+        "JavaScript",
+        "Docker",
+        "React",
+        "Next.js",
+        "Supabase"
+      ],
+      "project_summary": "AI Study Buddy: Next.js frontend over a Python FastAPI LangChain service with embeddings, vector search and a tool-calling agent for flashcards. Dockerized end to end.",
+      "github_summary": "GitHub rate limit already hit this run",
+      "strengths": [
+        "Strong AI/agentic project depth",
+        "Solid Python/backend engineering evidence"
+      ],
+      "concerns": [
+        "GitHub not enriched (rate_limited)"
+      ],
+      "rejection_reasons": [],
+      "github": {
+        "status": "rate_limited",
+        "username": "pooja22dev",
+        "summary": "GitHub rate limit already hit this run",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_22.docx",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": 10,
+      "candidate_name": "Sara Sharma",
+      "eligible": true,
+      "total_score": 53.72,
+      "score_breakdown": {
+        "ai_project_depth": 24.6,
+        "python_backend": 22.07,
+        "cloud_fullstack": 7.05,
+        "github": 0.0,
+        "engineering_depth": 0.0,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "AI Study Buddy: depth 7.0/10",
+            "best-depth 19.6 + breadth 2.0 (1 solid project(s)) + signals 3.0"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (project), FastAPI (project), PostgreSQL (experience)"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: Docker (skills (list-only)), React (experience), Next.js (project), Supabase (skills (list-only))"
+          ],
+          "engineering_depth": [
+            "No engineering-depth signals found"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "matched_skills": [
+        "Python",
+        "FastAPI",
+        "LangChain",
+        "Embeddings",
+        "Vector Search",
+        "Tool Calling",
+        "AI Agents",
+        "PostgreSQL",
+        "JavaScript",
+        "Docker",
+        "React",
+        "Next.js",
+        "Supabase"
+      ],
+      "project_summary": "AI Study Buddy: Next.js frontend over a Python FastAPI LangChain service with embeddings, vector search and a tool-calling agent for flashcards. Dockerized end to end.",
+      "github_summary": "GitHub rate limit already hit this run",
+      "strengths": [
+        "Strong AI/agentic project depth",
+        "Solid Python/backend engineering evidence"
+      ],
+      "concerns": [
+        "GitHub not enriched (rate_limited)"
+      ],
+      "rejection_reasons": [],
+      "github": {
+        "status": "rate_limited",
+        "username": "sara08dev",
+        "summary": "GitHub rate limit already hit this run",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_08.txt",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": 11,
+      "candidate_name": "Ananya Bose",
+      "eligible": true,
+      "total_score": 51.6,
+      "score_breakdown": {
+        "ai_project_depth": 16.1,
+        "python_backend": 18.0,
+        "cloud_fullstack": 15.0,
+        "github": 0.0,
+        "engineering_depth": 2.5,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "LLM Ops Platform: depth 4.5/10",
+            "best-depth 12.6 + breadth 2.0 (1 solid project(s)) + signals 1.5"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (experience), FastAPI (project), PostgreSQL (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: GCP (project), Docker (skills (list-only)), Kubernetes (skills (list-only)), Terraform (experience), CI/CD (experience)"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Caching, Observability"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "matched_skills": [
+        "Python",
+        "FastAPI",
+        "Embeddings",
+        "LLM",
+        "PostgreSQL",
+        "GCP",
+        "Docker",
+        "Kubernetes",
+        "Terraform",
+        "CI/CD",
+        "Caching",
+        "Observability"
+      ],
+      "project_summary": "LLM Ops Platform: Served an open-source LLM behind a FastAPI gateway with embeddings-based semantic caching, Prometheus monitoring and autoscaling on GKE.",
+      "github_summary": "GitHub rate limit already hit this run",
+      "strengths": [
+        "Solid Python/backend engineering evidence",
+        "Cloud/deployment and full-stack exposure"
+      ],
+      "concerns": [
+        "GitHub not enriched (rate_limited)"
+      ],
+      "rejection_reasons": [],
+      "github": {
+        "status": "rate_limited",
+        "username": "ananya10dev",
+        "summary": "GitHub rate limit already hit this run",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_10.docx",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": 12,
+      "candidate_name": "Lily Verma",
+      "eligible": true,
+      "total_score": 51.6,
+      "score_breakdown": {
+        "ai_project_depth": 16.1,
+        "python_backend": 18.0,
+        "cloud_fullstack": 15.0,
+        "github": 0.0,
+        "engineering_depth": 2.5,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "LLM Ops Platform: depth 4.5/10",
+            "best-depth 12.6 + breadth 2.0 (1 solid project(s)) + signals 1.5"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (experience), FastAPI (project), PostgreSQL (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: GCP (project), Docker (skills (list-only)), Kubernetes (skills (list-only)), Terraform (experience), CI/CD (experience)"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Caching, Observability"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "matched_skills": [
+        "Python",
+        "FastAPI",
+        "Embeddings",
+        "LLM",
+        "PostgreSQL",
+        "GCP",
+        "Docker",
+        "Kubernetes",
+        "Terraform",
+        "CI/CD",
+        "Caching",
+        "Observability"
+      ],
+      "project_summary": "LLM Ops Platform: Served an open-source LLM behind a FastAPI gateway with embeddings-based semantic caching, Prom etheus monitoring and autoscaling on GKE.",
+      "github_summary": "GitHub rate limit already hit this run",
+      "strengths": [
+        "Solid Python/backend engineering evidence",
+        "Cloud/deployment and full-stack exposure"
+      ],
+      "concerns": [
+        "GitHub not enriched (rate_limited)"
+      ],
+      "rejection_reasons": [],
+      "github": {
+        "status": "rate_limited",
+        "username": "lily24dev",
+        "summary": "GitHub rate limit already hit this run",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_24.pdf",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": 13,
+      "candidate_name": "Sara Menon",
+      "eligible": true,
+      "total_score": 51.6,
+      "score_breakdown": {
+        "ai_project_depth": 16.1,
+        "python_backend": 18.0,
+        "cloud_fullstack": 15.0,
+        "github": 0.0,
+        "engineering_depth": 2.5,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "LLM Ops Platform: depth 4.5/10",
+            "best-depth 12.6 + breadth 2.0 (1 solid project(s)) + signals 1.5"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (experience), FastAPI (project), PostgreSQL (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: GCP (project), Docker (skills (list-only)), Kubernetes (skills (list-only)), Terraform (experience), CI/CD (experience)"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Caching, Observability"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "matched_skills": [
+        "Python",
+        "FastAPI",
+        "Embeddings",
+        "LLM",
+        "PostgreSQL",
+        "GCP",
+        "Docker",
+        "Kubernetes",
+        "Terraform",
+        "CI/CD",
+        "Caching",
+        "Observability"
+      ],
+      "project_summary": "LLM Ops Platform: Served an open-source LLM behind a FastAPI gateway with embeddings-based semantic caching, Prometheus monitoring and autoscaling on GKE.",
+      "github_summary": "GitHub rate limit already hit this run",
+      "strengths": [
+        "Solid Python/backend engineering evidence",
+        "Cloud/deployment and full-stack exposure"
+      ],
+      "concerns": [
+        "GitHub not enriched (rate_limited)"
+      ],
+      "rejection_reasons": [],
+      "github": {
+        "status": "rate_limited",
+        "username": "sara38dev",
+        "summary": "GitHub rate limit already hit this run",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_38.txt",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": 14,
+      "candidate_name": "Priya Patel",
+      "eligible": true,
+      "total_score": 50.17,
+      "score_breakdown": {
+        "ai_project_depth": 21.05,
+        "python_backend": 22.07,
+        "cloud_fullstack": 7.05,
+        "github": 0.0,
+        "engineering_depth": 0.0,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "AI Study Buddy: depth 6.0/10",
+            "best-depth 16.8 + breadth 2.0 (1 solid project(s)) + signals 2.2"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (project), FastAPI (project), PostgreSQL (experience)"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: Docker (skills (list-only)), React (experience), Next.js (project), Supabase (skills (list-only))"
+          ],
+          "engineering_depth": [
+            "No engineering-depth signals found"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "matched_skills": [
+        "Python",
+        "FastAPI",
+        "LangChain",
+        "Embeddings",
+        "Vector Search",
+        "AI Agents",
+        "PostgreSQL",
+        "JavaScript",
+        "Docker",
+        "React",
+        "Next.js",
+        "Supabase"
+      ],
+      "project_summary": "AI Study Buddy: Next.js frontend over a Python FastAPI LangChain service with embeddings, vector search and a t ool-calling agent for flashcards. Dockerized end to end.",
+      "github_summary": "GitHub rate limit already hit this run",
+      "strengths": [
+        "Solid Python/backend engineering evidence"
+      ],
+      "concerns": [
+        "GitHub not enriched (rate_limited)"
+      ],
+      "rejection_reasons": [],
+      "github": {
+        "status": "rate_limited",
+        "username": "priya36dev",
+        "summary": "GitHub rate limit already hit this run",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_36.pdf",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": 15,
+      "candidate_name": "Dev Khan",
+      "eligible": true,
+      "total_score": 47.11,
+      "score_breakdown": {
+        "ai_project_depth": 9.15,
+        "python_backend": 29.4,
+        "cloud_fullstack": 7.31,
+        "github": 0.0,
+        "engineering_depth": 1.25,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "Churn Predictor with LLM Explanations: depth 3.0/10",
+            "best-depth 8.4 + breadth 0.0 (0 solid project(s)) + signals 0.8"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (experience), Pandas (skills (list-only)), NumPy (skills (list-only)), scikit-learn (project), FastAPI (project), PostgreSQL (project), SQL (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: GCP (experience), Docker (skills (list-only))"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Caching"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "matched_skills": [
+        "Python",
+        "FastAPI",
+        "Pandas",
+        "NumPy",
+        "scikit-learn",
+        "OpenAI API",
+        "LLM",
+        "PostgreSQL",
+        "SQL",
+        "GCP",
+        "Docker",
+        "Caching"
+      ],
+      "project_summary": "Churn Predictor with LLM Explanations: scikit-learn churn model plus an LLM layer (OpenAI API) generating explanations from feature importances, served via FastAPI with Postgres caching.",
+      "github_summary": "GitHub rate limit already hit this run",
+      "strengths": [
+        "Solid Python/backend engineering evidence"
+      ],
+      "concerns": [
+        "Limited AI project depth",
+        "GitHub not enriched (rate_limited)"
+      ],
+      "rejection_reasons": [],
+      "github": {
+        "status": "rate_limited",
+        "username": "dev37dev",
+        "summary": "GitHub rate limit already hit this run",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_37.docx",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": 16,
+      "candidate_name": "Sanjay Reddy",
+      "eligible": true,
+      "total_score": 47.11,
+      "score_breakdown": {
+        "ai_project_depth": 9.15,
+        "python_backend": 29.4,
+        "cloud_fullstack": 7.31,
+        "github": 0.0,
+        "engineering_depth": 1.25,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "Churn Predictor with LLM Explanations: depth 3.0/10",
+            "best-depth 8.4 + breadth 0.0 (0 solid project(s)) + signals 0.8"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (experience), Pandas (skills (list-only)), NumPy (skills (list-only)), scikit-learn (project), FastAPI (project), PostgreSQL (project), SQL (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: GCP (experience), Docker (skills (list-only))"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Caching"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "matched_skills": [
+        "Python",
+        "FastAPI",
+        "Pandas",
+        "NumPy",
+        "scikit-learn",
+        "OpenAI API",
+        "LLM",
+        "PostgreSQL",
+        "SQL",
+        "GCP",
+        "Docker",
+        "Caching"
+      ],
+      "project_summary": "Churn Predictor with LLM Explanations: scikit-learn churn model plus an LLM layer (OpenAI API) generating explanations from feature importances, served via FastAPI with Postgres caching.",
+      "github_summary": "GitHub rate limit already hit this run",
+      "strengths": [
+        "Solid Python/backend engineering evidence"
+      ],
+      "concerns": [
+        "Limited AI project depth",
+        "GitHub not enriched (rate_limited)"
+      ],
+      "rejection_reasons": [],
+      "github": {
+        "status": "rate_limited",
+        "username": "sanjay23dev",
+        "summary": "GitHub rate limit already hit this run",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_23.txt",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": 17,
+      "candidate_name": "Vikram Singh",
+      "eligible": true,
+      "total_score": 47.11,
+      "score_breakdown": {
+        "ai_project_depth": 9.15,
+        "python_backend": 29.4,
+        "cloud_fullstack": 7.31,
+        "github": 0.0,
+        "engineering_depth": 1.25,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "Churn Predictor with LLM Explanations: depth 3.0/10",
+            "best-depth 8.4 + breadth 0.0 (0 solid project(s)) + signals 0.8"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (experience), Pandas (skills (list-only)), NumPy (skills (list-only)), scikit-learn (project), FastAPI (project), PostgreSQL (project), SQL (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: GCP (experience), Docker (skills (list-only))"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Caching"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "matched_skills": [
+        "Python",
+        "FastAPI",
+        "Pandas",
+        "NumPy",
+        "scikit-learn",
+        "OpenAI API",
+        "LLM",
+        "PostgreSQL",
+        "SQL",
+        "GCP",
+        "Docker",
+        "Caching"
+      ],
+      "project_summary": "Churn Predictor with LLM Explanations: scikit-learn churn model plus an LLM layer (OpenAI API) generating explanations from feature im portances, served via FastAPI with Postgres caching.",
+      "github_summary": "GitHub rate limit already hit this run",
+      "strengths": [
+        "Solid Python/backend engineering evidence"
+      ],
+      "concerns": [
+        "Limited AI project depth",
+        "GitHub not enriched (rate_limited)"
+      ],
+      "rejection_reasons": [],
+      "github": {
+        "status": "rate_limited",
+        "username": "vikram09dev",
+        "summary": "GitHub rate limit already hit this run",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_09.pdf",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": 18,
+      "candidate_name": "Omar Das",
+      "eligible": true,
+      "total_score": 45.61,
+      "score_breakdown": {
+        "ai_project_depth": 31.7,
+        "python_backend": 11.66,
+        "cloud_fullstack": 2.25,
+        "github": 0.0,
+        "engineering_depth": 0.0,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "Multi-Agent Research Assistant: depth 9.0/10",
+            "best-depth 25.2 + breadth 2.0 (1 solid project(s)) + signals 4.5"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (skills (list-only)), FastAPI (skills (list-only)), Redis (project)"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: Docker (skills (list-only))"
+          ],
+          "engineering_depth": [
+            "No engineering-depth signals found"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "matched_skills": [
+        "Python",
+        "FastAPI",
+        "LangGraph",
+        "Embeddings",
+        "Tool Calling",
+        "Multi-Agent",
+        "AI Agents",
+        "Redis",
+        "Docker"
+      ],
+      "project_summary": "Multi-Agent Research Assistant: LangGraph multi-agent system with retrieval over arXiv using embeddings, planner and tool-calling agents, Redis session state, and an evaluation harness comparing summarisation quality.",
+      "github_summary": "GitHub rate limit already hit this run",
+      "strengths": [
+        "Strong AI/agentic project depth"
+      ],
+      "concerns": [
+        "Little cloud/deployment evidence",
+        "GitHub not enriched (rate_limited)"
+      ],
+      "rejection_reasons": [],
+      "github": {
+        "status": "rate_limited",
+        "username": "omar25dev",
+        "summary": "GitHub rate limit already hit this run",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_25.docx",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": 19,
+      "candidate_name": "Rahul Joshi",
+      "eligible": true,
+      "total_score": 45.61,
+      "score_breakdown": {
+        "ai_project_depth": 31.7,
+        "python_backend": 11.66,
+        "cloud_fullstack": 2.25,
+        "github": 0.0,
+        "engineering_depth": 0.0,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "Multi-Agent Research Assistant: depth 9.0/10",
+            "best-depth 25.2 + breadth 2.0 (1 solid project(s)) + signals 4.5"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (skills (list-only)), FastAPI (skills (list-only)), Redis (project)"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: Docker (skills (list-only))"
+          ],
+          "engineering_depth": [
+            "No engineering-depth signals found"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "matched_skills": [
+        "Python",
+        "FastAPI",
+        "LangGraph",
+        "Embeddings",
+        "Tool Calling",
+        "Multi-Agent",
+        "AI Agents",
+        "Redis",
+        "Docker"
+      ],
+      "project_summary": "Multi-Agent Research Assistant: LangGraph multi-agent system with retrieval over arXiv using embeddings, planner and tool-calling agents, Redis session state, and an evaluation harness comparing summarisation quality.",
+      "github_summary": "GitHub rate limit already hit this run",
+      "strengths": [
+        "Strong AI/agentic project depth"
+      ],
+      "concerns": [
+        "Little cloud/deployment evidence",
+        "GitHub not enriched (rate_limited)"
+      ],
+      "rejection_reasons": [],
+      "github": {
+        "status": "rate_limited",
+        "username": "rahul11dev",
+        "summary": "GitHub rate limit already hit this run",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_11.txt",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": 20,
+      "candidate_name": "Nikhil Sinha",
+      "eligible": true,
+      "total_score": 43.57,
+      "score_breakdown": {
+        "ai_project_depth": 26.75,
+        "python_backend": 14.57,
+        "cloud_fullstack": 2.25,
+        "github": 0.0,
+        "engineering_depth": 0.0,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "Multi-Agent Content Pipeline: depth 7.5/10",
+            "best-depth 21.0 + breadth 2.0 (1 solid project(s)) + signals 3.8"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (skills (list-only)), FastAPI (project), MongoDB (project)"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: Docker (skills (list-only))"
+          ],
+          "engineering_depth": [
+            "No engineering-depth signals found"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "matched_skills": [
+        "Python",
+        "FastAPI",
+        "LlamaIndex",
+        "Tool Calling",
+        "Multi-Agent",
+        "AI Agents",
+        "MongoDB",
+        "Docker"
+      ],
+      "project_summary": "Multi-Agent Content Pipeline: LlamaIndex agents with tool calling and orchestration to draft, review and publish content; FastAPI backend with MongoDB state.",
+      "github_summary": "No GitHub profile on resume",
+      "strengths": [
+        "Strong AI/agentic project depth"
+      ],
+      "concerns": [
+        "Little cloud/deployment evidence"
+      ],
+      "rejection_reasons": [],
+      "github": {
+        "status": "no_profile",
+        "username": null,
+        "summary": "No GitHub profile on resume",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_13.docx",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": 21,
+      "candidate_name": "Rahul Kapoor",
+      "eligible": true,
+      "total_score": 43.57,
+      "score_breakdown": {
+        "ai_project_depth": 26.75,
+        "python_backend": 14.57,
+        "cloud_fullstack": 2.25,
+        "github": 0.0,
+        "engineering_depth": 0.0,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "Multi-Agent Content Pipeline: depth 7.5/10",
+            "best-depth 21.0 + breadth 2.0 (1 solid project(s)) + signals 3.8"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (skills (list-only)), FastAPI (project), MongoDB (project)"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: Docker (skills (list-only))"
+          ],
+          "engineering_depth": [
+            "No engineering-depth signals found"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "matched_skills": [
+        "Python",
+        "FastAPI",
+        "LlamaIndex",
+        "Tool Calling",
+        "Multi-Agent",
+        "AI Agents",
+        "MongoDB",
+        "Docker"
+      ],
+      "project_summary": "Multi-Agent Content Pipeline: LlamaIndex agents with tool calling and orchestration to draft, review and publish content; FastAPI backend with MongoDB state.",
+      "github_summary": "No GitHub profile on resume",
+      "strengths": [
+        "Strong AI/agentic project depth"
+      ],
+      "concerns": [
+        "Little cloud/deployment evidence"
+      ],
+      "rejection_reasons": [],
+      "github": {
+        "status": "no_profile",
+        "username": null,
+        "summary": "No GitHub profile on resume",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_41.txt",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": 22,
+      "candidate_name": "Vikram Pillai",
+      "eligible": true,
+      "total_score": 42.06,
+      "score_breakdown": {
+        "ai_project_depth": 28.15,
+        "python_backend": 11.66,
+        "cloud_fullstack": 2.25,
+        "github": 0.0,
+        "engineering_depth": 0.0,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "Multi-Agent Research Assistant: depth 8.0/10",
+            "best-depth 22.4 + breadth 2.0 (1 solid project(s)) + signals 3.8"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (skills (list-only)), FastAPI (skills (list-only)), Redis (project)"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: Docker (skills (list-only))"
+          ],
+          "engineering_depth": [
+            "No engineering-depth signals found"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "matched_skills": [
+        "Python",
+        "FastAPI",
+        "LangGraph",
+        "Embeddings",
+        "Multi-Agent",
+        "AI Agents",
+        "Redis",
+        "Docker"
+      ],
+      "project_summary": "Multi-Agent Research Assistant: LangGraph multi-agent system with retrieval over arXiv using embeddings, planner and tool-calli ng agents, Redis session state, and an evaluation harness comparing summarisation quality.",
+      "github_summary": "GitHub rate limit already hit this run",
+      "strengths": [
+        "Strong AI/agentic project depth"
+      ],
+      "concerns": [
+        "Little cloud/deployment evidence",
+        "GitHub not enriched (rate_limited)"
+      ],
+      "rejection_reasons": [],
+      "github": {
+        "status": "rate_limited",
+        "username": "vikram39dev",
+        "summary": "GitHub rate limit already hit this run",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_39.pdf",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": 23,
+      "candidate_name": "Chen Mehta",
+      "eligible": true,
+      "total_score": 38.94,
+      "score_breakdown": {
+        "ai_project_depth": 26.75,
+        "python_backend": 9.94,
+        "cloud_fullstack": 2.25,
+        "github": 0.0,
+        "engineering_depth": 0.0,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "Multi-Agent Content Pipeline: depth 7.5/10",
+            "best-depth 21.0 + breadth 2.0 (1 solid project(s)) + signals 3.8"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (skills (list-only)), FastAPI (skills (list-only)), MongoDB (project)"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: Docker (skills (list-only))"
+          ],
+          "engineering_depth": [
+            "No engineering-depth signals found"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "matched_skills": [
+        "Python",
+        "FastAPI",
+        "LlamaIndex",
+        "Tool Calling",
+        "Multi-Agent",
+        "AI Agents",
+        "MongoDB",
+        "Docker"
+      ],
+      "project_summary": "Multi-Agent Content Pipeline: LlamaIndex agents with tool calling and orchestration to draft, review and publish content; Fas tAPI backend with MongoDB state.",
+      "github_summary": "No GitHub profile on resume",
+      "strengths": [
+        "Strong AI/agentic project depth"
+      ],
+      "concerns": [
+        "Little cloud/deployment evidence"
+      ],
+      "rejection_reasons": [],
+      "github": {
+        "status": "no_profile",
+        "username": null,
+        "summary": "No GitHub profile on resume",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_27.pdf",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": 24,
+      "candidate_name": "Ananya Rao",
+      "eligible": true,
+      "total_score": 33.04,
+      "score_breakdown": {
+        "ai_project_depth": 19.65,
+        "python_backend": 11.14,
+        "cloud_fullstack": 2.25,
+        "github": 0.0,
+        "engineering_depth": 0.0,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "Recipe Assistant: depth 5.5/10",
+            "best-depth 15.4 + breadth 2.0 (1 solid project(s)) + signals 2.2"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (skills (list-only)), Flask (project), PostgreSQL (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: React (project)"
+          ],
+          "engineering_depth": [
+            "No engineering-depth signals found"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "matched_skills": [
+        "Python",
+        "Flask",
+        "OpenAI API",
+        "RAG",
+        "Embeddings",
+        "Vector Search",
+        "PostgreSQL",
+        "React"
+      ],
+      "project_summary": "Recipe Assistant: Flask backend with a RAG pipeline over a recipe corpus using embeddings and vector search; React Native client.",
+      "github_summary": "GitHub rate limit already hit this run",
+      "strengths": [],
+      "concerns": [
+        "Little cloud/deployment evidence",
+        "GitHub not enriched (rate_limited)"
+      ],
+      "rejection_reasons": [],
+      "github": {
+        "status": "rate_limited",
+        "username": "ananya40dev",
+        "summary": "GitHub rate limit already hit this run",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_40.docx",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": 25,
+      "candidate_name": "Hana Malhotra",
+      "eligible": true,
+      "total_score": 33.04,
+      "score_breakdown": {
+        "ai_project_depth": 19.65,
+        "python_backend": 11.14,
+        "cloud_fullstack": 2.25,
+        "github": 0.0,
+        "engineering_depth": 0.0,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "Recipe Assistant: depth 5.5/10",
+            "best-depth 15.4 + breadth 2.0 (1 solid project(s)) + signals 2.2"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (skills (list-only)), Flask (project), PostgreSQL (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: React (project)"
+          ],
+          "engineering_depth": [
+            "No engineering-depth signals found"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "matched_skills": [
+        "Python",
+        "Flask",
+        "OpenAI API",
+        "RAG",
+        "Embeddings",
+        "Vector Search",
+        "PostgreSQL",
+        "React"
+      ],
+      "project_summary": "Recipe Assistant: Flask backend with a RAG pipeline over a recipe corpus using embeddings and vector search; React Native client.",
+      "github_summary": "GitHub rate limit already hit this run",
+      "strengths": [],
+      "concerns": [
+        "Little cloud/deployment evidence",
+        "GitHub not enriched (rate_limited)"
+      ],
+      "rejection_reasons": [],
+      "github": {
+        "status": "rate_limited",
+        "username": "hana26dev",
+        "summary": "GitHub rate limit already hit this run",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_26.txt",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": 26,
+      "candidate_name": "Isha Chopra",
+      "eligible": true,
+      "total_score": 31.69,
+      "score_breakdown": {
+        "ai_project_depth": 19.65,
+        "python_backend": 11.14,
+        "cloud_fullstack": 0.9,
+        "github": 0.0,
+        "engineering_depth": 0.0,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "Recipe Assistant: depth 5.5/10",
+            "best-depth 15.4 + breadth 2.0 (1 solid project(s)) + signals 2.2"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (skills (list-only)), Flask (project), PostgreSQL (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: React (skills (list-only))"
+          ],
+          "engineering_depth": [
+            "No engineering-depth signals found"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "matched_skills": [
+        "Python",
+        "Flask",
+        "OpenAI API",
+        "RAG",
+        "Embeddings",
+        "Vector Search",
+        "PostgreSQL",
+        "React"
+      ],
+      "project_summary": "Recipe Assistant: Flask backend with a RAG pipeline over a recipe corpus using embeddings and vector search; Reac t Native client.",
+      "github_summary": "GitHub rate limit already hit this run",
+      "strengths": [],
+      "concerns": [
+        "Little cloud/deployment evidence",
+        "GitHub not enriched (rate_limited)"
+      ],
+      "rejection_reasons": [],
+      "github": {
+        "status": "rate_limited",
+        "username": "isha12dev",
+        "summary": "GitHub rate limit already hit this run",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_12.pdf",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": 27,
+      "candidate_name": "Kavya Sharma",
+      "eligible": true,
+      "total_score": 14.46,
+      "score_breakdown": {
+        "ai_project_depth": 12.55,
+        "python_backend": 4.46,
+        "cloud_fullstack": 0.45,
+        "github": 0.0,
+        "engineering_depth": 0.0,
+        "penalties": -3.0,
+        "rationale": {
+          "ai_project_depth": [
+            "RAG Tutorial Follow-along: depth 3.5/10",
+            "best-depth 9.8 + breadth 2.0 (1 solid project(s)) + signals 0.8"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (skills (list-only)), Streamlit (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: Streamlit (skills (list-only))"
+          ],
+          "engineering_depth": [
+            "No engineering-depth signals found"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "tutorial-style: RAG Tutorial Follow-along (-3.0)"
+          ]
+        }
+      },
+      "matched_skills": [
+        "Python",
+        "Streamlit",
+        "LangChain",
+        "RAG"
+      ],
+      "project_summary": "RAG Tutorial Follow-along: Followed a YouTube tutorial to build a basic RAG demo.",
+      "github_summary": "GitHub rate limit already hit this run",
+      "strengths": [],
+      "concerns": [
+        "Weak Python/backend evidence",
+        "Little cloud/deployment evidence",
+        "Project-quality penalties applied (see score breakdown)",
+        "GitHub not enriched (rate_limited)"
+      ],
+      "rejection_reasons": [],
+      "github": {
+        "status": "rate_limited",
+        "username": "kavya48dev",
+        "summary": "GitHub rate limit already hit this run",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_48.pdf",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": 28,
+      "candidate_name": "Neha Iyer",
+      "eligible": true,
+      "total_score": 14.46,
+      "score_breakdown": {
+        "ai_project_depth": 12.55,
+        "python_backend": 4.46,
+        "cloud_fullstack": 0.45,
+        "github": 0.0,
+        "engineering_depth": 0.0,
+        "penalties": -3.0,
+        "rationale": {
+          "ai_project_depth": [
+            "RAG Tutorial Follow-along: depth 3.5/10",
+            "best-depth 9.8 + breadth 2.0 (1 solid project(s)) + signals 0.8"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (skills (list-only)), Streamlit (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: Streamlit (skills (list-only))"
+          ],
+          "engineering_depth": [
+            "No engineering-depth signals found"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "tutorial-style: RAG Tutorial Follow-along (-3.0)"
+          ]
+        }
+      },
+      "matched_skills": [
+        "Python",
+        "Streamlit",
+        "LangChain",
+        "RAG"
+      ],
+      "project_summary": "RAG Tutorial Follow-along: Followed a YouTube tutorial to build a basic RAG demo.",
+      "github_summary": "GitHub rate limit already hit this run",
+      "strengths": [],
+      "concerns": [
+        "Weak Python/backend evidence",
+        "Little cloud/deployment evidence",
+        "Project-quality penalties applied (see score breakdown)",
+        "GitHub not enriched (rate_limited)"
+      ],
+      "rejection_reasons": [],
+      "github": {
+        "status": "rate_limited",
+        "username": "neha34dev",
+        "summary": "GitHub rate limit already hit this run",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_34.docx",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": 29,
+      "candidate_name": "Priya Malhotra",
+      "eligible": true,
+      "total_score": 14.46,
+      "score_breakdown": {
+        "ai_project_depth": 12.55,
+        "python_backend": 4.46,
+        "cloud_fullstack": 0.45,
+        "github": 0.0,
+        "engineering_depth": 0.0,
+        "penalties": -3.0,
+        "rationale": {
+          "ai_project_depth": [
+            "RAG Tutorial Follow-along: depth 3.5/10",
+            "best-depth 9.8 + breadth 2.0 (1 solid project(s)) + signals 0.8"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (skills (list-only)), Streamlit (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: Streamlit (skills (list-only))"
+          ],
+          "engineering_depth": [
+            "No engineering-depth signals found"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "tutorial-style: RAG Tutorial Follow-along (-3.0)"
+          ]
+        }
+      },
+      "matched_skills": [
+        "Python",
+        "Streamlit",
+        "LangChain",
+        "RAG"
+      ],
+      "project_summary": "RAG Tutorial Follow-along: Followed a YouTube tutorial to build a basic RAG demo.",
+      "github_summary": "GitHub API rate limited",
+      "strengths": [],
+      "concerns": [
+        "Weak Python/backend evidence",
+        "Little cloud/deployment evidence",
+        "Project-quality penalties applied (see score breakdown)",
+        "GitHub not enriched (rate_limited)"
+      ],
+      "rejection_reasons": [],
+      "github": {
+        "status": "rate_limited",
+        "username": "priya06dev",
+        "summary": "GitHub API rate limited",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_06.pdf",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": 30,
+      "candidate_name": "Zara Rao",
+      "eligible": true,
+      "total_score": 14.46,
+      "score_breakdown": {
+        "ai_project_depth": 12.55,
+        "python_backend": 4.46,
+        "cloud_fullstack": 0.45,
+        "github": 0.0,
+        "engineering_depth": 0.0,
+        "penalties": -3.0,
+        "rationale": {
+          "ai_project_depth": [
+            "RAG Tutorial Follow-along: depth 3.5/10",
+            "best-depth 9.8 + breadth 2.0 (1 solid project(s)) + signals 0.8"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (skills (list-only)), Streamlit (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: Streamlit (skills (list-only))"
+          ],
+          "engineering_depth": [
+            "No engineering-depth signals found"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "tutorial-style: RAG Tutorial Follow-along (-3.0)"
+          ]
+        }
+      },
+      "matched_skills": [
+        "Python",
+        "Streamlit",
+        "LangChain",
+        "RAG"
+      ],
+      "project_summary": "RAG Tutorial Follow-along: Followed a YouTube tutorial to build a basic RAG demo.",
+      "github_summary": "GitHub rate limit already hit this run",
+      "strengths": [],
+      "concerns": [
+        "Weak Python/backend evidence",
+        "Little cloud/deployment evidence",
+        "Project-quality penalties applied (see score breakdown)",
+        "GitHub not enriched (rate_limited)"
+      ],
+      "rejection_reasons": [],
+      "github": {
+        "status": "rate_limited",
+        "username": "zara20dev",
+        "summary": "GitHub rate limit already hit this run",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_20.txt",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": 31,
+      "candidate_name": "Dev Mehta",
+      "eligible": true,
+      "total_score": 13.69,
+      "score_breakdown": {
+        "ai_project_depth": 9.15,
+        "python_backend": 7.54,
+        "cloud_fullstack": 0.0,
+        "github": 0.0,
+        "engineering_depth": 0.0,
+        "penalties": -3.0,
+        "rationale": {
+          "ai_project_depth": [
+            "Defect Detection: depth 3.0/10",
+            "best-depth 8.4 + breadth 0.0 (0 solid project(s)) + signals 0.8"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (skills (list-only)), Pandas (skills (list-only)), NumPy (skills (list-only)), scikit-learn (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "No cloud/deployment evidence"
+          ],
+          "engineering_depth": [
+            "No engineering-depth signals found"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "listed without implementation detail: Defect Detection (-3.0)"
+          ]
+        }
+      },
+      "matched_skills": [
+        "Python",
+        "Pandas",
+        "NumPy",
+        "scikit-learn",
+        "PyTorch",
+        "Computer Vision"
+      ],
+      "project_summary": "Defect Detection: Trained a CNN in PyTorch with OpenCV preprocessing to classify manufacturing defects.",
+      "github_summary": "GitHub API rate limited",
+      "strengths": [],
+      "concerns": [
+        "Limited AI project depth",
+        "Weak Python/backend evidence",
+        "Little cloud/deployment evidence",
+        "Project-quality penalties applied (see score breakdown)",
+        "GitHub not enriched (rate_limited)"
+      ],
+      "rejection_reasons": [],
+      "github": {
+        "status": "rate_limited",
+        "username": "dev07dev",
+        "summary": "GitHub API rate limited",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_07.docx",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": 32,
+      "candidate_name": "Karan Nair",
+      "eligible": true,
+      "total_score": 13.69,
+      "score_breakdown": {
+        "ai_project_depth": 9.15,
+        "python_backend": 7.54,
+        "cloud_fullstack": 0.0,
+        "github": 0.0,
+        "engineering_depth": 0.0,
+        "penalties": -3.0,
+        "rationale": {
+          "ai_project_depth": [
+            "Defect Detection: depth 3.0/10",
+            "best-depth 8.4 + breadth 0.0 (0 solid project(s)) + signals 0.8"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (skills (list-only)), Pandas (skills (list-only)), NumPy (skills (list-only)), scikit-learn (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "No cloud/deployment evidence"
+          ],
+          "engineering_depth": [
+            "No engineering-depth signals found"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "listed without implementation detail: Defect Detection (-3.0)"
+          ]
+        }
+      },
+      "matched_skills": [
+        "Python",
+        "Pandas",
+        "NumPy",
+        "scikit-learn",
+        "PyTorch",
+        "Computer Vision"
+      ],
+      "project_summary": "Defect Detection: Trained a CNN in PyTorch with OpenCV preprocessing to classify manufacturing defects.",
+      "github_summary": "GitHub rate limit already hit this run",
+      "strengths": [],
+      "concerns": [
+        "Limited AI project depth",
+        "Weak Python/backend evidence",
+        "Little cloud/deployment evidence",
+        "Project-quality penalties applied (see score breakdown)",
+        "GitHub not enriched (rate_limited)"
+      ],
+      "rejection_reasons": [],
+      "github": {
+        "status": "rate_limited",
+        "username": "karan35dev",
+        "summary": "GitHub rate limit already hit this run",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_35.txt",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": 33,
+      "candidate_name": "Manish Kapoor",
+      "eligible": true,
+      "total_score": 13.69,
+      "score_breakdown": {
+        "ai_project_depth": 9.15,
+        "python_backend": 7.54,
+        "cloud_fullstack": 0.0,
+        "github": 0.0,
+        "engineering_depth": 0.0,
+        "penalties": -3.0,
+        "rationale": {
+          "ai_project_depth": [
+            "Defect Detection: depth 3.0/10",
+            "best-depth 8.4 + breadth 0.0 (0 solid project(s)) + signals 0.8"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (skills (list-only)), Pandas (skills (list-only)), NumPy (skills (list-only)), scikit-learn (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "No cloud/deployment evidence"
+          ],
+          "engineering_depth": [
+            "No engineering-depth signals found"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "listed without implementation detail: Defect Detection (-3.0)"
+          ]
+        }
+      },
+      "matched_skills": [
+        "Python",
+        "Pandas",
+        "NumPy",
+        "scikit-learn",
+        "PyTorch",
+        "Computer Vision"
+      ],
+      "project_summary": "Defect Detection: Trained a CNN in PyTorch with OpenCV preprocessing to classify manufacturing defects.",
+      "github_summary": "GitHub rate limit already hit this run",
+      "strengths": [],
+      "concerns": [
+        "Limited AI project depth",
+        "Weak Python/backend evidence",
+        "Little cloud/deployment evidence",
+        "Project-quality penalties applied (see score breakdown)",
+        "GitHub not enriched (rate_limited)"
+      ],
+      "rejection_reasons": [],
+      "github": {
+        "status": "rate_limited",
+        "username": "manish21dev",
+        "summary": "GitHub rate limit already hit this run",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_21.pdf",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": 34,
+      "candidate_name": "Rohan Singh",
+      "eligible": true,
+      "total_score": 13.69,
+      "score_breakdown": {
+        "ai_project_depth": 9.15,
+        "python_backend": 7.54,
+        "cloud_fullstack": 0.0,
+        "github": 0.0,
+        "engineering_depth": 0.0,
+        "penalties": -3.0,
+        "rationale": {
+          "ai_project_depth": [
+            "Defect Detection: depth 3.0/10",
+            "best-depth 8.4 + breadth 0.0 (0 solid project(s)) + signals 0.8"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (skills (list-only)), Pandas (skills (list-only)), NumPy (skills (list-only)), scikit-learn (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "No cloud/deployment evidence"
+          ],
+          "engineering_depth": [
+            "No engineering-depth signals found"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "listed without implementation detail: Defect Detection (-3.0)"
+          ]
+        }
+      },
+      "matched_skills": [
+        "Python",
+        "Pandas",
+        "NumPy",
+        "scikit-learn",
+        "PyTorch",
+        "Computer Vision"
+      ],
+      "project_summary": "Defect Detection: Trained a CNN in PyTorch with OpenCV preprocessing to classify manufacturing defects.",
+      "github_summary": "GitHub rate limit already hit this run",
+      "strengths": [],
+      "concerns": [
+        "Limited AI project depth",
+        "Weak Python/backend evidence",
+        "Little cloud/deployment evidence",
+        "Project-quality penalties applied (see score breakdown)",
+        "GitHub not enriched (rate_limited)"
+      ],
+      "rejection_reasons": [],
+      "github": {
+        "status": "rate_limited",
+        "username": "rohan49dev",
+        "summary": "GitHub rate limit already hit this run",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_49.docx",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": 35,
+      "candidate_name": "Aditya Mehta",
+      "eligible": true,
+      "total_score": 0.0,
+      "score_breakdown": {
+        "ai_project_depth": 9.15,
+        "python_backend": 3.43,
+        "cloud_fullstack": 0.0,
+        "github": 0.0,
+        "engineering_depth": 0.0,
+        "penalties": -15.0,
+        "rationale": {
+          "ai_project_depth": [
+            "Chatbot: depth 3.0/10",
+            "best-depth 8.4 + breadth 0.0 (0 solid project(s)) + signals 0.8"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "No cloud/deployment evidence"
+          ],
+          "engineering_depth": [
+            "No engineering-depth signals found"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "Thin LLM/API wrapper, no meaningful workflow: Chatbot (-12.0)",
+            "listed without implementation detail: Chatbot (-3.0)"
+          ]
+        }
+      },
+      "matched_skills": [
+        "Python",
+        "LangChain",
+        "OpenAI API"
+      ],
+      "project_summary": "Chatbot: A chatbot that calls the OpenAI API to answer user questions.",
+      "github_summary": "GitHub rate limit already hit this run",
+      "strengths": [],
+      "concerns": [
+        "Limited AI project depth",
+        "Weak Python/backend evidence",
+        "Little cloud/deployment evidence",
+        "Project-quality penalties applied (see score breakdown)",
+        "GitHub not enriched (rate_limited)"
+      ],
+      "rejection_reasons": [],
+      "github": {
+        "status": "rate_limited",
+        "username": "aditya47dev",
+        "summary": "GitHub rate limit already hit this run",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_47.txt",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": 36,
+      "candidate_name": "Arjun Sinha",
+      "eligible": true,
+      "total_score": 0.0,
+      "score_breakdown": {
+        "ai_project_depth": 9.15,
+        "python_backend": 3.43,
+        "cloud_fullstack": 0.0,
+        "github": 0.0,
+        "engineering_depth": 0.0,
+        "penalties": -15.0,
+        "rationale": {
+          "ai_project_depth": [
+            "Chatbot: depth 3.0/10",
+            "best-depth 8.4 + breadth 0.0 (0 solid project(s)) + signals 0.8"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "No cloud/deployment evidence"
+          ],
+          "engineering_depth": [
+            "No engineering-depth signals found"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "Thin LLM/API wrapper, no meaningful workflow: Chatbot (-12.0)",
+            "listed without implementation detail: Chatbot (-3.0)"
+          ]
+        }
+      },
+      "matched_skills": [
+        "Python",
+        "LangChain",
+        "OpenAI API"
+      ],
+      "project_summary": "Chatbot: A chatbot that calls the OpenAI API to answer user questions.",
+      "github_summary": "GitHub rate limit already hit this run",
+      "strengths": [],
+      "concerns": [
+        "Limited AI project depth",
+        "Weak Python/backend evidence",
+        "Little cloud/deployment evidence",
+        "Project-quality penalties applied (see score breakdown)",
+        "GitHub not enriched (rate_limited)"
+      ],
+      "rejection_reasons": [],
+      "github": {
+        "status": "rate_limited",
+        "username": "arjun33dev",
+        "summary": "GitHub rate limit already hit this run",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_33.pdf",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": 37,
+      "candidate_name": "Karan Das",
+      "eligible": true,
+      "total_score": 0.0,
+      "score_breakdown": {
+        "ai_project_depth": 9.15,
+        "python_backend": 3.43,
+        "cloud_fullstack": 0.0,
+        "github": 0.0,
+        "engineering_depth": 0.0,
+        "penalties": -15.0,
+        "rationale": {
+          "ai_project_depth": [
+            "Chatbot: depth 3.0/10",
+            "best-depth 8.4 + breadth 0.0 (0 solid project(s)) + signals 0.8"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "No cloud/deployment evidence"
+          ],
+          "engineering_depth": [
+            "No engineering-depth signals found"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "Thin LLM/API wrapper, no meaningful workflow: Chatbot (-12.0)",
+            "listed without implementation detail: Chatbot (-3.0)"
+          ]
+        }
+      },
+      "matched_skills": [
+        "Python",
+        "LangChain",
+        "OpenAI API"
+      ],
+      "project_summary": "Chatbot: A chatbot that calls the OpenAI API to answer user questions.",
+      "github_summary": "GitHub API rate limited",
+      "strengths": [],
+      "concerns": [
+        "Limited AI project depth",
+        "Weak Python/backend evidence",
+        "Little cloud/deployment evidence",
+        "Project-quality penalties applied (see score breakdown)",
+        "GitHub not enriched (rate_limited)"
+      ],
+      "rejection_reasons": [],
+      "github": {
+        "status": "rate_limited",
+        "username": "karan05dev",
+        "summary": "GitHub API rate limited",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_05.txt",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": 38,
+      "candidate_name": "Rohan Pillai",
+      "eligible": true,
+      "total_score": 0.0,
+      "score_breakdown": {
+        "ai_project_depth": 9.15,
+        "python_backend": 3.43,
+        "cloud_fullstack": 0.0,
+        "github": 0.0,
+        "engineering_depth": 0.0,
+        "penalties": -15.0,
+        "rationale": {
+          "ai_project_depth": [
+            "Chatbot: depth 3.0/10",
+            "best-depth 8.4 + breadth 0.0 (0 solid project(s)) + signals 0.8"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "No cloud/deployment evidence"
+          ],
+          "engineering_depth": [
+            "No engineering-depth signals found"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "Thin LLM/API wrapper, no meaningful workflow: Chatbot (-12.0)",
+            "listed without implementation detail: Chatbot (-3.0)"
+          ]
+        }
+      },
+      "matched_skills": [
+        "Python",
+        "LangChain",
+        "OpenAI API"
+      ],
+      "project_summary": "Chatbot: A chatbot that calls the OpenAI API to answer user questions.",
+      "github_summary": "GitHub rate limit already hit this run",
+      "strengths": [],
+      "concerns": [
+        "Limited AI project depth",
+        "Weak Python/backend evidence",
+        "Little cloud/deployment evidence",
+        "Project-quality penalties applied (see score breakdown)",
+        "GitHub not enriched (rate_limited)"
+      ],
+      "rejection_reasons": [],
+      "github": {
+        "status": "rate_limited",
+        "username": "rohan19dev",
+        "summary": "GitHub rate limit already hit this run",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_19.docx",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": null,
+      "candidate_name": "Aditya Khan",
+      "eligible": false,
+      "total_score": null,
+      "score_breakdown": null,
+      "matched_skills": [
+        "REST API",
+        "Node.js",
+        "Express",
+        "TypeScript",
+        "JavaScript",
+        "React",
+        "Next.js",
+        "Tailwind",
+        "Testing"
+      ],
+      "project_summary": "Analytics Dashboard: React + Next.js dashboard with charts, auth and API integration.",
+      "github_summary": "",
+      "strengths": [],
+      "concerns": [],
+      "rejection_reasons": [
+        "No evidence of Python stack",
+        "No AI/agentic project evidence"
+      ],
+      "github": {
+        "status": "disabled",
+        "username": "aditya17dev",
+        "summary": "Not enriched (candidate ineligible)",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_17.txt",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": null,
+      "candidate_name": "Arjun Reddy",
+      "eligible": false,
+      "total_score": null,
+      "score_breakdown": null,
+      "matched_skills": [
+        "REST API",
+        "Node.js",
+        "Express",
+        "TypeScript",
+        "JavaScript",
+        "React",
+        "Next.js",
+        "Tailwind",
+        "Testing"
+      ],
+      "project_summary": "Analytics Dashboard: React + Next.js dashboard with charts, auth and API integration.",
+      "github_summary": "",
+      "strengths": [],
+      "concerns": [],
+      "rejection_reasons": [
+        "No evidence of Python stack",
+        "No AI/agentic project evidence"
+      ],
+      "github": {
+        "status": "disabled",
+        "username": "arjun03dev",
+        "summary": "Not enriched (candidate ineligible)",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_03.pdf",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": null,
+      "candidate_name": "Asha Bose",
+      "eligible": false,
+      "total_score": null,
+      "score_breakdown": null,
+      "matched_skills": [
+        "Python",
+        "Django",
+        "Flask",
+        "Celery",
+        "pytest",
+        "PostgreSQL",
+        "MySQL",
+        "Redis",
+        "SQL",
+        "REST API",
+        "Docker",
+        "Testing",
+        "Caching",
+        "Queues",
+        "Security"
+      ],
+      "project_summary": "Inventory API: REST API in Django with PostgreSQL, JWT auth, caching and pagination.",
+      "github_summary": "",
+      "strengths": [],
+      "concerns": [],
+      "rejection_reasons": [
+        "No AI/agentic project evidence"
+      ],
+      "github": {
+        "status": "disabled",
+        "username": "asha30dev",
+        "summary": "Not enriched (candidate ineligible)",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_30.pdf",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": null,
+      "candidate_name": "candidate_00_copy.pdf",
+      "eligible": false,
+      "total_score": null,
+      "score_breakdown": null,
+      "matched_skills": [],
+      "project_summary": "",
+      "github_summary": "",
+      "strengths": [],
+      "concerns": [],
+      "rejection_reasons": [
+        "Resume not processed (duplicate): duplicate of candidate_00.pdf"
+      ],
+      "github": {
+        "status": "disabled",
+        "username": null,
+        "summary": "",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_00_copy.pdf",
+      "parse_status": "duplicate",
+      "warnings": []
+    },
+    {
+      "rank": null,
+      "candidate_name": "candidate_corrupt.pdf",
+      "eligible": false,
+      "total_score": null,
+      "score_breakdown": null,
+      "matched_skills": [],
+      "project_summary": "",
+      "github_summary": "",
+      "strengths": [],
+      "concerns": [],
+      "rejection_reasons": [
+        "Resume not processed (failed): RuntimeError: pdfplumber: PdfminerException: No /Root object! - Is this really a PDF?; pypdf: PdfStreamError: Stream has ended unexpectedly"
+      ],
+      "github": {
+        "status": "disabled",
+        "username": null,
+        "summary": "",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_corrupt.pdf",
+      "parse_status": "failed",
+      "warnings": []
+    },
+    {
+      "rank": null,
+      "candidate_name": "candidate_empty.txt",
+      "eligible": false,
+      "total_score": null,
+      "score_breakdown": null,
+      "matched_skills": [],
+      "project_summary": "",
+      "github_summary": "",
+      "strengths": [],
+      "concerns": [],
+      "rejection_reasons": [
+        "Resume not processed (empty): no extractable text (possibly image-only/scanned)"
+      ],
+      "github": {
+        "status": "disabled",
+        "username": null,
+        "summary": "",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_empty.txt",
+      "parse_status": "empty",
+      "warnings": []
+    },
+    {
+      "rank": null,
+      "candidate_name": "Diya Malhotra",
+      "eligible": false,
+      "total_score": null,
+      "score_breakdown": null,
+      "matched_skills": [
+        "MySQL",
+        "REST API",
+        "Kafka",
+        "Java",
+        "Spring Boot",
+        "Docker",
+        "Queues"
+      ],
+      "project_summary": "Order Service: Spring Boot microservice with Kafka events and MySQL persistence.",
+      "github_summary": "",
+      "strengths": [],
+      "concerns": [],
+      "rejection_reasons": [
+        "No evidence of Python stack",
+        "No AI/agentic project evidence"
+      ],
+      "github": {
+        "status": "disabled",
+        "username": "diya46dev",
+        "summary": "Not enriched (candidate ineligible)",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_46.docx",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": null,
+      "candidate_name": "Diya Patel",
+      "eligible": false,
+      "total_score": null,
+      "score_breakdown": null,
+      "matched_skills": [
+        "Python",
+        "Django",
+        "Flask",
+        "Celery",
+        "pytest",
+        "PostgreSQL",
+        "MySQL",
+        "Redis",
+        "SQL",
+        "REST API",
+        "Docker",
+        "Testing",
+        "Caching",
+        "Queues",
+        "Security"
+      ],
+      "project_summary": "Inventory API: REST API in Django with PostgreSQL, JWT auth, caching and pagination.",
+      "github_summary": "",
+      "strengths": [],
+      "concerns": [],
+      "rejection_reasons": [
+        "No AI/agentic project evidence"
+      ],
+      "github": {
+        "status": "disabled",
+        "username": "diya16dev",
+        "summary": "Not enriched (candidate ineligible)",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_16.docx",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": null,
+      "candidate_name": "Kavya Menon",
+      "eligible": false,
+      "total_score": null,
+      "score_breakdown": null,
+      "matched_skills": [
+        "MySQL",
+        "REST API",
+        "Kafka",
+        "Java",
+        "Spring Boot",
+        "Docker",
+        "Queues"
+      ],
+      "project_summary": "Order Service: Spring Boot microservice with Kafka events and MySQL persistence.",
+      "github_summary": "",
+      "strengths": [],
+      "concerns": [],
+      "rejection_reasons": [
+        "No evidence of Python stack",
+        "No AI/agentic project evidence"
+      ],
+      "github": {
+        "status": "disabled",
+        "username": "kavya18dev",
+        "summary": "Not enriched (candidate ineligible)",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_18.pdf",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": null,
+      "candidate_name": "Meera Chopra",
+      "eligible": false,
+      "total_score": null,
+      "score_breakdown": null,
+      "matched_skills": [
+        "MySQL",
+        "REST API",
+        "Kafka",
+        "Java",
+        "Spring Boot",
+        "Docker",
+        "Queues"
+      ],
+      "project_summary": "Order Service: Spring Boot microservice with Kafka events and MySQL persistence.",
+      "github_summary": "",
+      "strengths": [],
+      "concerns": [],
+      "rejection_reasons": [
+        "No evidence of Python stack",
+        "No AI/agentic project evidence"
+      ],
+      "github": {
+        "status": "disabled",
+        "username": "meera32dev",
+        "summary": "Not enriched (candidate ineligible)",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_32.txt",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": null,
+      "candidate_name": "Meera Gupta",
+      "eligible": false,
+      "total_score": null,
+      "score_breakdown": null,
+      "matched_skills": [
+        "Python",
+        "Django",
+        "Flask",
+        "Celery",
+        "pytest",
+        "PostgreSQL",
+        "MySQL",
+        "Redis",
+        "SQL",
+        "REST API",
+        "Docker",
+        "Testing",
+        "Caching",
+        "Queues",
+        "Security"
+      ],
+      "project_summary": "Inventory API: REST API in Django with PostgreSQL, JWT auth, caching and pagination.",
+      "github_summary": "",
+      "strengths": [],
+      "concerns": [],
+      "rejection_reasons": [
+        "No AI/agentic project evidence"
+      ],
+      "github": {
+        "status": "disabled",
+        "username": "meera02dev",
+        "summary": "Not enriched (candidate ineligible)",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_02.txt",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": null,
+      "candidate_name": "Neha Verma",
+      "eligible": false,
+      "total_score": null,
+      "score_breakdown": null,
+      "matched_skills": [
+        "MySQL",
+        "REST API",
+        "Kafka",
+        "Java",
+        "Spring Boot",
+        "Docker",
+        "Queues"
+      ],
+      "project_summary": "Order Service: Spring Boot microservice with Kafka events and MySQL persistence.",
+      "github_summary": "",
+      "strengths": [],
+      "concerns": [],
+      "rejection_reasons": [
+        "No evidence of Python stack",
+        "No AI/agentic project evidence"
+      ],
+      "github": {
+        "status": "disabled",
+        "username": "neha04dev",
+        "summary": "Not enriched (candidate ineligible)",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_04.docx",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": null,
+      "candidate_name": "Ravi Joshi",
+      "eligible": false,
+      "total_score": null,
+      "score_breakdown": null,
+      "matched_skills": [
+        "REST API",
+        "Node.js",
+        "Express",
+        "TypeScript",
+        "JavaScript",
+        "React",
+        "Next.js",
+        "Tailwind",
+        "Testing"
+      ],
+      "project_summary": "Analytics Dashboard: React + Next.js dashboard with charts, auth and API integration.",
+      "github_summary": "",
+      "strengths": [],
+      "concerns": [],
+      "rejection_reasons": [
+        "No evidence of Python stack",
+        "No AI/agentic project evidence"
+      ],
+      "github": {
+        "status": "disabled",
+        "username": "ravi31dev",
+        "summary": "Not enriched (candidate ineligible)",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_31.docx",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": null,
+      "candidate_name": "Tara Verma",
+      "eligible": false,
+      "total_score": null,
+      "score_breakdown": null,
+      "matched_skills": [
+        "Python",
+        "Django",
+        "Flask",
+        "Celery",
+        "pytest",
+        "PostgreSQL",
+        "MySQL",
+        "Redis",
+        "SQL",
+        "REST API",
+        "Docker",
+        "Testing",
+        "Caching",
+        "Queues",
+        "Security"
+      ],
+      "project_summary": "Inventory API: REST API in Django with PostgreSQL, JWT auth, caching and pagination.",
+      "github_summary": "",
+      "strengths": [],
+      "concerns": [],
+      "rejection_reasons": [
+        "No AI/agentic project evidence"
+      ],
+      "github": {
+        "status": "disabled",
+        "username": "tara44dev",
+        "summary": "Not enriched (candidate ineligible)",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_44.txt",
+      "parse_status": "ok",
+      "warnings": []
+    },
+    {
+      "rank": null,
+      "candidate_name": "Yash Das",
+      "eligible": false,
+      "total_score": null,
+      "score_breakdown": null,
+      "matched_skills": [
+        "REST API",
+        "Node.js",
+        "Express",
+        "TypeScript",
+        "JavaScript",
+        "React",
+        "Next.js",
+        "Tailwind",
+        "Testing"
+      ],
+      "project_summary": "Analytics Dashboard: React + Next.js dashboard with charts, auth and API integration.",
+      "github_summary": "",
+      "strengths": [],
+      "concerns": [],
+      "rejection_reasons": [
+        "No evidence of Python stack",
+        "No AI/agentic project evidence"
+      ],
+      "github": {
+        "status": "disabled",
+        "username": "yash45dev",
+        "summary": "Not enriched (candidate ineligible)",
+        "recent_activity_score": 0.0,
+        "repos_score": 0.0,
+        "public_repos": null,
+        "days_since_last_activity": null,
+        "relevant_repos": [],
+        "error": null
+      },
+      "source_file": "resumes_sample/candidate_45.pdf",
+      "parse_status": "ok",
+      "warnings": []
+    }
+  ]
+}

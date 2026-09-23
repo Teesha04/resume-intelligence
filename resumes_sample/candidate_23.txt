@@ -1,0 +1,12 @@
+Sanjay Reddy
+sanjay.reddy@example.com
+github.com/sanjay23dev
+
+Skills: Python, Pandas, NumPy, SQL, PostgreSQL, Airflow, scikit-learn, Docker, GCP
+
+Experience
+Data Intern - Built Python data pipelines on GCP with BigQuery and Airflow.
+
+Projects
+Churn Predictor with LLM Explanations
+scikit-learn churn model plus an LLM layer (OpenAI API) generating explanations from feature importances, served via FastAPI with Postgres caching.

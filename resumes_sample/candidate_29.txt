@@ -1,0 +1,12 @@
+Farah Singh
+farah.singh@example.com
+github.com/farah29dev
+
+Skills: Python, LlamaIndex, FastAPI, Qdrant, Docker, AWS, asyncio
+
+Experience
+Data Engineer Intern - Python ETL pipelines with async processing and a message queue processing 1M records/day.
+
+Projects
+Enterprise RAG Search
+Built a retrieval pipeline using LlamaIndex with embeddings and vector search over internal wikis, plus an evaluation pipeline measuring answer relevance. FastAPI service deployed with Docker on AWS.

@@ -1,0 +1,9 @@
+Zara Rao
+zara.rao@example.com
+github.com/zara20dev
+
+Skills: Python, LangChain, Streamlit
+
+Projects
+RAG Tutorial Follow-along
+Followed a YouTube tutorial to build a basic RAG demo.

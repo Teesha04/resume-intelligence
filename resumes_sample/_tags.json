@@ -1,0 +1,230 @@
+{
+  "candidate_00.pdf": [
+    "agentic",
+    "python",
+    "cloud"
+  ],
+  "candidate_01.docx": [
+    "agentic",
+    "python",
+    "cloud"
+  ],
+  "candidate_02.txt": [
+    "no_ai"
+  ],
+  "candidate_03.pdf": [
+    "no_python",
+    "no_ai"
+  ],
+  "candidate_04.docx": [
+    "no_python",
+    "no_ai"
+  ],
+  "candidate_05.txt": [
+    "thin",
+    "eligible"
+  ],
+  "candidate_06.pdf": [
+    "tutorial",
+    "eligible"
+  ],
+  "candidate_07.docx": [
+    "general_ai",
+    "python"
+  ],
+  "candidate_08.txt": [
+    "agentic",
+    "python",
+    "cloud"
+  ],
+  "candidate_09.pdf": [
+    "python",
+    "cloud",
+    "general_ai"
+  ],
+  "candidate_10.docx": [
+    "agentic",
+    "python",
+    "cloud"
+  ],
+  "candidate_11.txt": [
+    "agentic",
+    "python"
+  ],
+  "candidate_12.pdf": [
+    "agentic",
+    "python"
+  ],
+  "candidate_13.docx": [
+    "agentic",
+    "python",
+    "no_github"
+  ],
+  "candidate_14.txt": [
+    "agentic",
+    "python",
+    "cloud"
+  ],
+  "candidate_15.pdf": [
+    "agentic",
+    "python",
+    "cloud"
+  ],
+  "candidate_16.docx": [
+    "no_ai"
+  ],
+  "candidate_17.txt": [
+    "no_python",
+    "no_ai"
+  ],
+  "candidate_18.pdf": [
+    "no_python",
+    "no_ai"
+  ],
+  "candidate_19.docx": [
+    "thin",
+    "eligible"
+  ],
+  "candidate_20.txt": [
+    "tutorial",
+    "eligible"
+  ],
+  "candidate_21.pdf": [
+    "general_ai",
+    "python"
+  ],
+  "candidate_22.docx": [
+    "agentic",
+    "python",
+    "cloud"
+  ],
+  "candidate_23.txt": [
+    "python",
+    "cloud",
+    "general_ai"
+  ],
+  "candidate_24.pdf": [
+    "agentic",
+    "python",
+    "cloud"
+  ],
+  "candidate_25.docx": [
+    "agentic",
+    "python"
+  ],
+  "candidate_26.txt": [
+    "agentic",
+    "python"
+  ],
+  "candidate_27.pdf": [
+    "agentic",
+    "python",
+    "no_github"
+  ],
+  "candidate_28.docx": [
+    "agentic",
+    "python",
+    "cloud"
+  ],
+  "candidate_29.txt": [
+    "agentic",
+    "python",
+    "cloud"
+  ],
+  "candidate_30.pdf": [
+    "no_ai"
+  ],
+  "candidate_31.docx": [
+    "no_python",
+    "no_ai"
+  ],
+  "candidate_32.txt": [
+    "no_python",
+    "no_ai"
+  ],
+  "candidate_33.pdf": [
+    "thin",
+    "eligible"
+  ],
+  "candidate_34.docx": [
+    "tutorial",
+    "eligible"
+  ],
+  "candidate_35.txt": [
+    "general_ai",
+    "python"
+  ],
+  "candidate_36.pdf": [
+    "agentic",
+    "python",
+    "cloud"
+  ],
+  "candidate_37.docx": [
+    "python",
+    "cloud",
+    "general_ai"
+  ],
+  "candidate_38.txt": [
+    "agentic",
+    "python",
+    "cloud"
+  ],
+  "candidate_39.pdf": [
+    "agentic",
+    "python"
+  ],
+  "candidate_40.docx": [
+    "agentic",
+    "python"
+  ],
+  "candidate_41.txt": [
+    "agentic",
+    "python",
+    "no_github"
+  ],
+  "candidate_42.pdf": [
+    "agentic",
+    "python",
+    "cloud"
+  ],
+  "candidate_43.docx": [
+    "agentic",
+    "python",
+    "cloud"
+  ],
+  "candidate_44.txt": [
+    "no_ai"
+  ],
+  "candidate_45.pdf": [
+    "no_python",
+    "no_ai"
+  ],
+  "candidate_46.docx": [
+    "no_python",
+    "no_ai"
+  ],
+  "candidate_47.txt": [
+    "thin",
+    "eligible"
+  ],
+  "candidate_48.pdf": [
+    "tutorial",
+    "eligible"
+  ],
+  "candidate_49.docx": [
+    "general_ai",
+    "python"
+  ],
+  "candidate_corrupt.pdf": [
+    "corrupt"
+  ],
+  "candidate_empty.txt": [
+    "empty"
+  ],
+  "candidate_00_copy.pdf": [
+    "duplicate"
+  ],
+  "candidate_photo.png": [
+    "unsupported"
+  ]
+}

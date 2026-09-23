@@ -1,0 +1,12 @@
+Aditya Khan
+aditya.khan@example.com
+github.com/aditya17dev
+
+Skills: JavaScript, React, Next.js, TypeScript, Tailwind, HTML, CSS, Node.js, Express
+
+Experience
+Frontend Intern - Built responsive React dashboards consuming REST APIs, wrote Jest tests.
+
+Projects
+Analytics Dashboard
+React + Next.js dashboard with charts, auth and API integration.

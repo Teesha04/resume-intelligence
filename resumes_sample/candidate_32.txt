@@ -1,0 +1,12 @@
+Meera Chopra
+meera.chopra@example.com
+github.com/meera32dev
+
+Skills: Java, Spring Boot, MySQL, Docker, REST API, Kafka
+
+Experience
+Software Intern - Built Spring Boot microservices with Kafka and MySQL.
+
+Projects
+Order Service
+Spring Boot microservice with Kafka events and MySQL persistence.

@@ -1,0 +1,9 @@
+Hana Malhotra
+hana.malhotra@example.com
+github.com/hana26dev
+
+Skills: Python, Flask, OpenAI API, RAG, React Native, PostgreSQL
+
+Projects
+Recipe Assistant
+Flask backend with a RAG pipeline over a recipe corpus using embeddings and vector search; React Native client.

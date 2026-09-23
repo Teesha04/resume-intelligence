@@ -1,0 +1,9 @@
+Aditya Mehta
+aditya.mehta@example.com
+github.com/aditya47dev
+
+Skills: Python, OpenAI API, LangChain
+
+Projects
+Chatbot
+A chatbot that calls the OpenAI API to answer user questions.

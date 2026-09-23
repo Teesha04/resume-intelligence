@@ -1,0 +1,9 @@
+Rahul Joshi
+rahul.joshi@example.com
+github.com/rahul11dev
+
+Skills: Python, LangGraph, FastAPI, Redis, Docker
+
+Projects
+Multi-Agent Research Assistant
+LangGraph multi-agent system with retrieval over arXiv using embeddings, planner and tool-calling agents, Redis session state, and an evaluation harness comparing summarisation quality.

@@ -1,0 +1,17 @@
+Tara Iyer
+tara.iyer@example.com
+github.com/tara14dev
+
+Summary
+Backend-leaning engineer focused on LLM systems and Python services.
+
+Skills: Python, FastAPI, PostgreSQL, Redis, Docker, GCP, LangGraph, LangChain, pgvector, pytest
+
+Experience
+Software Engineer Intern - Built async FastAPI services backed by PostgreSQL and Redis, added caching and unit tests, containerized with Docker and deployed to Cloud Run.
+
+Projects
+Agentic Support Triage
+Built a multi-agent workflow in LangGraph that retrieves over 50k support docs using pgvector embeddings, calls internal ticketing tools, and maintains conversation state. Added an evaluation harness with regression tests and guardrails. Deployed on GCP Cloud Run with Redis-backed queueing and observability.
+RAG Knowledge Assistant
+Document Q&A service with a FastAPI backend, chunking pipeline, pgvector vector search, tool calling for live data, and a small evaluation set for answer quality.

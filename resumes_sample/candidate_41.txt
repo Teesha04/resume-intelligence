@@ -1,0 +1,9 @@
+Rahul Kapoor
+rahul.kapoor@example.com
+
+
+Skills: Python, LlamaIndex, FastAPI, MongoDB, Docker
+
+Projects
+Multi-Agent Content Pipeline
+LlamaIndex agents with tool calling and orchestration to draft, review and publish content; FastAPI backend with MongoDB state.

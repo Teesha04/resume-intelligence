@@ -1,0 +1,12 @@
+Sara Menon
+sara.menon@example.com
+github.com/sara38dev
+
+Skills: Python, Docker, Kubernetes, Terraform, GCP, CI/CD, GitHub Actions, PostgreSQL
+
+Experience
+Platform Intern - Built Python automation, Terraform infra on GCP, CI/CD pipelines.
+
+Projects
+LLM Ops Platform
+Served an open-source LLM behind a FastAPI gateway with embeddings-based semantic caching, Prometheus monitoring and autoscaling on GKE.

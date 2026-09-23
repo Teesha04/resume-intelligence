@@ -1,0 +1,54 @@
+rank,candidate_name,eligible,total_score,ai_project_depth,python_backend,cloud_fullstack,github,engineering_depth,penalties,matched_skills,source_file
+1,Diego Sharma,True,73.69,33.7,24.3,10.69,0.0,5.0,0.0,Python; FastAPI; pytest; LangChain; LangGraph; RAG; Embeddings; Vector Search; pgvector; Tool Calling; Multi-Agent; AI Agents; LLM; Evaluation; PostgreSQL; Redis; GCP; Docker; Testing; Caching; Observability; Concurrency,resumes_sample/candidate_28.docx
+2,Tara Iyer,True,73.69,33.7,24.3,10.69,0.0,5.0,0.0,Python; FastAPI; pytest; LangChain; LangGraph; RAG; Embeddings; Vector Search; pgvector; Tool Calling; Multi-Agent; AI Agents; LLM; Evaluation; PostgreSQL; Redis; GCP; Docker; Testing; Caching; Observability; Concurrency,resumes_sample/candidate_14.txt
+3,Asha Rao,True,72.44,33.7,24.3,10.69,0.0,3.75,0.0,Python; FastAPI; pytest; LangChain; LangGraph; RAG; Vector Search; pgvector; Multi-Agent; AI Agents; LLM; Evaluation; PostgreSQL; Redis; GCP; Docker; Testing; Observability; Concurrency,resumes_sample/candidate_00.pdf
+4,Isha Gupta,True,72.44,33.7,24.3,10.69,0.0,3.75,0.0,Python; FastAPI; pytest; LangChain; LangGraph; RAG; Vector Search; pgvector; Multi-Agent; AI Agents; LLM; Evaluation; PostgreSQL; Redis; GCP; Docker; Testing; Observability; Concurrency,resumes_sample/candidate_42.pdf
+5,Farah Singh,True,57.99,26.75,17.49,11.25,0.0,2.5,0.0,Python; FastAPI; asyncio; LlamaIndex; RAG; Embeddings; Vector Search; Qdrant; Evaluation; AWS; Docker; Queues; Concurrency,resumes_sample/candidate_29.txt
+6,Nikhil Reddy,True,57.99,26.75,17.49,11.25,0.0,2.5,0.0,Python; FastAPI; asyncio; LlamaIndex; RAG; Embeddings; Vector Search; Qdrant; Evaluation; AWS; Docker; Queues; Concurrency,resumes_sample/candidate_43.docx
+7,Ravi Kapoor,True,57.99,26.75,17.49,11.25,0.0,2.5,0.0,Python; FastAPI; asyncio; LlamaIndex; RAG; Embeddings; Vector Search; Qdrant; Evaluation; AWS; Docker; Queues; Concurrency,resumes_sample/candidate_01.docx
+8,Yash Nair,True,54.62,26.75,17.49,7.88,0.0,2.5,0.0,Python; FastAPI; asyncio; LlamaIndex; RAG; Embeddings; Vector Search; Qdrant; Evaluation; AWS; Docker; Queues; Concurrency,resumes_sample/candidate_15.pdf
+9,Pooja Gupta,True,53.72,24.6,22.07,7.05,0.0,0.0,0.0,Python; FastAPI; LangChain; Embeddings; Vector Search; Tool Calling; AI Agents; PostgreSQL; JavaScript; Docker; React; Next.js; Supabase,resumes_sample/candidate_22.docx
+10,Sara Sharma,True,53.72,24.6,22.07,7.05,0.0,0.0,0.0,Python; FastAPI; LangChain; Embeddings; Vector Search; Tool Calling; AI Agents; PostgreSQL; JavaScript; Docker; React; Next.js; Supabase,resumes_sample/candidate_08.txt
+11,Ananya Bose,True,51.6,16.1,18.0,15.0,0.0,2.5,0.0,Python; FastAPI; Embeddings; LLM; PostgreSQL; GCP; Docker; Kubernetes; Terraform; CI/CD; Caching; Observability,resumes_sample/candidate_10.docx
+12,Lily Verma,True,51.6,16.1,18.0,15.0,0.0,2.5,0.0,Python; FastAPI; Embeddings; LLM; PostgreSQL; GCP; Docker; Kubernetes; Terraform; CI/CD; Caching; Observability,resumes_sample/candidate_24.pdf
+13,Sara Menon,True,51.6,16.1,18.0,15.0,0.0,2.5,0.0,Python; FastAPI; Embeddings; LLM; PostgreSQL; GCP; Docker; Kubernetes; Terraform; CI/CD; Caching; Observability,resumes_sample/candidate_38.txt
+14,Priya Patel,True,50.17,21.05,22.07,7.05,0.0,0.0,0.0,Python; FastAPI; LangChain; Embeddings; Vector Search; AI Agents; PostgreSQL; JavaScript; Docker; React; Next.js; Supabase,resumes_sample/candidate_36.pdf
+15,Dev Khan,True,47.11,9.15,29.4,7.31,0.0,1.25,0.0,Python; FastAPI; Pandas; NumPy; scikit-learn; OpenAI API; LLM; PostgreSQL; SQL; GCP; Docker; Caching,resumes_sample/candidate_37.docx
+16,Sanjay Reddy,True,47.11,9.15,29.4,7.31,0.0,1.25,0.0,Python; FastAPI; Pandas; NumPy; scikit-learn; OpenAI API; LLM; PostgreSQL; SQL; GCP; Docker; Caching,resumes_sample/candidate_23.txt
+17,Vikram Singh,True,47.11,9.15,29.4,7.31,0.0,1.25,0.0,Python; FastAPI; Pandas; NumPy; scikit-learn; OpenAI API; LLM; PostgreSQL; SQL; GCP; Docker; Caching,resumes_sample/candidate_09.pdf
+18,Omar Das,True,45.61,31.7,11.66,2.25,0.0,0.0,0.0,Python; FastAPI; LangGraph; Embeddings; Tool Calling; Multi-Agent; AI Agents; Redis; Docker,resumes_sample/candidate_25.docx
+19,Rahul Joshi,True,45.61,31.7,11.66,2.25,0.0,0.0,0.0,Python; FastAPI; LangGraph; Embeddings; Tool Calling; Multi-Agent; AI Agents; Redis; Docker,resumes_sample/candidate_11.txt
+20,Nikhil Sinha,True,43.57,26.75,14.57,2.25,0.0,0.0,0.0,Python; FastAPI; LlamaIndex; Tool Calling; Multi-Agent; AI Agents; MongoDB; Docker,resumes_sample/candidate_13.docx
+21,Rahul Kapoor,True,43.57,26.75,14.57,2.25,0.0,0.0,0.0,Python; FastAPI; LlamaIndex; Tool Calling; Multi-Agent; AI Agents; MongoDB; Docker,resumes_sample/candidate_41.txt
+22,Vikram Pillai,True,42.06,28.15,11.66,2.25,0.0,0.0,0.0,Python; FastAPI; LangGraph; Embeddings; Multi-Agent; AI Agents; Redis; Docker,resumes_sample/candidate_39.pdf
+23,Chen Mehta,True,38.94,26.75,9.94,2.25,0.0,0.0,0.0,Python; FastAPI; LlamaIndex; Tool Calling; Multi-Agent; AI Agents; MongoDB; Docker,resumes_sample/candidate_27.pdf
+24,Ananya Rao,True,33.04,19.65,11.14,2.25,0.0,0.0,0.0,Python; Flask; OpenAI API; RAG; Embeddings; Vector Search; PostgreSQL; React,resumes_sample/candidate_40.docx
+25,Hana Malhotra,True,33.04,19.65,11.14,2.25,0.0,0.0,0.0,Python; Flask; OpenAI API; RAG; Embeddings; Vector Search; PostgreSQL; React,resumes_sample/candidate_26.txt
+26,Isha Chopra,True,31.69,19.65,11.14,0.9,0.0,0.0,0.0,Python; Flask; OpenAI API; RAG; Embeddings; Vector Search; PostgreSQL; React,resumes_sample/candidate_12.pdf
+27,Kavya Sharma,True,14.46,12.55,4.46,0.45,0.0,0.0,-3.0,Python; Streamlit; LangChain; RAG,resumes_sample/candidate_48.pdf
+28,Neha Iyer,True,14.46,12.55,4.46,0.45,0.0,0.0,-3.0,Python; Streamlit; LangChain; RAG,resumes_sample/candidate_34.docx
+29,Priya Malhotra,True,14.46,12.55,4.46,0.45,0.0,0.0,-3.0,Python; Streamlit; LangChain; RAG,resumes_sample/candidate_06.pdf
+30,Zara Rao,True,14.46,12.55,4.46,0.45,0.0,0.0,-3.0,Python; Streamlit; LangChain; RAG,resumes_sample/candidate_20.txt
+31,Dev Mehta,True,13.69,9.15,7.54,0.0,0.0,0.0,-3.0,Python; Pandas; NumPy; scikit-learn; PyTorch; Computer Vision,resumes_sample/candidate_07.docx
+32,Karan Nair,True,13.69,9.15,7.54,0.0,0.0,0.0,-3.0,Python; Pandas; NumPy; scikit-learn; PyTorch; Computer Vision,resumes_sample/candidate_35.txt
+33,Manish Kapoor,True,13.69,9.15,7.54,0.0,0.0,0.0,-3.0,Python; Pandas; NumPy; scikit-learn; PyTorch; Computer Vision,resumes_sample/candidate_21.pdf
+34,Rohan Singh,True,13.69,9.15,7.54,0.0,0.0,0.0,-3.0,Python; Pandas; NumPy; scikit-learn; PyTorch; Computer Vision,resumes_sample/candidate_49.docx
+35,Aditya Mehta,True,0.0,9.15,3.43,0.0,0.0,0.0,-15.0,Python; LangChain; OpenAI API,resumes_sample/candidate_47.txt
+36,Arjun Sinha,True,0.0,9.15,3.43,0.0,0.0,0.0,-15.0,Python; LangChain; OpenAI API,resumes_sample/candidate_33.pdf
+37,Karan Das,True,0.0,9.15,3.43,0.0,0.0,0.0,-15.0,Python; LangChain; OpenAI API,resumes_sample/candidate_05.txt
+38,Rohan Pillai,True,0.0,9.15,3.43,0.0,0.0,0.0,-15.0,Python; LangChain; OpenAI API,resumes_sample/candidate_19.docx
+,Aditya Khan,False,,,,,,,,REST API; Node.js; Express; TypeScript; JavaScript; React; Next.js; Tailwind; Testing,resumes_sample/candidate_17.txt
+,Arjun Reddy,False,,,,,,,,REST API; Node.js; Express; TypeScript; JavaScript; React; Next.js; Tailwind; Testing,resumes_sample/candidate_03.pdf
+,Asha Bose,False,,,,,,,,Python; Django; Flask; Celery; pytest; PostgreSQL; MySQL; Redis; SQL; REST API; Docker; Testing; Caching; Queues; Security,resumes_sample/candidate_30.pdf
+,candidate_00_copy.pdf,False,,,,,,,,,resumes_sample/candidate_00_copy.pdf
+,candidate_corrupt.pdf,False,,,,,,,,,resumes_sample/candidate_corrupt.pdf
+,candidate_empty.txt,False,,,,,,,,,resumes_sample/candidate_empty.txt
+,Diya Malhotra,False,,,,,,,,MySQL; REST API; Kafka; Java; Spring Boot; Docker; Queues,resumes_sample/candidate_46.docx
+,Diya Patel,False,,,,,,,,Python; Django; Flask; Celery; pytest; PostgreSQL; MySQL; Redis; SQL; REST API; Docker; Testing; Caching; Queues; Security,resumes_sample/candidate_16.docx
+,Kavya Menon,False,,,,,,,,MySQL; REST API; Kafka; Java; Spring Boot; Docker; Queues,resumes_sample/candidate_18.pdf
+,Meera Chopra,False,,,,,,,,MySQL; REST API; Kafka; Java; Spring Boot; Docker; Queues,resumes_sample/candidate_32.txt
+,Meera Gupta,False,,,,,,,,Python; Django; Flask; Celery; pytest; PostgreSQL; MySQL; Redis; SQL; REST API; Docker; Testing; Caching; Queues; Security,resumes_sample/candidate_02.txt
+,Neha Verma,False,,,,,,,,MySQL; REST API; Kafka; Java; Spring Boot; Docker; Queues,resumes_sample/candidate_04.docx
+,Ravi Joshi,False,,,,,,,,REST API; Node.js; Express; TypeScript; JavaScript; React; Next.js; Tailwind; Testing,resumes_sample/candidate_31.docx
+,Tara Verma,False,,,,,,,,Python; Django; Flask; Celery; pytest; PostgreSQL; MySQL; Redis; SQL; REST API; Docker; Testing; Caching; Queues; Security,resumes_sample/candidate_44.txt
+,Yash Das,False,,,,,,,,REST API; Node.js; Express; TypeScript; JavaScript; React; Next.js; Tailwind; Testing,resumes_sample/candidate_45.pdf
