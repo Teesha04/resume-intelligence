@@ -17,6 +17,3 @@ venv/
 
 # OS
 .DS_Store
-
-# Provided candidate resumes (PII — never commit)
-/resumes/

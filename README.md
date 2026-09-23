@@ -717,9 +717,9 @@ python main.py --input ./resumes --output ./output/results.json --no-llm
 python main.py --input ./resumes --output ./output/results.json --csv ./output/results.csv
 ```
 
-- `resumes/` holds the provided 50-PDF set and is **git-ignored** so candidate
-  PII is never committed. `output/results.json` / `output/results.csv` are
-  generated from it.
+- `resumes/` holds the provided 50-PDF set (committed to this repository at the
+  owner's request). `output/results.json` / `output/results.csv` /
+  `output/results.pdf` are generated from it.
 - `resumes_sample/` is a **synthetic** set (50 candidates + edge cases: corrupt
   PDF, empty file, duplicate, unsupported type) produced by
   `tests/fixtures/generate_resumes.py`, useful for demos and regression checks:
