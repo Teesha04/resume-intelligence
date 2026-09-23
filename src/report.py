@@ -13,6 +13,17 @@ from xml.sax.saxutils import escape as _esc
 from .schemas import ScreeningReport
 
 
+def _clip(text: object, n: int = 140) -> str:
+    """Whitespace-normalise, then truncate at a word boundary with an ellipsis."""
+    t = " ".join(str(text or "").split())
+    if len(t) <= n:
+        return _esc(t)
+    cut = t[:n]
+    if " " in cut:
+        cut = cut[: cut.rfind(" ")]
+    return _esc(cut) + "…"
+
+
 def write_json(report: ScreeningReport, output_path: Path) -> Path:
     output_path = Path(output_path)
     output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -156,9 +167,8 @@ def write_pdf(report: ScreeningReport, output_path: Path, top: int = 25) -> Path
     body = ParagraphStyle("body", parent=base["Normal"], fontSize=9, leading=12, spaceAfter=3)
     cell = ParagraphStyle("cell", parent=base["Normal"], fontSize=7.5, leading=9.5)
 
-    def T(rows, widths, header=NAVY, center_from=99):
-        t = Table(rows, colWidths=widths, repeatRows=1)
-        t.setStyle(TableStyle([
+    def T(rows, widths, header=NAVY, center_from=99, extra=None):
+        style = [
             ("GRID", (0, 0), (-1, -1), 0.25, colors.lightgrey),
             ("BACKGROUND", (0, 0), (-1, 0), header),
             ("TEXTCOLOR", (0, 0), (-1, 0), colors.white),
@@ -168,7 +178,11 @@ def write_pdf(report: ScreeningReport, output_path: Path, top: int = 25) -> Path
             ("TOPPADDING", (0, 0), (-1, -1), 2.5),
             ("BOTTOMPADDING", (0, 0), (-1, -1), 2.5),
             ("ROWBACKGROUNDS", (0, 1), (-1, -1), [colors.white, colors.HexColor("#f4f7fa")]),
-        ]))
+        ]
+        if extra:
+            style.extend(extra)
+        t = Table(rows, colWidths=widths, repeatRows=1)
+        t.setStyle(TableStyle(style))
         return t
 
     s = report.summary
@@ -234,28 +248,32 @@ def write_pdf(report: ScreeningReport, output_path: Path, top: int = 25) -> Path
         b, db = c.score_breakdown, c.deterministic_breakdown
         det = c.deterministic_total_score
         delta = (c.total_score - det) if det is not None else None
-        block = [Paragraph(
-            f"<b>#{c.rank} {_esc(c.candidate_name)}</b> — final {c.total_score:.1f}"
-            + (f" &nbsp;(deterministic {det:.1f}, LLM {delta:+.1f})" if det is not None else ""), body)]
+        header_line = f"<b>#{c.rank} {_esc(c.candidate_name)}</b> — final {c.total_score:.1f}"
+        if delta is not None:
+            header_line += (f" &nbsp;·&nbsp; deterministic {det:.1f} "
+                            f"&nbsp;·&nbsp; LLM {delta:+.1f}")
+        block = [Paragraph(header_line, body)]
         if db:
-            block.append(T([
-                ["Category", "Deterministic", "With LLM", "Notes"],
-                ["AI project depth (40)", f"{db.ai_project_depth:.1f}", f"{b.ai_project_depth:.1f}",
-                 Paragraph(_esc((b.rationale.get("ai_project_depth") or ["—"])[0][:110]), cell)],
-                ["Python & backend (30)", f"{db.python_backend:.1f}", f"{b.python_backend:.1f}",
-                 "deterministic (unchanged)"],
-                ["Cloud / full-stack (15)", f"{db.cloud_fullstack:.1f}", f"{b.cloud_fullstack:.1f}",
-                 "deterministic (unchanged)"],
-                ["GitHub (10)", f"{db.github:.1f}", f"{b.github:.1f}",
-                 _esc(c.github_summary[:70] or "—")],
-                ["Engineering depth (5)", f"{db.engineering_depth:.1f}", f"{b.engineering_depth:.1f}",
-                 "deterministic (unchanged)"],
-                ["Penalties", f"{db.penalties:.1f}", f"{b.penalties:.1f}", "thin-wrapper / tutorial"],
-                ["TOTAL", f"{db.total():.1f}", f"{b.total():.1f}",
-                 f"LLM contribution {delta:+.1f}" if delta is not None else "—"],
-            ], [36 * mm, 24 * mm, 22 * mm, 92 * mm], center_from=1))
-        block.append(Paragraph(f"<i>Project:</i> {_esc(c.project_summary[:230])}", small))
-        story.append(KeepTogether(block + [Spacer(1, 6)]))
+            def row(label, d, l):
+                return [label, f"{d:.1f}", f"{l:.1f}", f"{l - d:+.1f}"]
+
+            rows = [["Category", "Deterministic", "With LLM", "Change"],
+                    row("AI project depth (40)", db.ai_project_depth, b.ai_project_depth),
+                    row("Python & backend (30)", db.python_backend, b.python_backend),
+                    row("Cloud / full-stack (15)", db.cloud_fullstack, b.cloud_fullstack),
+                    row("GitHub (10)", db.github, b.github),
+                    row("Engineering depth (5)", db.engineering_depth, b.engineering_depth),
+                    row("Penalties", db.penalties, b.penalties),
+                    ["TOTAL", f"{db.total():.1f}", f"{b.total():.1f}", f"{(b.total() - db.total()):+.1f}"]]
+            block.append(T(rows, [58 * mm, 30 * mm, 30 * mm, 26 * mm], center_from=1, extra=[
+                ("BACKGROUND", (0, 1), (-1, 1), colors.HexColor("#fff3cd")),
+                ("BACKGROUND", (0, len(rows) - 1), (-1, len(rows) - 1), colors.HexColor("#e8eef4")),
+                ("FONTNAME", (0, len(rows) - 1), (-1, len(rows) - 1), "Helvetica-Bold"),
+            ]))
+            ai_note = (b.rationale.get("ai_project_depth") or ["—"])[0]
+            block.append(Paragraph(f"<i>AI depth:</i> {_clip(ai_note, 170)}", small))
+        block.append(Paragraph(f"<i>Project:</i> {_clip(c.project_summary, 210)}", small))
+        story.append(KeepTogether(block + [Spacer(1, 7)]))
 
     # ---- Rejected with reasons -------------------------------------------
     if rejected:
