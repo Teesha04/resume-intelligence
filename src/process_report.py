@@ -50,6 +50,7 @@ def write_process_pdf(report: ScreeningReport, output_path: Path, top: int = 25)
     st_p = ParagraphStyle("p", parent=base["Normal"], fontSize=9.5, leading=13, spaceAfter=5)
     st_small = ParagraphStyle("sm", parent=base["Normal"], fontSize=8, textColor=GREY, leading=10)
     st_cell = ParagraphStyle("c", parent=base["Normal"], fontSize=8, leading=10)
+    st_cell_c = ParagraphStyle("cc", parent=st_cell, alignment=1)
     st_bullet = ParagraphStyle("b", parent=st_p, leftIndent=10, bulletIndent=2, spaceAfter=2)
 
     def P(text: str) -> Paragraph:
@@ -59,7 +60,16 @@ def write_process_pdf(report: ScreeningReport, output_path: Path, top: int = 25)
         return [Paragraph(f"• {t}", st_bullet) for t in items]
 
     def table(rows, widths, header_color=NAVY, align_center_from=2):
-        t = Table(rows, colWidths=widths, repeatRows=1)
+        # Wrap EVERY body cell in a Paragraph so text wraps instead of
+        # overflowing/overlapping the neighbouring column.
+        def wrap(v, center: bool):
+            if isinstance(v, str):
+                return Paragraph(esc(v), st_cell_c if center else st_cell)
+            return v
+
+        body = [rows[0]] + [[wrap(c, j >= align_center_from) for j, c in enumerate(r)]
+                            for r in rows[1:]]
+        t = Table(body, colWidths=widths, repeatRows=1)
         t.setStyle(TableStyle([
             ("GRID", (0, 0), (-1, -1), 0.25, colors.lightgrey),
             ("BACKGROUND", (0, 0), (-1, 0), header_color),
