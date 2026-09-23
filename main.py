@@ -26,6 +26,7 @@ from src.cache import DiskCache, NullCache  # noqa: E402
 from src.config import get_settings  # noqa: E402
 from src.extract import NullLLMClient  # noqa: E402
 from src.pipeline import run_screening  # noqa: E402
+from src.process_report import write_process_pdf  # noqa: E402
 from src.report import render_console, write_csv, write_json, write_pdf  # noqa: E402
 
 
@@ -40,6 +41,8 @@ def build_parser() -> argparse.ArgumentParser:
                         help="Path to the JSON results file.")
     parser.add_argument("--csv", type=Path, default=None, help="Optional CSV output path.")
     parser.add_argument("--pdf", type=Path, default=None, help="Optional PDF report path.")
+    parser.add_argument("--process-pdf", type=Path, default=None,
+                        help="Optional process/design PDF path.")
     parser.add_argument("--limit", type=int, default=None, help="Process only the first N resumes.")
     parser.add_argument("--top", type=int, default=10, help="Rows in the terminal summary.")
     parser.add_argument("--no-llm", action="store_true", help="Force deterministic-only mode.")
@@ -89,6 +92,11 @@ def main(argv: list[str] | None = None) -> int:
         except ImportError:
             print("warning: reportlab not installed; skipping PDF "
                   "(pip install reportlab)", file=sys.stderr)
+    if args.process_pdf:
+        try:
+            print(f"Wrote {write_process_pdf(report, args.process_pdf, top=args.top)}")
+        except ImportError:
+            print("warning: reportlab not installed; skipping process PDF", file=sys.stderr)
 
     return 0
 
