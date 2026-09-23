@@ -9,7 +9,7 @@
     "llm_used": true,
     "github_enriched": 6,
     "github_failures": 10,
-    "duration_seconds": 419.37,
+    "duration_seconds": 10.35,
     "llm_skipped_by_gate": 9,
     "llm_scored": 41,
     "llm_rate_limit_waits": 0,
@@ -56,6 +56,38 @@
           ]
         }
       },
+      "deterministic_total_score": 74.2,
+      "deterministic_breakdown": {
+        "ai_project_depth": 14.7,
+        "python_backend": 30.0,
+        "cloud_fullstack": 15.0,
+        "github": 9.5,
+        "engineering_depth": 5.0,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "CopyGuard – Serverless GenAI Code Detection Platform: depth 3.0/10",
+            "ThreatMatrix – MLOps Pipeline for Network Intrusion Detection: depth 4.0/10",
+            "best-depth 11.2 + breadth 2.0 (1 solid project(s)) + signals 1.5"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (project), asyncio (experience), FastAPI (project), Flask (skills (list-only)), Pandas (skills (list-only)), NumPy (skills (list-only)), scikit-learn (skills (list-only)), SQL (context), REST API (experience), PostgreSQL (experience), MongoDB (project)"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: GCP (context), AWS (project), Docker (project), Terraform (project), CI/CD (project), Serverless (project)"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Architecture, Concurrency, Failure Handling, Observability, Performance, Testing"
+          ],
+          "github": [
+            "GitHub enrichment: 9.5/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "llm_ai_project_depth": 40.0,
       "matched_skills": [
         "Python",
         "FastAPI",
@@ -128,7 +160,7 @@
         "error": null,
         "flagged": false
       },
-      "source_file": "resumes/candidate_13.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_13.pdf",
       "parse_status": "ok",
       "llm_applied": true,
       "warnings": []
@@ -169,6 +201,39 @@
           ]
         }
       },
+      "deterministic_total_score": 84.7,
+      "deterministic_breakdown": {
+        "ai_project_depth": 35.7,
+        "python_backend": 30.0,
+        "cloud_fullstack": 6.0,
+        "github": 8.0,
+        "engineering_depth": 5.0,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "AI Voice Appointment Assistant — Healthcare Voice AI Agent: depth 4.5/10",
+            "Live Demo: depth 7.5/10",
+            "AI-Powered HPC Monitoring Assistant — CHAMP Supercomputer: depth 9.0/10",
+            "best-depth 25.2 + breadth 6.0 (3 solid project(s)) + signals 4.5"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (project), FastAPI (project), Pydantic (skills (list-only)), asyncio (skills (list-only)), uvicorn (skills (list-only)), Flask (experience), SQLAlchemy (project), REST API (project), SQL (project), PostgreSQL (project)"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: React (project), Vercel (project), Render (project)"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Architecture, Concurrency, Observability, Performance"
+          ],
+          "github": [
+            "GitHub enrichment: 8.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "llm_ai_project_depth": 39.25,
       "matched_skills": [
         "Python",
         "FastAPI",
@@ -228,7 +293,7 @@
         "error": null,
         "flagged": false
       },
-      "source_file": "resumes/candidate_22.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_22.pdf",
       "parse_status": "ok",
       "llm_applied": true,
       "warnings": []
@@ -268,6 +333,36 @@
           ]
         }
       },
+      "deterministic_total_score": 60.0,
+      "deterministic_breakdown": {
+        "ai_project_depth": 10.0,
+        "python_backend": 30.0,
+        "cloud_fullstack": 15.0,
+        "github": 0.0,
+        "engineering_depth": 5.0,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "AI framework(s) named but no AI project described: AI Agents, Embeddings, LLM, LangChain, LangGraph, LangSmith, MCP, OpenAI API, Pinecone, RAG, Vector Search"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (experience), FastAPI (experience), Django (experience), Pydantic (skills (list-only)), PostgreSQL (context), MongoDB (experience), Redis (experience), REST API (experience), SQL (experience)"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: Azure (experience), CI/CD (experience), React (experience), AWS (skills (list-only)), Docker (skills (list-only)), Kubernetes (skills (list-only))"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Architecture, Caching, Concurrency, Failure Handling, Observability, Performance, Testing"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "llm_ai_project_depth": 38.0,
       "matched_skills": [
         "Python",
         "FastAPI",
@@ -327,7 +422,7 @@
         "error": null,
         "flagged": false
       },
-      "source_file": "resumes/candidate_30.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_30.pdf",
       "parse_status": "ok",
       "llm_applied": true,
       "warnings": []
@@ -369,6 +464,37 @@
           ]
         }
       },
+      "deterministic_total_score": 74.6,
+      "deterministic_breakdown": {
+        "ai_project_depth": 24.6,
+        "python_backend": 30.0,
+        "cloud_fullstack": 15.0,
+        "github": 0.0,
+        "engineering_depth": 5.0,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "systems, LLM applications, RAG pipelines, real-time stream-: depth 7.0/10",
+            "best-depth 19.6 + breadth 2.0 (1 solid project(s)) + signals 3.0"
+          ],
+          "python_backend": [
+            "Python/backend evidence: pytest (project), FastAPI (project), Python (project), NumPy (skills (list-only)), Pandas (skills (list-only)), uvicorn (skills (list-only)), REST API (project), MongoDB (project), SQL (skills (list-only)), WebSockets (skills (list-only)), PostgreSQL (skills (list-only)), Redis (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: Docker (project), CI/CD (project), Nginx (project), React (project), Next.js (project), AWS (skills (list-only)), Kubernetes (skills (list-only)), Tailwind (skills (list-only))"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Architecture, Concurrency, Observability, Performance, Testing"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "llm_ai_project_depth": 36.45,
       "matched_skills": [
         "Python",
         "FastAPI",
@@ -434,7 +560,7 @@
         "error": null,
         "flagged": false
       },
-      "source_file": "resumes/candidate_41.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_41.pdf",
       "parse_status": "ok",
       "llm_applied": true,
       "warnings": []
@@ -475,6 +601,36 @@
           ]
         }
       },
+      "deterministic_total_score": 59.87,
+      "deterministic_breakdown": {
+        "ai_project_depth": 10.0,
+        "python_backend": 29.87,
+        "cloud_fullstack": 15.0,
+        "github": 0.0,
+        "engineering_depth": 5.0,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "AI framework(s) named but no AI project described: AI Agents, Embeddings, Evaluation, Gemini, Hugging Face, LLM, LangChain, LangGraph, LangSmith, Multi-Agent, OpenAI API, Pinecone, Prompt Engineering, RAG, Tool Calling, Vector Search, pgvector"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (experience), FastAPI (experience), Pydantic (context), SQL (experience), PostgreSQL (experience), MySQL (context), REST API (context)"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: AWS (experience), Serverless (experience), Docker (experience), GCP (context)"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Architecture, Failure Handling, Observability, Performance"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "llm_ai_project_depth": 35.7,
       "matched_skills": [
         "Python",
         "FastAPI",
@@ -532,7 +688,7 @@
         "error": null,
         "flagged": false
       },
-      "source_file": "resumes/candidate_43.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_43.pdf",
       "parse_status": "ok",
       "llm_applied": true,
       "warnings": []
@@ -572,6 +728,38 @@
           ]
         }
       },
+      "deterministic_total_score": 76.46,
+      "deterministic_breakdown": {
+        "ai_project_depth": 21.65,
+        "python_backend": 26.57,
+        "cloud_fullstack": 13.24,
+        "github": 10.0,
+        "engineering_depth": 5.0,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "Construct IDE (Electron, LangGraph, OpenAI, Prisma, PostgreSQL, Turborepo) Mar 2026 - Present: depth 5.5/10",
+            "Decipath AI (Next.js, TypeScript, ShadCN UI, OpenAI API, React Flow) Jan 2025 - Mar 2025: depth 3.5/10",
+            "best-depth 15.4 + breadth 4.0 (2 solid project(s)) + signals 2.2"
+          ],
+          "python_backend": [
+            "Python/backend evidence: FastAPI (experience), Python (project), Redis (experience), PostgreSQL (project)"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: Next.js (project), CI/CD (experience), Azure (experience), React (project), Vercel (experience)"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Caching, Failure Handling, Observability, Performance, Testing"
+          ],
+          "github": [
+            "GitHub enrichment: 10.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "llm_ai_project_depth": 30.15,
       "matched_skills": [
         "Python",
         "FastAPI",
@@ -622,7 +810,7 @@
         "error": null,
         "flagged": false
       },
-      "source_file": "resumes/candidate_10.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_10.pdf",
       "parse_status": "ok",
       "llm_applied": true,
       "warnings": []
@@ -662,6 +850,36 @@
           ]
         }
       },
+      "deterministic_total_score": 62.8,
+      "deterministic_breakdown": {
+        "ai_project_depth": 8.0,
+        "python_backend": 30.0,
+        "cloud_fullstack": 15.0,
+        "github": 4.8,
+        "engineering_depth": 5.0,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "AI framework(s) named but no AI project described: AI Agents, LangChain, LangGraph, RAG"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (context), FastAPI (experience), Django (project), Flask (experience), pytest (experience), Kafka (experience), SQL (experience), REST API (experience), MongoDB (experience), PostgreSQL (project), MySQL (skills (list-only)), Redis (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: AWS (experience), Docker (project), Nginx (project), React (project), CI/CD (project)"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Concurrency, Performance, Queues, Testing"
+          ],
+          "github": [
+            "GitHub enrichment: 4.8/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "llm_ai_project_depth": 30.15,
       "matched_skills": [
         "Python",
         "FastAPI",
@@ -713,7 +931,7 @@
         "error": null,
         "flagged": false
       },
-      "source_file": "resumes/candidate_17.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_17.pdf",
       "parse_status": "ok",
       "llm_applied": true,
       "warnings": []
@@ -752,6 +970,37 @@
           ]
         }
       },
+      "deterministic_total_score": 77.56,
+      "deterministic_breakdown": {
+        "ai_project_depth": 23.2,
+        "python_backend": 29.36,
+        "cloud_fullstack": 15.0,
+        "github": 5.0,
+        "engineering_depth": 5.0,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "AI Research Copilot (LangGraph) GitHub: depth 6.5/10",
+            "best-depth 18.2 + breadth 2.0 (1 solid project(s)) + signals 3.0"
+          ],
+          "python_backend": [
+            "Python/backend evidence: FastAPI (project), Python (skills (list-only)), PostgreSQL (experience), Redis (experience), WebSockets (project), REST API (experience), MongoDB (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: React (project), Next.js (project), AWS (experience), Docker (experience), CI/CD (experience)"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Architecture, Concurrency, Observability, Performance"
+          ],
+          "github": [
+            "GitHub unavailable (rate_limited); tagged — neutral placeholder 5.0/10 applied"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "llm_ai_project_depth": 28.9,
       "matched_skills": [
         "Python",
         "FastAPI",
@@ -802,7 +1051,7 @@
         "error": null,
         "flagged": true
       },
-      "source_file": "resumes/candidate_44.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_44.pdf",
       "parse_status": "ok",
       "llm_applied": true,
       "warnings": []
@@ -842,6 +1091,38 @@
           ]
         }
       },
+      "deterministic_total_score": 83.7,
+      "deterministic_breakdown": {
+        "ai_project_depth": 33.7,
+        "python_backend": 30.0,
+        "cloud_fullstack": 15.0,
+        "github": 0.0,
+        "engineering_depth": 5.0,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "Adaptive Agentic RAG - Multi-Agent Research System: depth 9.0/10",
+            "AI-SaaS-Kit - Scalable Multimodal AI Boilerplate: depth 5.0/10",
+            "best-depth 25.2 + breadth 4.0 (2 solid project(s)) + signals 4.5"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (project), FastAPI (project), scikit-learn (skills (list-only)), Celery (project), Pydantic (project), REST API (experience), PostgreSQL (project), Redis (project), SQL (experience), gRPC (project), Kafka (project), WebSockets (project)"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: React (project), Next.js (project), AWS (project), Docker (project), Kubernetes (project), CI/CD (project)"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Architecture, Caching, Failure Handling, Observability, Performance, Queues, Security, Testing"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "llm_ai_project_depth": 35.2,
       "matched_skills": [
         "Python",
         "FastAPI",
@@ -909,7 +1190,7 @@
         "error": null,
         "flagged": false
       },
-      "source_file": "resumes/candidate_35.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_35.pdf",
       "parse_status": "ok",
       "llm_applied": true,
       "warnings": []
@@ -949,6 +1230,38 @@
           ]
         }
       },
+      "deterministic_total_score": 65.15,
+      "deterministic_breakdown": {
+        "ai_project_depth": 28.15,
+        "python_backend": 30.0,
+        "cloud_fullstack": 15.0,
+        "github": 0.0,
+        "engineering_depth": 5.0,
+        "penalties": -13.0,
+        "rationale": {
+          "ai_project_depth": [
+            "• Privacy Risk Intelligence Platform [GitHub] 2026: depth 8.0/10",
+            "Publication: depth 2.0/10",
+            "best-depth 22.4 + breadth 2.0 (1 solid project(s)) + signals 3.8"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (project), FastAPI (project), scikit-learn (project), pytest (experience), REST API (project), SQL (skills (list-only)), GraphQL (skills (list-only)), PostgreSQL (project), MongoDB (project)"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: GCP (experience), Docker (experience), React (project), CI/CD (skills (list-only)), Tailwind (project)"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Architecture, Failure Handling, Observability, Performance, Security, Testing"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "Thin LLM/API wrapper, no meaningful workflow: Publication (-13.0)"
+          ]
+        }
+      },
+      "llm_ai_project_depth": 31.65,
       "matched_skills": [
         "Python",
         "FastAPI",
@@ -1002,7 +1315,7 @@
         "error": null,
         "flagged": false
       },
-      "source_file": "resumes/candidate_28.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_28.pdf",
       "parse_status": "ok",
       "llm_applied": true,
       "warnings": []
@@ -1043,6 +1356,37 @@
           ]
         }
       },
+      "deterministic_total_score": 73.25,
+      "deterministic_breakdown": {
+        "ai_project_depth": 18.25,
+        "python_backend": 30.0,
+        "cloud_fullstack": 15.0,
+        "github": 5.0,
+        "engineering_depth": 5.0,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "• IRLYSM – AI-Powered Real-Time Social Networking App: depth 5.0/10",
+            "best-depth 14.0 + breadth 2.0 (1 solid project(s)) + signals 2.2"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (project), Flask (project), SQLAlchemy (project), PostgreSQL (project), SQL (project), REST API (project), MongoDB (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: React (project), Supabase (project), Next.js (skills (list-only)), Tailwind (project), Serverless (project), Firebase (skills (list-only)), GCP (project), Docker (skills (list-only)), Vercel (skills (list-only)), CI/CD (skills (list-only))"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Architecture, Concurrency, Performance, Security, Testing"
+          ],
+          "github": [
+            "GitHub unavailable (rate_limited); tagged — neutral placeholder 5.0/10 applied"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "llm_ai_project_depth": 26.55,
       "matched_skills": [
         "Python",
         "Flask",
@@ -1104,7 +1448,7 @@
         "error": null,
         "flagged": true
       },
-      "source_file": "resumes/candidate_26.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_26.pdf",
       "parse_status": "ok",
       "llm_applied": true,
       "warnings": []
@@ -1146,6 +1490,37 @@
           ]
         }
       },
+      "deterministic_total_score": 61.45,
+      "deterministic_breakdown": {
+        "ai_project_depth": 16.1,
+        "python_backend": 23.66,
+        "cloud_fullstack": 12.94,
+        "github": 5.0,
+        "engineering_depth": 3.75,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "Code Review Agent GitHub: depth 4.5/10",
+            "best-depth 12.6 + breadth 2.0 (1 solid project(s)) + signals 1.5"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (experience), FastAPI (project), Pydantic (project), Pandas (skills (list-only)), MongoDB (context), SQL (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: Serverless (experience), AWS (experience), React (context), Next.js (context), Docker (skills (list-only)), Tailwind (skills (list-only))"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Architecture, Observability, Performance"
+          ],
+          "github": [
+            "GitHub unavailable (rate_limited); tagged — neutral placeholder 5.0/10 applied"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "llm_ai_project_depth": 36.45,
       "matched_skills": [
         "Python",
         "FastAPI",
@@ -1201,7 +1576,7 @@
         "error": null,
         "flagged": true
       },
-      "source_file": "resumes/candidate_47.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_47.pdf",
       "parse_status": "ok",
       "llm_applied": true,
       "warnings": []
@@ -1242,6 +1617,39 @@
           ]
         }
       },
+      "deterministic_total_score": 53.1,
+      "deterministic_breakdown": {
+        "ai_project_depth": 16.1,
+        "python_backend": 30.0,
+        "cloud_fullstack": 15.0,
+        "github": 0.0,
+        "engineering_depth": 5.0,
+        "penalties": -13.0,
+        "rationale": {
+          "ai_project_depth": [
+            "AI Document Intelligence: depth 4.5/10",
+            "Plagiarism Detection for Large Language Models through Watermarking Method, Dissertation 2024: depth 2.0/10",
+            "Sentimental Analysis of Different Aspects, Industrial Project 2022: depth 2.0/10",
+            "best-depth 12.6 + breadth 2.0 (1 solid project(s)) + signals 1.5"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (experience), FastAPI (project), Django (experience), Flask (context), Celery (project), Streamlit (project), BeautifulSoup (skills (list-only)), Selenium (skills (list-only)), Pandas (skills (list-only)), NumPy (skills (list-only)), SQL (context), MySQL (experience), MongoDB (experience), Redis (project), PostgreSQL (project)"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: AWS (project), React (experience), Heroku (experience), Nginx (project), Streamlit (project), Tailwind (skills (list-only)), Docker (skills (list-only))"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Architecture, Concurrency, Queues, Security"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "Thin LLM/API wrapper, no meaningful workflow: Plagiarism Detection for Large Language Models through Watermarking Method, Dissertation 2024 (-13.0)"
+          ]
+        }
+      },
+      "llm_ai_project_depth": 28.6,
       "matched_skills": [
         "Python",
         "FastAPI",
@@ -1302,7 +1710,7 @@
         "error": null,
         "flagged": false
       },
-      "source_file": "resumes/candidate_50.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_50.pdf",
       "parse_status": "ok",
       "llm_applied": true,
       "warnings": []
@@ -1346,6 +1754,36 @@
           ]
         }
       },
+      "deterministic_total_score": 57.13,
+      "deterministic_breakdown": {
+        "ai_project_depth": 6.0,
+        "python_backend": 28.63,
+        "cloud_fullstack": 15.0,
+        "github": 5.0,
+        "engineering_depth": 2.5,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "AI framework(s) named but no AI project described: AI Agents, Gemini, LLM"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (experience), Flask (experience), FastAPI (experience), MongoDB (experience), WebSockets (experience), SQL (skills (list-only)), PostgreSQL (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: React (experience), Docker (experience), Next.js (experience), Firebase (experience), GCP (experience), Tailwind (skills (list-only))"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Concurrency, Testing"
+          ],
+          "github": [
+            "GitHub unavailable (rate_limited); tagged — neutral placeholder 5.0/10 applied"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "llm_ai_project_depth": 32.9,
       "matched_skills": [
         "Python",
         "FastAPI",
@@ -1400,7 +1838,7 @@
         "error": null,
         "flagged": true
       },
-      "source_file": "resumes/candidate_37.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_37.pdf",
       "parse_status": "ok",
       "llm_applied": true,
       "warnings": []
@@ -1440,6 +1878,38 @@
           ]
         }
       },
+      "deterministic_total_score": 73.83,
+      "deterministic_breakdown": {
+        "ai_project_depth": 25.2,
+        "python_backend": 30.0,
+        "cloud_fullstack": 7.88,
+        "github": 9.5,
+        "engineering_depth": 1.25,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "AI-Powered Resume Screening & Job Matching SystemSep 2025 – Nov 2025: depth 6.5/10",
+            "Python, FastAPI, OpenCV, Vision Transformer (ViT), LangGraph, Next.js: depth 5.5/10",
+            "best-depth 18.2 + breadth 4.0 (2 solid project(s)) + signals 3.0"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (project), Django (project), FastAPI (project), scikit-learn (skills (list-only)), REST API (project), SQL (experience), PostgreSQL (project), MongoDB (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: React (project), Next.js (project), AWS (skills (list-only)), CI/CD (skills (list-only))"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Concurrency"
+          ],
+          "github": [
+            "GitHub enrichment: 9.5/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "llm_ai_project_depth": 26.6,
       "matched_skills": [
         "Python",
         "FastAPI",
@@ -1498,7 +1968,7 @@
         "error": null,
         "flagged": false
       },
-      "source_file": "resumes/candidate_08.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_08.pdf",
       "parse_status": "ok",
       "llm_applied": true,
       "warnings": []
@@ -1537,6 +2007,37 @@
           ]
         }
       },
+      "deterministic_total_score": 70.66,
+      "deterministic_breakdown": {
+        "ai_project_depth": 24.6,
+        "python_backend": 30.0,
+        "cloud_fullstack": 11.06,
+        "github": 0.0,
+        "engineering_depth": 5.0,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "AI Workflow Orchestration Engine(NestJS, Apache Kafka, PostgreSQL, Redis, OpenAI, Gemini):: depth 7.0/10",
+            "best-depth 19.6 + breadth 2.0 (1 solid project(s)) + signals 3.0"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (experience), Flask (experience), REST API (experience), Kafka (project), Redis (project), GraphQL (experience), PostgreSQL (project), MySQL (skills (list-only)), MongoDB (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: AWS (experience), React (project), Docker (skills (list-only)), CI/CD (skills (list-only))"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Architecture, Caching, Failure Handling, Observability, Queues, Security"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "llm_ai_project_depth": 28.9,
       "matched_skills": [
         "Python",
         "Flask",
@@ -1589,7 +2090,7 @@
         "error": null,
         "flagged": false
       },
-      "source_file": "resumes/candidate_40.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_40.pdf",
       "parse_status": "ok",
       "llm_applied": true,
       "warnings": []
@@ -1632,6 +2133,37 @@
           ]
         }
       },
+      "deterministic_total_score": 61.63,
+      "deterministic_breakdown": {
+        "ai_project_depth": 19.65,
+        "python_backend": 30.0,
+        "cloud_fullstack": 6.98,
+        "github": 0.0,
+        "engineering_depth": 5.0,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "AI-Powered Healthcare Interaction Management System: depth 5.5/10",
+            "best-depth 15.4 + breadth 2.0 (1 solid project(s)) + signals 2.2"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (experience), FastAPI (project), Flask (experience), Streamlit (skills (list-only)), Pandas (skills (list-only)), NumPy (skills (list-only)), asyncio (skills (list-only)), pytest (skills (list-only)), SQL (skills (list-only)), REST API (experience), MySQL (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: Streamlit (skills (list-only)), Firebase (experience), AWS (skills (list-only)), Docker (skills (list-only))"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Architecture, Caching, Concurrency, Observability, Performance, Security, Testing"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "llm_ai_project_depth": 32.15,
       "matched_skills": [
         "Python",
         "FastAPI",
@@ -1690,7 +2222,7 @@
         "error": null,
         "flagged": false
       },
-      "source_file": "resumes/candidate_33.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_33.pdf",
       "parse_status": "ok",
       "llm_applied": true,
       "warnings": []
@@ -1732,6 +2264,38 @@
           ]
         }
       },
+      "deterministic_total_score": 53.4,
+      "deterministic_breakdown": {
+        "ai_project_depth": 16.7,
+        "python_backend": 30.0,
+        "cloud_fullstack": 4.2,
+        "github": 0.0,
+        "engineering_depth": 2.5,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "Automated Stock News AI Agent: depth 3.5/10",
+            "Automated Financial Expense Classification: depth 4.0/10",
+            "best-depth 11.2 + breadth 4.0 (2 solid project(s)) + signals 1.5"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (project), Pandas (project), NumPy (skills (list-only)), scikit-learn (project), FastAPI (project), Streamlit (skills (list-only)), MySQL (skills (list-only)), SQL (skills (list-only)), REST API (project)"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: CI/CD (project), Streamlit (skills (list-only))"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Performance, Testing"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "llm_ai_project_depth": 36.45,
       "matched_skills": [
         "Python",
         "FastAPI",
@@ -1789,7 +2353,7 @@
         "error": null,
         "flagged": false
       },
-      "source_file": "resumes/candidate_12.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_12.pdf",
       "parse_status": "ok",
       "llm_applied": true,
       "warnings": []
@@ -1829,6 +2393,38 @@
           ]
         }
       },
+      "deterministic_total_score": 61.91,
+      "deterministic_breakdown": {
+        "ai_project_depth": 16.1,
+        "python_backend": 30.0,
+        "cloud_fullstack": 12.56,
+        "github": 5.0,
+        "engineering_depth": 1.25,
+        "penalties": -3.0,
+        "rationale": {
+          "ai_project_depth": [
+            "Handwritten Digit Recognition: depth 2.0/10",
+            "https://github.com/Pavani-A/handwritten-number-recognition: depth 4.5/10",
+            "best-depth 12.6 + breadth 2.0 (1 solid project(s)) + signals 1.5"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (project), Selenium (experience), FastAPI (project), Django (project), Pandas (skills (list-only)), NumPy (skills (list-only)), scikit-learn (skills (list-only)), Flask (skills (list-only)), REST API (project), PostgreSQL (project), MySQL (project), SQL (skills (list-only)), MongoDB (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: Docker (experience), CI/CD (experience), React (project), Next.js (project)"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Security"
+          ],
+          "github": [
+            "GitHub unavailable (rate_limited); tagged — neutral placeholder 5.0/10 applied"
+          ],
+          "penalties": [
+            "listed without implementation detail: Handwritten Digit Recognition (-3.0)"
+          ]
+        }
+      },
+      "llm_ai_project_depth": 21.05,
       "matched_skills": [
         "Python",
         "FastAPI",
@@ -1879,7 +2475,7 @@
         "error": null,
         "flagged": true
       },
-      "source_file": "resumes/candidate_38.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_38.pdf",
       "parse_status": "ok",
       "llm_applied": true,
       "warnings": []
@@ -1919,6 +2515,37 @@
           ]
         }
       },
+      "deterministic_total_score": 62.67,
+      "deterministic_breakdown": {
+        "ai_project_depth": 28.15,
+        "python_backend": 25.37,
+        "cloud_fullstack": 5.4,
+        "github": 0.0,
+        "engineering_depth": 3.75,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "Agentic RAG Assistant: depth 8.0/10",
+            "best-depth 22.4 + breadth 2.0 (1 solid project(s)) + signals 3.8"
+          ],
+          "python_backend": [
+            "Python/backend evidence: FastAPI (project), Pydantic (experience), Python (experience), REST API (skills (list-only)), Redis (project)"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: Next.js (experience), Render (experience), React (experience)"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Architecture, Performance, Security"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "llm_ai_project_depth": 35.2,
       "matched_skills": [
         "Python",
         "FastAPI",
@@ -1965,7 +2592,7 @@
         "error": null,
         "flagged": false
       },
-      "source_file": "resumes/candidate_07.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_07.pdf",
       "parse_status": "ok",
       "llm_applied": true,
       "warnings": []
@@ -2004,6 +2631,38 @@
           ]
         }
       },
+      "deterministic_total_score": 46.1,
+      "deterministic_breakdown": {
+        "ai_project_depth": 16.1,
+        "python_backend": 30.0,
+        "cloud_fullstack": 6.75,
+        "github": 5.0,
+        "engineering_depth": 1.25,
+        "penalties": -13.0,
+        "rationale": {
+          "ai_project_depth": [
+            "Python, React.js, FastAPI, REST APIs,: depth 4.5/10",
+            "Integrated OpenAI APIs for AI-based content generation and: depth 2.0/10",
+            "best-depth 12.6 + breadth 2.0 (1 solid project(s)) + signals 1.5"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (project), FastAPI (project), PostgreSQL (project), REST API (project), MongoDB (project), SQL (project)"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: React (project), Azure (project)"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Security"
+          ],
+          "github": [
+            "GitHub unavailable (rate_limited); tagged — neutral placeholder 5.0/10 applied"
+          ],
+          "penalties": [
+            "Thin LLM/API wrapper, no meaningful workflow: Integrated OpenAI APIs for AI-based content generation and (-13.0)"
+          ]
+        }
+      },
+      "llm_ai_project_depth": 26.1,
       "matched_skills": [
         "Python",
         "FastAPI",
@@ -2041,7 +2700,7 @@
         "error": null,
         "flagged": true
       },
-      "source_file": "resumes/candidate_23.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_23.pdf",
       "parse_status": "ok",
       "llm_applied": true,
       "warnings": []
@@ -2080,6 +2739,37 @@
           ]
         }
       },
+      "deterministic_total_score": 70.06,
+      "deterministic_breakdown": {
+        "ai_project_depth": 26.75,
+        "python_backend": 30.0,
+        "cloud_fullstack": 9.56,
+        "github": 0.0,
+        "engineering_depth": 3.75,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "MicroScroll - Revise concepts quickly: depth 7.5/10",
+            "best-depth 21.0 + breadth 2.0 (1 solid project(s)) + signals 3.8"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (skills (list-only)), FastAPI (experience), SQL (experience), GraphQL (skills (list-only)), PostgreSQL (project), MongoDB (project), Redis (project), REST API (project)"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: Docker (skills (list-only)), React (project), Next.js (experience), Tailwind (project), Supabase (project)"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Architecture, Caching, Performance"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "llm_ai_project_depth": 25.35,
       "matched_skills": [
         "Python",
         "FastAPI",
@@ -2128,7 +2818,7 @@
         "error": null,
         "flagged": false
       },
-      "source_file": "resumes/candidate_03.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_03.pdf",
       "parse_status": "ok",
       "llm_applied": true,
       "warnings": []
@@ -2168,6 +2858,37 @@
           ]
         }
       },
+      "deterministic_total_score": 51.11,
+      "deterministic_breakdown": {
+        "ai_project_depth": 12.55,
+        "python_backend": 23.53,
+        "cloud_fullstack": 5.03,
+        "github": 5.0,
+        "engineering_depth": 5.0,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "Timesheet Bot Python, LangChain, LangGraph, LLMs: depth 3.5/10",
+            "best-depth 9.8 + breadth 2.0 (1 solid project(s)) + signals 0.8"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (project), Django (skills (list-only)), PostgreSQL (experience), REST API (experience), SQL (skills (list-only)), MySQL (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: React (project), Next.js (project), Firebase (skills (list-only))"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Concurrency, Failure Handling, Observability, Security"
+          ],
+          "github": [
+            "GitHub unavailable (rate_limited); tagged — neutral placeholder 5.0/10 applied"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "llm_ai_project_depth": 29.4,
       "matched_skills": [
         "Python",
         "Django",
@@ -2218,7 +2939,7 @@
         "error": null,
         "flagged": true
       },
-      "source_file": "resumes/candidate_39.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_39.pdf",
       "parse_status": "ok",
       "llm_applied": true,
       "warnings": []
@@ -2259,6 +2980,38 @@
           ]
         }
       },
+      "deterministic_total_score": 53.8,
+      "deterministic_breakdown": {
+        "ai_project_depth": 25.2,
+        "python_backend": 23.1,
+        "cloud_fullstack": 3.0,
+        "github": 0.0,
+        "engineering_depth": 2.5,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "PR Sentinel – AI: depth 6.5/10",
+            "AI Conversation Assistant: depth 5.0/10",
+            "best-depth 18.2 + breadth 4.0 (2 solid project(s)) + signals 3.0"
+          ],
+          "python_backend": [
+            "Python/backend evidence: FastAPI (project), Python (skills (list-only)), PostgreSQL (experience), Kafka (project), MySQL (skills (list-only)), MongoDB (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: React (project), Nginx (skills (list-only))"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Architecture, Queues"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "llm_ai_project_depth": 37.2,
       "matched_skills": [
         "Python",
         "FastAPI",
@@ -2309,7 +3062,7 @@
         "error": null,
         "flagged": false
       },
-      "source_file": "resumes/candidate_16.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_16.pdf",
       "parse_status": "ok",
       "llm_applied": true,
       "warnings": []
@@ -2349,6 +3102,40 @@
           ]
         }
       },
+      "deterministic_total_score": 55.15,
+      "deterministic_breakdown": {
+        "ai_project_depth": 16.7,
+        "python_backend": 30.0,
+        "cloud_fullstack": 7.2,
+        "github": 0.0,
+        "engineering_depth": 1.25,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "Skin Cancer Detection using Deep Learning: depth 4.0/10",
+            "Motion Detection: depth 2.0/10",
+            "Skin Cancer Detection using Deep Learning: depth 4.0/10",
+            "Motion Detection: depth 2.0/10",
+            "best-depth 11.2 + breadth 4.0 (2 solid project(s)) + signals 1.5"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (project), Pandas (project), NumPy (project), FastAPI (experience), SQL (skills (list-only)), MySQL (project), REST API (project), PostgreSQL (experience)"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: Azure (context), React (project), Docker (skills (list-only))"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Architecture"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "llm_ai_project_depth": 25.85,
       "matched_skills": [
         "Python",
         "FastAPI",
@@ -2395,7 +3182,7 @@
         "error": null,
         "flagged": false
       },
-      "source_file": "resumes/candidate_15.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_15.pdf",
       "parse_status": "ok",
       "llm_applied": true,
       "warnings": []
@@ -2436,6 +3223,37 @@
           ]
         }
       },
+      "deterministic_total_score": 40.96,
+      "deterministic_breakdown": {
+        "ai_project_depth": 9.15,
+        "python_backend": 29.44,
+        "cloud_fullstack": 1.12,
+        "github": 0.0,
+        "engineering_depth": 1.25,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "PDF Document Analysis System — Python, NLP, ML: depth 3.0/10",
+            "best-depth 8.4 + breadth 0.0 (0 solid project(s)) + signals 0.8"
+          ],
+          "python_backend": [
+            "Python/backend evidence: FastAPI (context), Django (experience), Python (project), scikit-learn (project), PostgreSQL (skills (list-only)), SQL (skills (list-only)), REST API (experience)"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: React (context)"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Performance"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "llm_ai_project_depth": 31.65,
       "matched_skills": [
         "Python",
         "FastAPI",
@@ -2480,7 +3298,7 @@
         "error": null,
         "flagged": false
       },
-      "source_file": "resumes/candidate_06.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_06.pdf",
       "parse_status": "ok",
       "llm_applied": true,
       "warnings": []
@@ -2519,6 +3337,37 @@
           ]
         }
       },
+      "deterministic_total_score": 55.33,
+      "deterministic_breakdown": {
+        "ai_project_depth": 19.65,
+        "python_backend": 22.8,
+        "cloud_fullstack": 7.88,
+        "github": 0.0,
+        "engineering_depth": 5.0,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "AI-Powered Resume Screener [GitHub]: depth 5.5/10",
+            "best-depth 15.4 + breadth 2.0 (1 solid project(s)) + signals 2.2"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (skills (list-only)), PostgreSQL (project), MongoDB (project), Redis (context), Kafka (context), REST API (experience), SQL (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: Docker (project), React (project)"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Architecture, Caching, Concurrency, Failure Handling, Observability, Performance, Queues, Security"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "llm_ai_project_depth": 25.35,
       "matched_skills": [
         "Python",
         "LangChain",
@@ -2569,7 +3418,7 @@
         "error": null,
         "flagged": false
       },
-      "source_file": "resumes/candidate_09.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_09.pdf",
       "parse_status": "ok",
       "llm_applied": true,
       "warnings": []
@@ -2610,6 +3459,38 @@
           ]
         }
       },
+      "deterministic_total_score": 48.78,
+      "deterministic_breakdown": {
+        "ai_project_depth": 24.6,
+        "python_backend": 16.8,
+        "cloud_fullstack": 7.88,
+        "github": 0.0,
+        "engineering_depth": 2.5,
+        "penalties": -3.0,
+        "rationale": {
+          "ai_project_depth": [
+            "• Cognitive Resonance AI – Emotion-Aware Contextual AI Framework: Architected a novel deep learning system: depth 2.0/10",
+            "(Mar–May 2023): depth 7.0/10",
+            "best-depth 19.6 + breadth 2.0 (1 solid project(s)) + signals 3.0"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (project), scikit-learn (skills (list-only)), Flask (skills (list-only)), SQL (skills (list-only)), MySQL (project)"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: Docker (skills (list-only)), React (project), AWS (context)"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Observability, Performance"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "listed without implementation detail: • Cognitive Resonance AI – Emotion-Aware Contextual AI Framework: Architected a novel deep learning system (-3.0)"
+          ]
+        }
+      },
+      "llm_ai_project_depth": 32.9,
       "matched_skills": [
         "Python",
         "Flask",
@@ -2658,7 +3539,7 @@
         "error": null,
         "flagged": false
       },
-      "source_file": "resumes/candidate_19.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_19.pdf",
       "parse_status": "ok",
       "llm_applied": true,
       "warnings": []
@@ -2697,6 +3578,38 @@
           ]
         }
       },
+      "deterministic_total_score": 49.26,
+      "deterministic_breakdown": {
+        "ai_project_depth": 9.9,
+        "python_backend": 28.11,
+        "cloud_fullstack": 10.5,
+        "github": 0.0,
+        "engineering_depth": 3.75,
+        "penalties": -3.0,
+        "rationale": {
+          "ai_project_depth": [
+            "Waste Image Classification 03/2023 – 04/2023: depth 2.0/10",
+            "Deep Learning and Streamlit: depth 3.0/10",
+            "best-depth 8.4 + breadth 0.0 (0 solid project(s)) + signals 1.5"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (project), Django (project), Pandas (skills (list-only)), NumPy (skills (list-only)), Streamlit (project), scikit-learn (skills (list-only)), SQL (context), REST API (context), PostgreSQL (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: Docker (project), CI/CD (project), Streamlit (project)"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Architecture, Observability, Security"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "listed without implementation detail: Waste Image Classification 03/2023 – 04/2023 (-3.0)"
+          ]
+        }
+      },
+      "llm_ai_project_depth": 17.5,
       "matched_skills": [
         "Python",
         "Django",
@@ -2739,7 +3652,7 @@
         "error": null,
         "flagged": false
       },
-      "source_file": "resumes/candidate_04.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_04.pdf",
       "parse_status": "ok",
       "llm_applied": true,
       "warnings": []
@@ -2778,6 +3691,37 @@
           ]
         }
       },
+      "deterministic_total_score": 51.43,
+      "deterministic_breakdown": {
+        "ai_project_depth": 18.25,
+        "python_backend": 19.37,
+        "cloud_fullstack": 5.06,
+        "github": 5.0,
+        "engineering_depth": 3.75,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "Book My StaySpring Boot, React.js, MySQL, REST APIs, Maven: depth 5.0/10",
+            "best-depth 14.0 + breadth 2.0 (1 solid project(s)) + signals 2.2"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (project), MySQL (project), REST API (project), SQL (experience)"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: React (project), AWS (context)"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Architecture, Performance, Security"
+          ],
+          "github": [
+            "GitHub unavailable (rate_limited); tagged — neutral placeholder 5.0/10 applied"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "llm_ai_project_depth": 20.3,
       "matched_skills": [
         "Python",
         "TensorFlow",
@@ -2815,7 +3759,7 @@
         "error": null,
         "flagged": true
       },
-      "source_file": "resumes/candidate_48.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_48.pdf",
       "parse_status": "ok",
       "llm_applied": true,
       "warnings": []
@@ -2856,6 +3800,38 @@
           ]
         }
       },
+      "deterministic_total_score": 44.0,
+      "deterministic_breakdown": {
+        "ai_project_depth": 19.65,
+        "python_backend": 18.6,
+        "cloud_fullstack": 4.5,
+        "github": 0.0,
+        "engineering_depth": 1.25,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "Federated Learning in Plant Disease Detection: depth 2.0/10",
+            "AI Car Rental Platform: depth 5.5/10",
+            "best-depth 15.4 + breadth 2.0 (1 solid project(s)) + signals 2.2"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (project), REST API (experience), MongoDB (project), SQL (skills (list-only)), MySQL (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: React (project), AWS (skills (list-only))"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Security"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "llm_ai_project_depth": 25.05,
       "matched_skills": [
         "Python",
         "LangChain",
@@ -2899,7 +3875,7 @@
         "error": null,
         "flagged": false
       },
-      "source_file": "resumes/candidate_49.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_49.pdf",
       "parse_status": "ok",
       "llm_applied": true,
       "warnings": []
@@ -2940,6 +3916,36 @@
           ]
         }
       },
+      "deterministic_total_score": 12.88,
+      "deterministic_breakdown": {
+        "ai_project_depth": 2.0,
+        "python_backend": 9.0,
+        "cloud_fullstack": 1.88,
+        "github": 0.0,
+        "engineering_depth": 0.0,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "AI framework(s) named but no AI project described: Anthropic"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (context), REST API (context), MySQL (context)"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: CI/CD (context)"
+          ],
+          "engineering_depth": [
+            "No engineering-depth signals found"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "llm_ai_project_depth": 35.7,
       "matched_skills": [
         "Python",
         "Anthropic",
@@ -2974,7 +3980,7 @@
         "error": null,
         "flagged": false
       },
-      "source_file": "resumes/candidate_34.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_34.pdf",
       "parse_status": "ok",
       "llm_applied": true,
       "warnings": []
@@ -3013,6 +4019,37 @@
           ]
         }
       },
+      "deterministic_total_score": 48.82,
+      "deterministic_breakdown": {
+        "ai_project_depth": 21.8,
+        "python_backend": 23.74,
+        "cloud_fullstack": 2.03,
+        "github": 0.0,
+        "engineering_depth": 1.25,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "Soil Classification for Sustainable Agriculture — Python, Flask, Scikit-learn Jan 2024 – Jun 2024: depth 6.0/10",
+            "best-depth 16.8 + breadth 2.0 (1 solid project(s)) + signals 3.0"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (project), Flask (project), scikit-learn (project), REST API (context), MySQL (experience), MongoDB (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: React (experience)"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Security"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "llm_ai_project_depth": 19.0,
       "matched_skills": [
         "Python",
         "Flask",
@@ -3050,7 +4087,7 @@
         "error": null,
         "flagged": false
       },
-      "source_file": "resumes/candidate_05.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_05.pdf",
       "parse_status": "ok",
       "llm_applied": true,
       "warnings": []
@@ -3091,6 +4128,37 @@
           ]
         }
       },
+      "deterministic_total_score": 35.13,
+      "deterministic_breakdown": {
+        "ai_project_depth": 14.7,
+        "python_backend": 15.43,
+        "cloud_fullstack": 0.0,
+        "github": 5.0,
+        "engineering_depth": 0.0,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "Detecting Hate Speech in tweets with advanced ML Techniques: depth 4.0/10",
+            "best-depth 11.2 + breadth 2.0 (1 solid project(s)) + signals 1.5"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (experience), Flask (project), Django (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "No cloud/deployment evidence"
+          ],
+          "engineering_depth": [
+            "No engineering-depth signals found"
+          ],
+          "github": [
+            "GitHub unavailable (rate_limited); tagged — neutral placeholder 5.0/10 applied"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "llm_ai_project_depth": 25.05,
       "matched_skills": [
         "Python",
         "Django",
@@ -3127,7 +4195,7 @@
         "error": null,
         "flagged": true
       },
-      "source_file": "resumes/candidate_24.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_24.pdf",
       "parse_status": "ok",
       "llm_applied": true,
       "warnings": []
@@ -3166,6 +4234,37 @@
           ]
         }
       },
+      "deterministic_total_score": 48.1,
+      "deterministic_breakdown": {
+        "ai_project_depth": 19.65,
+        "python_backend": 18.94,
+        "cloud_fullstack": 3.26,
+        "github": 5.0,
+        "engineering_depth": 1.25,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "• Electrical V ehicle Knowledge Bot: depth 5.5/10",
+            "best-depth 15.4 + breadth 2.0 (1 solid project(s)) + signals 2.2"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (skills (list-only)), FastAPI (skills (list-only)), Flask (project), MongoDB (project), REST API (experience)"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: React (project), Tailwind (experience)"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Security"
+          ],
+          "github": [
+            "GitHub unavailable (rate_limited); tagged — neutral placeholder 5.0/10 applied"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "llm_ai_project_depth": 16.2,
       "matched_skills": [
         "Python",
         "FastAPI",
@@ -3205,7 +4304,7 @@
         "error": null,
         "flagged": true
       },
-      "source_file": "resumes/candidate_36.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_36.pdf",
       "parse_status": "ok",
       "llm_applied": true,
       "warnings": []
@@ -3244,6 +4343,37 @@
           ]
         }
       },
+      "deterministic_total_score": 32.53,
+      "deterministic_breakdown": {
+        "ai_project_depth": 5.6,
+        "python_backend": 20.06,
+        "cloud_fullstack": 5.62,
+        "github": 0.0,
+        "engineering_depth": 1.25,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "Job Shop Scheduling Using SGO: depth 2.0/10",
+            "best-depth 5.6 + breadth 0.0 (0 solid project(s)) + signals 0.0"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (project), Pandas (skills (list-only)), NumPy (skills (list-only)), SQL (experience), MySQL (skills (list-only)), REST API (project)"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: React (project), AWS (context)"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Performance"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "llm_ai_project_depth": 16.75,
       "matched_skills": [
         "Python",
         "Pandas",
@@ -3278,7 +4408,7 @@
         "error": null,
         "flagged": false
       },
-      "source_file": "resumes/candidate_14.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_14.pdf",
       "parse_status": "ok",
       "llm_applied": true,
       "warnings": []
@@ -3317,6 +4447,36 @@
           ]
         }
       },
+      "deterministic_total_score": 29.22,
+      "deterministic_breakdown": {
+        "ai_project_depth": 2.0,
+        "python_backend": 7.89,
+        "cloud_fullstack": 14.33,
+        "github": 0.0,
+        "engineering_depth": 5.0,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "AI framework(s) named but no AI project described: OpenAI API"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (skills (list-only)), scikit-learn (skills (list-only)), SQL (skills (list-only)), REST API (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: AWS (context), Kubernetes (context), Terraform (context), CI/CD (project), Docker (skills (list-only)), Serverless (skills (list-only))"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Architecture, Concurrency, Observability, Performance"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "llm_ai_project_depth": 15.45,
       "matched_skills": [
         "Python",
         "scikit-learn",
@@ -3356,7 +4516,7 @@
         "error": null,
         "flagged": false
       },
-      "source_file": "resumes/candidate_29.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_29.pdf",
       "parse_status": "ok",
       "llm_applied": true,
       "warnings": []
@@ -3394,6 +4554,36 @@
           ]
         }
       },
+      "deterministic_total_score": 41.88,
+      "deterministic_breakdown": {
+        "ai_project_depth": 2.0,
+        "python_backend": 21.6,
+        "cloud_fullstack": 13.28,
+        "github": 0.0,
+        "engineering_depth": 5.0,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "AI framework(s) named but no AI project described: Anthropic"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (skills (list-only)), Django (skills (list-only)), Flask (skills (list-only)), MongoDB (project), REST API (project), GraphQL (skills (list-only)), MySQL (skills (list-only)), Redis (skills (list-only)), Kafka (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: React (project), AWS (context), Tailwind (skills (list-only)), Firebase (skills (list-only)), Azure (skills (list-only)), Docker (skills (list-only)), CI/CD (context)"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Caching, Concurrency, Performance, Queues, Security"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "llm_ai_project_depth": 2.0,
       "matched_skills": [
         "Python",
         "Django",
@@ -3445,7 +4635,7 @@
         "error": null,
         "flagged": false
       },
-      "source_file": "resumes/candidate_45.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_45.pdf",
       "parse_status": "ok",
       "llm_applied": true,
       "warnings": []
@@ -3489,6 +4679,37 @@
           ]
         }
       },
+      "deterministic_total_score": 53.74,
+      "deterministic_breakdown": {
+        "ai_project_depth": 18.25,
+        "python_backend": 27.43,
+        "cloud_fullstack": 8.06,
+        "github": 0.0,
+        "engineering_depth": 0.0,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "• SmartATS:DevelopedanAI-poweredresumescreeningapplicationusingPythonand Streamlit. IntegratedadvancedLarge: depth 5.0/10",
+            "best-depth 14.0 + breadth 2.0 (1 solid project(s)) + signals 2.2"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Streamlit (project), Python (project), Flask (project), Pandas (skills (list-only)), NumPy (skills (list-only)), scikit-learn (skills (list-only)), REST API (project), MySQL (skills (list-only)), SQL (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: GCP (experience), Streamlit (project), Render (project)"
+          ],
+          "engineering_depth": [
+            "No engineering-depth signals found"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "llm_ai_project_depth": 20.25,
       "matched_skills": [
         "Python",
         "Flask",
@@ -3528,7 +4749,7 @@
         "error": null,
         "flagged": false
       },
-      "source_file": "resumes/candidate_25.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_25.pdf",
       "parse_status": "ok",
       "llm_applied": true,
       "warnings": []
@@ -3568,6 +4789,39 @@
           ]
         }
       },
+      "deterministic_total_score": 20.49,
+      "deterministic_breakdown": {
+        "ai_project_depth": 9.15,
+        "python_backend": 9.94,
+        "cloud_fullstack": 0.9,
+        "github": 1.0,
+        "engineering_depth": 2.5,
+        "penalties": -3.0,
+        "rationale": {
+          "ai_project_depth": [
+            "Air Quality Index Prediction using Machine Learning: depth 2.0/10",
+            "Jul 2024 – Nov 2024: depth 3.0/10",
+            "KEJ IT SOLUTIONS PVT LTD, BENGALURU OCT 2025 - JAN 2026: depth 3.0/10",
+            "best-depth 8.4 + breadth 0.0 (0 solid project(s)) + signals 0.8"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (project), SQL (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: React (skills (list-only))"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Architecture, Observability"
+          ],
+          "github": [
+            "GitHub enrichment: 1.0/10"
+          ],
+          "penalties": [
+            "listed without implementation detail: Air Quality Index Prediction using Machine Learning (-3.0)"
+          ]
+        }
+      },
+      "llm_ai_project_depth": 23.05,
       "matched_skills": [
         "Python",
         "Machine Learning",
@@ -3598,7 +4852,7 @@
         "error": null,
         "flagged": false
       },
-      "source_file": "resumes/candidate_20.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_20.pdf",
       "parse_status": "ok",
       "llm_applied": true,
       "warnings": []
@@ -3637,6 +4891,36 @@
           ]
         }
       },
+      "deterministic_total_score": 22.43,
+      "deterministic_breakdown": {
+        "ai_project_depth": 2.0,
+        "python_backend": 17.83,
+        "cloud_fullstack": 1.35,
+        "github": 0.0,
+        "engineering_depth": 1.25,
+        "penalties": 0.0,
+        "rationale": {
+          "ai_project_depth": [
+            "AI framework(s) named but no AI project described: Hugging Face"
+          ],
+          "python_backend": [
+            "Python/backend evidence: Python (context), Pandas (context), NumPy (context), scikit-learn (skills (list-only)), Flask (skills (list-only)), Streamlit (skills (list-only)), SQL (context), MySQL (skills (list-only)), REST API (skills (list-only))"
+          ],
+          "cloud_fullstack": [
+            "Cloud/deploy/full-stack evidence: Streamlit (skills (list-only)), React (skills (list-only))"
+          ],
+          "engineering_depth": [
+            "Engineering signals: Testing"
+          ],
+          "github": [
+            "GitHub enrichment: 0.0/10"
+          ],
+          "penalties": [
+            "No project-quality penalties"
+          ]
+        }
+      },
+      "llm_ai_project_depth": 14.7,
       "matched_skills": [
         "Python",
         "Flask",
@@ -3678,7 +4962,7 @@
         "error": null,
         "flagged": false
       },
-      "source_file": "resumes/candidate_21.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_21.pdf",
       "parse_status": "ok",
       "llm_applied": true,
       "warnings": []
@@ -3689,6 +4973,9 @@
       "eligible": false,
       "total_score": null,
       "score_breakdown": null,
+      "deterministic_total_score": null,
+      "deterministic_breakdown": null,
+      "llm_ai_project_depth": null,
       "matched_skills": [
         "PostgreSQL",
         "MongoDB",
@@ -3725,7 +5012,7 @@
         "error": null,
         "flagged": false
       },
-      "source_file": "resumes/candidate_46.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_46.pdf",
       "parse_status": "ok",
       "llm_applied": false,
       "warnings": []
@@ -3736,6 +5023,9 @@
       "eligible": false,
       "total_score": null,
       "score_breakdown": null,
+      "deterministic_total_score": null,
+      "deterministic_breakdown": null,
+      "llm_ai_project_depth": null,
       "matched_skills": [
         "PostgreSQL",
         "MySQL",
@@ -3772,7 +5062,7 @@
         "error": null,
         "flagged": false
       },
-      "source_file": "resumes/candidate_42.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_42.pdf",
       "parse_status": "ok",
       "llm_applied": false,
       "warnings": []
@@ -3783,6 +5073,9 @@
       "eligible": false,
       "total_score": null,
       "score_breakdown": null,
+      "deterministic_total_score": null,
+      "deterministic_breakdown": null,
+      "llm_ai_project_depth": null,
       "matched_skills": [
         "Python",
         "MySQL",
@@ -3822,7 +5115,7 @@
         "error": null,
         "flagged": false
       },
-      "source_file": "resumes/candidate_27.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_27.pdf",
       "parse_status": "ok",
       "llm_applied": false,
       "warnings": []
@@ -3833,6 +5126,9 @@
       "eligible": false,
       "total_score": null,
       "score_breakdown": null,
+      "deterministic_total_score": null,
+      "deterministic_breakdown": null,
+      "llm_ai_project_depth": null,
       "matched_skills": [
         "PostgreSQL",
         "MongoDB",
@@ -3879,7 +5175,7 @@
         "error": null,
         "flagged": false
       },
-      "source_file": "resumes/candidate_18.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_18.pdf",
       "parse_status": "ok",
       "llm_applied": false,
       "warnings": []
@@ -3890,6 +5186,9 @@
       "eligible": false,
       "total_score": null,
       "score_breakdown": null,
+      "deterministic_total_score": null,
+      "deterministic_breakdown": null,
+      "llm_ai_project_depth": null,
       "matched_skills": [
         "MySQL",
         "MongoDB",
@@ -3928,7 +5227,7 @@
         "error": null,
         "flagged": false
       },
-      "source_file": "resumes/candidate_01.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_01.pdf",
       "parse_status": "ok",
       "llm_applied": false,
       "warnings": []
@@ -3939,6 +5238,9 @@
       "eligible": false,
       "total_score": null,
       "score_breakdown": null,
+      "deterministic_total_score": null,
+      "deterministic_breakdown": null,
+      "llm_ai_project_depth": null,
       "matched_skills": [
         "OpenAI API",
         "RAG",
@@ -3987,7 +5289,7 @@
         "error": null,
         "flagged": false
       },
-      "source_file": "resumes/candidate_11.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_11.pdf",
       "parse_status": "ok",
       "llm_applied": false,
       "warnings": []
@@ -3998,6 +5300,9 @@
       "eligible": false,
       "total_score": null,
       "score_breakdown": null,
+      "deterministic_total_score": null,
+      "deterministic_breakdown": null,
+      "llm_ai_project_depth": null,
       "matched_skills": [
         "OpenAI API",
         "LLM",
@@ -4039,7 +5344,7 @@
         "error": null,
         "flagged": false
       },
-      "source_file": "resumes/candidate_32.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_32.pdf",
       "parse_status": "ok",
       "llm_applied": false,
       "warnings": []
@@ -4050,6 +5355,9 @@
       "eligible": false,
       "total_score": null,
       "score_breakdown": null,
+      "deterministic_total_score": null,
+      "deterministic_breakdown": null,
+      "llm_ai_project_depth": null,
       "matched_skills": [
         "REST API",
         "Node.js",
@@ -4089,7 +5397,7 @@
         "error": null,
         "flagged": false
       },
-      "source_file": "resumes/candidate_02.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_02.pdf",
       "parse_status": "ok",
       "llm_applied": false,
       "warnings": []
@@ -4100,6 +5408,9 @@
       "eligible": false,
       "total_score": null,
       "score_breakdown": null,
+      "deterministic_total_score": null,
+      "deterministic_breakdown": null,
+      "llm_ai_project_depth": null,
       "matched_skills": [
         "Python",
         "MySQL",
@@ -4143,7 +5454,7 @@
         "error": null,
         "flagged": false
       },
-      "source_file": "resumes/candidate_31.pdf",
+      "source_file": "/Users/teeshashah/Downloads/resume-screener/resumes/candidate_31.pdf",
       "parse_status": "ok",
       "llm_applied": false,
       "warnings": []

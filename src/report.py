@@ -1,13 +1,14 @@
-"""Output rendering: machine-readable JSON + a concise terminal report.
+"""Output rendering: machine-readable JSON + a concise terminal report + PDFs.
 
-The JSON is the primary deliverable (spec section 7). The terminal report is a
-small convenience so a reviewer can see the shortlist at a glance.
+The JSON is the primary deliverable (spec section 7). The terminal report and
+PDF are conveniences so a reviewer can see the shortlist and *why* at a glance.
 """
 
 from __future__ import annotations
 
 import json
 from pathlib import Path
+from xml.sax.saxutils import escape as _esc
 
 from .schemas import ScreeningReport
 
@@ -29,28 +30,34 @@ def write_csv(report: ScreeningReport, output_path: Path) -> Path:
     output_path = Path(output_path)
     output_path.parent.mkdir(parents=True, exist_ok=True)
     fields = [
-        "rank", "candidate_name", "eligible", "total_score",
-        "ai_project_depth", "python_backend", "cloud_fullstack",
-        "github", "engineering_depth", "penalties",
-        "matched_skills", "source_file",
+        "rank", "candidate_name", "eligible", "det_total_score", "total_score", "llm_delta",
+        "ai_project_depth", "ai_project_depth_deterministic", "python_backend", "cloud_fullstack",
+        "github", "engineering_depth", "penalties", "matched_skills", "rejection_reasons",
+        "source_file",
     ]
     with output_path.open("w", newline="", encoding="utf-8") as fh:
         writer = csv.DictWriter(fh, fieldnames=fields)
         writer.writeheader()
         for r in report.candidates:
             b = r.score_breakdown
+            db = r.deterministic_breakdown
+            det = r.deterministic_total_score
             writer.writerow({
                 "rank": r.rank if r.rank is not None else "",
                 "candidate_name": r.candidate_name,
                 "eligible": r.eligible,
-                "total_score": r.total_score if r.total_score is not None else "",
+                "det_total_score": round(det, 2) if det is not None else "",
+                "total_score": round(r.total_score, 2) if r.total_score is not None else "",
+                "llm_delta": round((r.total_score - det), 2) if (r.total_score is not None and det is not None) else "",
                 "ai_project_depth": b.ai_project_depth if b else "",
+                "ai_project_depth_deterministic": db.ai_project_depth if db else "",
                 "python_backend": b.python_backend if b else "",
                 "cloud_fullstack": b.cloud_fullstack if b else "",
                 "github": b.github if b else "",
                 "engineering_depth": b.engineering_depth if b else "",
                 "penalties": b.penalties if b else "",
                 "matched_skills": "; ".join(r.matched_skills),
+                "rejection_reasons": "; ".join(r.rejection_reasons),
                 "source_file": r.source_file,
             })
     return output_path
@@ -82,13 +89,20 @@ def render_console(report: ScreeningReport, top: int = 10) -> str:
 
     ranked = [r for r in report.candidates if r.eligible]
     if ranked:
-        lines.append(f"{'Rank':<5}{'Score':<7}{'Candidate':<28}{'AI':<5}{'PY':<5}{'Cloud':<6}{'GH':<5}{'Pen'}")
-        lines.append("-" * 78)
+        lines.append(
+            f"{'Rank':<5}{'Det':<7}{'Final':<7}{'Candidate':<26}{'AI':<9}"
+            f"{'PY':<5}{'Cloud':<6}{'GH':<5}{'Pen'}"
+        )
+        lines.append("-" * 82)
         for r in ranked[:top]:
             b = r.score_breakdown
+            det = r.deterministic_total_score
+            det_s = f"{det:.1f}" if det is not None else "-"
+            det_ai = f"{r.deterministic_breakdown.ai_project_depth:.0f}" if r.deterministic_breakdown else "-"
+            llm_ai = f"{b.ai_project_depth:.0f}"
             lines.append(
-                f"{r.rank:<5}{r.total_score:<7.1f}{r.candidate_name[:27]:<28}"
-                f"{b.ai_project_depth:<5.0f}{b.python_backend:<5.0f}"
+                f"{r.rank:<5}{det_s:<7}{r.total_score:<7.1f}{r.candidate_name[:25]:<26}"
+                f"{det_ai + '->' + llm_ai:<9}{b.python_backend:<5.0f}"
                 f"{b.cloud_fullstack:<6.0f}{b.github:<5.0f}{b.penalties:<.0f}"
             )
         if len(ranked) > top:
@@ -107,46 +121,69 @@ def render_console(report: ScreeningReport, top: int = 10) -> str:
     return "\n".join(lines)
 
 
-def write_pdf(report: ScreeningReport, output_path: Path, top: int = 20) -> Path:
-    """Render a human-readable PDF report (summary + shortlist + rejections).
-
-    Optional: requires `reportlab` (declared in requirements.txt).
-    """
+# ---------------------------------------------------------------------------
+# PDF report
+# ---------------------------------------------------------------------------
+def write_pdf(report: ScreeningReport, output_path: Path, top: int = 25) -> Path:
+    """Render a human-readable PDF: summary, shortlist (deterministic vs LLM),
+    per-candidate score combination, and rejected candidates with reasons."""
     from datetime import datetime
 
     from reportlab.lib import colors
     from reportlab.lib.pagesizes import A4
-    from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
+    from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
     from reportlab.lib.units import mm
-    from reportlab.platypus import Paragraph, SimpleDocTemplate, Spacer, Table, TableStyle
+    from reportlab.platypus import (
+        KeepTogether,
+        PageBreak,
+        Paragraph,
+        SimpleDocTemplate,
+        Spacer,
+        Table,
+        TableStyle,
+    )
 
     output_path = Path(output_path)
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
-    styles = getSampleStyleSheet()
-    h1 = ParagraphStyle("h1", parent=styles["Heading1"], fontSize=18, spaceAfter=6)
-    h2 = ParagraphStyle("h2", parent=styles["Heading2"], fontSize=13, spaceBefore=12, spaceAfter=6)
-    small = ParagraphStyle("small", parent=styles["Normal"], fontSize=8, textColor=colors.grey)
-    body = ParagraphStyle("body", parent=styles["Normal"], fontSize=9)
-    cell = ParagraphStyle("cell", parent=styles["Normal"], fontSize=8, leading=10)
+    NAVY = colors.HexColor("#1f3b57")
+    RED = colors.HexColor("#7a1f1f")
+    base = getSampleStyleSheet()
+    h1 = ParagraphStyle("h1", parent=base["Heading1"], fontSize=17, textColor=NAVY, spaceAfter=4)
+    h2 = ParagraphStyle("h2", parent=base["Heading2"], fontSize=12, textColor=NAVY,
+                        spaceBefore=10, spaceAfter=4)
+    small = ParagraphStyle("small", parent=base["Normal"], fontSize=8, textColor=colors.grey)
+    body = ParagraphStyle("body", parent=base["Normal"], fontSize=9, leading=12, spaceAfter=3)
+    cell = ParagraphStyle("cell", parent=base["Normal"], fontSize=7.5, leading=9.5)
+
+    def T(rows, widths, header=NAVY, center_from=99):
+        t = Table(rows, colWidths=widths, repeatRows=1)
+        t.setStyle(TableStyle([
+            ("GRID", (0, 0), (-1, -1), 0.25, colors.lightgrey),
+            ("BACKGROUND", (0, 0), (-1, 0), header),
+            ("TEXTCOLOR", (0, 0), (-1, 0), colors.white),
+            ("FONTSIZE", (0, 0), (-1, -1), 7.5),
+            ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+            ("ALIGN", (center_from, 1), (-1, -1), "CENTER"),
+            ("TOPPADDING", (0, 0), (-1, -1), 2.5),
+            ("BOTTOMPADDING", (0, 0), (-1, -1), 2.5),
+            ("ROWBACKGROUNDS", (0, 1), (-1, -1), [colors.white, colors.HexColor("#f4f7fa")]),
+        ]))
+        return t
 
     s = report.summary
-    doc = SimpleDocTemplate(
-        str(output_path), pagesize=A4,
-        leftMargin=15 * mm, rightMargin=15 * mm, topMargin=15 * mm, bottomMargin=15 * mm,
-        title="AI Resume Screening — Results",
-    )
+    eligible = [c for c in report.candidates if c.eligible]
+    rejected = [c for c in report.candidates if not c.eligible]
     story: list = []
 
+    # ---- Header + summary -------------------------------------------------
     story.append(Paragraph("AI Resume Screening &amp; Ranking — Results", h1))
     story.append(Paragraph(
         f"Generated {datetime.now().strftime('%Y-%m-%d %H:%M')} &nbsp;|&nbsp; "
         f"LLM used: {s.llm_used} &nbsp;|&nbsp; duration: {s.duration_seconds}s", small))
     story.append(Spacer(1, 6))
-
-    # --- Batch summary -----------------------------------------------------
     story.append(Paragraph("Batch summary", h2))
-    summary_rows = [
+    story.append(T([
         ["Total resumes", str(s.total_resumes), "Eligible", str(s.eligible)],
         ["Parsed OK", str(s.parsed_ok), "Rejected", str(s.rejected)],
         ["Parse failed", str(s.parse_failed), "Duplicates skipped", str(s.duplicates_skipped)],
@@ -154,81 +191,109 @@ def write_pdf(report: ScreeningReport, output_path: Path, top: int = 20) -> Path
         ["GitHub enriched", str(s.github_enriched), "GitHub no profile", str(s.github_no_profile)],
         ["GitHub tagged (rate-limited)", str(s.github_tagged_rate_limited),
          "GitHub tagged (error)", str(s.github_tagged_error)],
-    ]
-    t = Table(summary_rows, colWidths=[52 * mm, 28 * mm, 52 * mm, 28 * mm])
-    t.setStyle(TableStyle([
-        ("GRID", (0, 0), (-1, -1), 0.25, colors.lightgrey),
-        ("BACKGROUND", (0, 0), (0, -1), colors.whitesmoke),
-        ("BACKGROUND", (2, 0), (2, -1), colors.whitesmoke),
-        ("FONTSIZE", (0, 0), (-1, -1), 8),
-        ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
-    ]))
-    story.append(t)
+    ], [50 * mm, 28 * mm, 50 * mm, 28 * mm], center_from=1))
 
-    # --- Shortlist ---------------------------------------------------------
-    eligible = [c for c in report.candidates if c.eligible]
+    # ---- Shortlist: deterministic vs LLM vs final -------------------------
     story.append(Paragraph(f"Shortlist — eligible candidates ({len(eligible)})", h2))
-    header = ["#", "Candidate", "Total", "AI", "PY", "Cloud", "GH", "Eng", "Pen"]
-    rows = [header]
+    story.append(Paragraph(
+        "<b>Det</b> = deterministic baseline (no LLM) &nbsp;•&nbsp; <b>Final</b> = with LLM "
+        "project scoring &nbsp;•&nbsp; <b>Δ</b> = LLM contribution &nbsp;•&nbsp; "
+        "<b>AI</b> shows det→llm depth. Every other category is deterministic and unchanged.",
+        small))
+    story.append(Spacer(1, 3))
+    rows = [["#", "Candidate", "Det", "Final", "Δ", "AI (det→llm)", "PY", "Cloud", "GH", "Pen"]]
     for c in eligible[:top]:
         b = c.score_breakdown
-        rows.append([
-            str(c.rank), c.candidate_name[:30],
-            f"{c.total_score:.1f}", f"{b.ai_project_depth:.0f}", f"{b.python_backend:.0f}",
-            f"{b.cloud_fullstack:.0f}", f"{b.github:.0f}", f"{b.engineering_depth:.0f}",
-            f"{b.penalties:.0f}",
-        ])
-    t = Table(rows, colWidths=[9 * mm, 62 * mm, 15 * mm, 13 * mm, 13 * mm, 16 * mm, 12 * mm, 13 * mm, 13 * mm],
-              repeatRows=1)
-    t.setStyle(TableStyle([
-        ("GRID", (0, 0), (-1, -1), 0.25, colors.lightgrey),
-        ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#1f3b57")),
-        ("TEXTCOLOR", (0, 0), (-1, 0), colors.white),
-        ("FONTSIZE", (0, 0), (-1, -1), 8),
-        ("ALIGN", (2, 1), (-1, -1), "CENTER"),
-    ]))
-    story.append(t)
+        det = c.deterministic_total_score
+        det_s = f"{det:.1f}" if det is not None else "—"
+        delta = f"{(c.total_score - det):+.1f}" if det is not None else "—"
+        det_ai = c.deterministic_breakdown.ai_project_depth if c.deterministic_breakdown else None
+        llm_ai = c.llm_ai_project_depth if c.llm_ai_project_depth is not None else b.ai_project_depth
+        ai_s = f"{det_ai:.0f}→{llm_ai:.0f}" if det_ai is not None else f"{llm_ai:.0f}"
+        rows.append([str(c.rank), Paragraph(_esc(c.candidate_name[:32]), cell), det_s,
+                     f"{c.total_score:.1f}", delta, ai_s, f"{b.python_backend:.0f}",
+                     f"{b.cloud_fullstack:.0f}", f"{b.github:.0f}", f"{b.penalties:.0f}"])
+    story.append(T(rows, [8 * mm, 44 * mm, 13 * mm, 13 * mm, 12 * mm, 24 * mm,
+                          11 * mm, 14 * mm, 11 * mm, 11 * mm]))
     if len(eligible) > top:
         story.append(Paragraph(f"… and {len(eligible) - top} more eligible candidate(s).", small))
 
-    # --- Why the top candidates ranked here --------------------------------
-    story.append(Paragraph("Score breakdown — top candidates", h2))
-    for c in eligible[: min(10, len(eligible))]:
-        b = c.score_breakdown
-        story.append(Paragraph(f"<b>#{c.rank} {c.candidate_name}</b> — {c.total_score:.1f}/100", body))
-        story.append(Paragraph(f"<i>Project:</i> {c.project_summary[:220]}", cell))
-        if c.github_summary:
-            story.append(Paragraph(f"<i>GitHub:</i> {c.github_summary}", cell))
-        for line in b.rationale.get("ai_project_depth", [])[:4]:
-            story.append(Paragraph(f"• {line[:220]}", cell))
-        for line in b.rationale.get("penalties", []):
-            if "No project-quality" not in line:
-                story.append(Paragraph(f"• penalty: {line[:200]}", cell))
-        story.append(Spacer(1, 5))
+    # ---- How deterministic + LLM combine (per candidate) ------------------
+    story.append(PageBreak())
+    story.append(Paragraph("How the final score is built (deterministic vs LLM)", h2))
+    story.append(Paragraph(
+        "Every category is computed deterministically from resume evidence. The LLM refines "
+        "<b>only</b> the AI / Agentic project-depth category, scoring each AI project 0-10 with a "
+        "rationale and cited evidence. The <b>final</b> score is the deterministic score with the "
+        "AI-depth category replaced by the LLM judgement; all other categories are identical. "
+        "For the score breakdown below, the AI-depth row shows what the deterministic signal "
+        "estimate gave versus what the LLM decided.", body))
+    story.append(Spacer(1, 4))
 
-    # --- Rejected ----------------------------------------------------------
-    rejected = [c for c in report.candidates if not c.eligible]
+    for c in eligible[: min(10, len(eligible))]:
+        b, db = c.score_breakdown, c.deterministic_breakdown
+        det = c.deterministic_total_score
+        delta = (c.total_score - det) if det is not None else None
+        block = [Paragraph(
+            f"<b>#{c.rank} {_esc(c.candidate_name)}</b> — final {c.total_score:.1f}"
+            + (f" &nbsp;(deterministic {det:.1f}, LLM {delta:+.1f})" if det is not None else ""), body)]
+        if db:
+            block.append(T([
+                ["Category", "Deterministic", "With LLM", "Notes"],
+                ["AI project depth (40)", f"{db.ai_project_depth:.1f}", f"{b.ai_project_depth:.1f}",
+                 Paragraph(_esc((b.rationale.get("ai_project_depth") or ["—"])[0][:110]), cell)],
+                ["Python & backend (30)", f"{db.python_backend:.1f}", f"{b.python_backend:.1f}",
+                 "deterministic (unchanged)"],
+                ["Cloud / full-stack (15)", f"{db.cloud_fullstack:.1f}", f"{b.cloud_fullstack:.1f}",
+                 "deterministic (unchanged)"],
+                ["GitHub (10)", f"{db.github:.1f}", f"{b.github:.1f}",
+                 _esc(c.github_summary[:70] or "—")],
+                ["Engineering depth (5)", f"{db.engineering_depth:.1f}", f"{b.engineering_depth:.1f}",
+                 "deterministic (unchanged)"],
+                ["Penalties", f"{db.penalties:.1f}", f"{b.penalties:.1f}", "thin-wrapper / tutorial"],
+                ["TOTAL", f"{db.total():.1f}", f"{b.total():.1f}",
+                 f"LLM contribution {delta:+.1f}" if delta is not None else "—"],
+            ], [36 * mm, 24 * mm, 22 * mm, 92 * mm], center_from=1))
+        block.append(Paragraph(f"<i>Project:</i> {_esc(c.project_summary[:230])}", small))
+        story.append(KeepTogether(block + [Spacer(1, 6)]))
+
+    # ---- Rejected with reasons -------------------------------------------
     if rejected:
-        story.append(Paragraph(f"Rejected / unparsed ({len(rejected)})", h2))
-        rows = [["Candidate", "Reason"]]
+        story.append(PageBreak())
+        story.append(Paragraph(f"Rejected candidates ({len(rejected)}) — and why", h2))
+        story.append(Paragraph(
+            "Eligibility is a hard, deterministic filter: a candidate must show <b>Python</b> AND "
+            "<b>AI/agentic</b> evidence. Reasons name only the unmet requirement — never the "
+            "presence of an “unwanted” skill. <i>matched_skills</i> is the evidence that was found.",
+            small))
+        story.append(Spacer(1, 3))
+        rows = [["Candidate", "Rejection reason(s)", "Matched skills (what we did find)"]]
         for c in rejected:
-            rows.append([c.candidate_name[:32], Paragraph("; ".join(c.rejection_reasons), cell)])
-        t = Table(rows, colWidths=[60 * mm, 108 * mm], repeatRows=1)
-        t.setStyle(TableStyle([
-            ("GRID", (0, 0), (-1, -1), 0.25, colors.lightgrey),
-            ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#7a1f1f")),
-            ("TEXTCOLOR", (0, 0), (-1, 0), colors.white),
-            ("FONTSIZE", (0, 0), (-1, -1), 8),
-            ("VALIGN", (0, 0), (-1, -1), "TOP"),
-        ]))
-        story.append(t)
+            rows.append([
+                Paragraph(_esc(c.candidate_name[:32]), cell),
+                Paragraph(_esc("; ".join(c.rejection_reasons) or "ineligible"), cell),
+                Paragraph(_esc(", ".join(c.matched_skills[:10]) or "—"), cell),
+            ])
+        story.append(T(rows, [40 * mm, 62 * mm, 68 * mm], header=RED))
 
     story.append(Spacer(1, 8))
     story.append(Paragraph(
-        "Eligibility is a hard, deterministic filter (Python AND AI/agentic evidence). "
-        "Scores are evidence-source weighted; the LLM contributes AI project depth with cited "
-        "evidence. GitHub rate-limited/errored profiles are tagged and given a neutral placeholder.",
-        small))
+        "Eligibility is a hard, deterministic filter (Python AND AI/agentic evidence). Scores are "
+        "evidence-source weighted; the LLM contributes AI project depth with cited evidence. GitHub "
+        "rate-limited/errored profiles are tagged and given a neutral placeholder.", small))
 
-    doc.build(story)
+    def _footer(canvas, doc):
+        canvas.saveState()
+        canvas.setFont("Helvetica", 7)
+        canvas.setFillGray(0.45)
+        canvas.drawString(15 * mm, 9 * mm, "AI Resume Screening & Ranking — Results")
+        canvas.drawRightString(A4[0] - 15 * mm, 9 * mm, f"Page {doc.page}")
+        canvas.restoreState()
+
+    doc = SimpleDocTemplate(
+        str(output_path), pagesize=A4,
+        leftMargin=15 * mm, rightMargin=15 * mm, topMargin=14 * mm, bottomMargin=15 * mm,
+        title="AI Resume Screening — Results", author="Resume Screener",
+    )
+    doc.build(story, onFirstPage=_footer, onLaterPages=_footer)
     return output_path

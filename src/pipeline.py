@@ -102,6 +102,12 @@ def _process_document(
         result.github = github
         result.github_summary = github.summary
 
+        # Deterministic baseline (no LLM): lets the report show how the LLM
+        # changes the AI-depth category and the total.
+        det_breakdown = score_candidate(extracted, eligibility, github, settings)
+        result.deterministic_breakdown = det_breakdown
+        result.deterministic_total_score = det_breakdown.total()
+
         # 4) LLM project scoring — only for gate survivors. Sends just the
         #    projects/experience context (small prompt), adds project quality
         #    with rationale + cited evidence on top of the deterministic base.
@@ -117,6 +123,7 @@ def _process_document(
         breakdown = score_candidate(refined, eligibility, github, settings)
         result.score_breakdown = breakdown
         result.total_score = breakdown.total()
+        result.llm_ai_project_depth = breakdown.ai_project_depth
 
         strengths, concerns = derive_strengths_concerns(refined, breakdown, github, settings)
         result.strengths = strengths

@@ -225,6 +225,12 @@ class CandidateResult(BaseModel):
     total_score: float | None = None
     score_breakdown: ScoreBreakdown | None = None
 
+    # The score BEFORE the LLM refined AI project depth (deterministic baseline),
+    # so the report can show deterministic vs LLM vs final and how they combine.
+    deterministic_total_score: float | None = None
+    deterministic_breakdown: ScoreBreakdown | None = None
+    llm_ai_project_depth: float | None = None  # AI depth after LLM refinement
+
     matched_skills: list[str] = Field(default_factory=list)
     project_summary: str = ""
     github_summary: str = ""
