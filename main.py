@@ -26,7 +26,7 @@ from src.cache import DiskCache, NullCache  # noqa: E402
 from src.config import get_settings  # noqa: E402
 from src.extract import NullLLMClient  # noqa: E402
 from src.pipeline import run_screening  # noqa: E402
-from src.report import render_console, write_csv, write_json  # noqa: E402
+from src.report import render_console, write_csv, write_json, write_pdf  # noqa: E402
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -39,6 +39,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--output", "-o", type=Path, default=Path("output/results.json"),
                         help="Path to the JSON results file.")
     parser.add_argument("--csv", type=Path, default=None, help="Optional CSV output path.")
+    parser.add_argument("--pdf", type=Path, default=None, help="Optional PDF report path.")
     parser.add_argument("--limit", type=int, default=None, help="Process only the first N resumes.")
     parser.add_argument("--top", type=int, default=10, help="Rows in the terminal summary.")
     parser.add_argument("--no-llm", action="store_true", help="Force deterministic-only mode.")
@@ -82,6 +83,12 @@ def main(argv: list[str] | None = None) -> int:
     print(f"\nWrote {out}  ({len(report.candidates)} candidates)")
     if args.csv:
         print(f"Wrote {write_csv(report, args.csv)}")
+    if args.pdf:
+        try:
+            print(f"Wrote {write_pdf(report, args.pdf, top=args.top)}")
+        except ImportError:
+            print("warning: reportlab not installed; skipping PDF "
+                  "(pip install reportlab)", file=sys.stderr)
 
     return 0
 
