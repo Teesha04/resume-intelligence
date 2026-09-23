@@ -103,15 +103,25 @@ class GeminiClient:
         timeout: float = 20.0,
         max_retries: int = 2,
         requests_per_minute: int = 12,
+        on_rate_limit: str = "wait",
+        max_wait_seconds: float = 90.0,
+        wait_budget_seconds: float = 600.0,
         cache: DiskCache | None = None,
     ) -> None:
         self.api_key = api_key
         self.model = model
         self.timeout = timeout
         self.max_retries = max_retries
+        self.on_rate_limit = on_rate_limit
+        self.max_wait_seconds = max_wait_seconds
+        self.wait_budget_seconds = wait_budget_seconds
         self.cache = cache
         self._limiter = _RateLimiter(requests_per_minute)
         self._client = None
+
+        # Observability counters (read by the pipeline for the batch summary).
+        self.rate_limit_waits = 0
+        self.total_wait_seconds = 0.0
 
     def _get_client(self):
         if self._client is None:
@@ -159,7 +169,8 @@ class GeminiClient:
         attempts.append(dict(base_cfg))
 
         for config_kwargs in attempts:
-            for attempt in range(self.max_retries + 1):
+            attempt = 0
+            while True:
                 self._limiter.wait()
                 try:
                     response = client.models.generate_content(
@@ -174,17 +185,38 @@ class GeminiClient:
                 except Exception as exc:  # noqa: BLE001 - adapter boundary
                     last_error = exc
                     message = str(exc).lower()
-                    transient = any(
+                    is_quota = any(
                         token in message
-                        for token in ("429", "rate", "timeout", "unavailable", "503", "500", "quota")
+                        for token in ("429", "quota", "rate limit", "resource_exhausted",
+                                      "resource exhausted", "exceeded your current quota")
                     )
-                    if not transient or attempt == self.max_retries:
+                    is_transient = is_quota or any(
+                        token in message for token in ("timeout", "unavailable", "503", "500")
+                    )
+
+                    # Per-minute quota: pause until it resets, then resume the
+                    # SAME request instead of falling back to deterministic.
+                    if is_quota and self.on_rate_limit == "wait":
+                        delay = _retry_delay_seconds(str(exc)) or 60.0
+                        delay = min(delay, self.max_wait_seconds)
+                        if self.total_wait_seconds + delay <= self.wait_budget_seconds:
+                            log.warning(
+                                "LLM rate limit reached; waiting %.0fs for the quota to "
+                                "reset, then resuming…", delay,
+                            )
+                            time.sleep(delay)
+                            self.rate_limit_waits += 1
+                            self.total_wait_seconds += delay
+                            continue  # retry the same request; no attempt consumed
+
+                    if not is_transient or attempt >= self.max_retries:
                         break  # schema problem or exhausted retries: next strategy
+                    attempt += 1
                     delay = _retry_delay_seconds(str(exc))
                     if delay:
                         # Respect the server's own backoff hint (capped).
-                        time.sleep(min(delay, 60.0))
-                    log.debug("LLM transient error, retrying (%s): %s", attempt + 1, exc)
+                        time.sleep(min(delay, self.max_wait_seconds))
+                    log.debug("LLM transient error, retrying (%s): %s", attempt, exc)
 
         raise LLMError(f"Gemini call failed: {type(last_error).__name__}: {last_error}")
 
@@ -215,6 +247,9 @@ def build_llm_client(
     timeout: float,
     max_retries: int,
     requests_per_minute: int = 12,
+    on_rate_limit: str = "wait",
+    max_wait_seconds: float = 90.0,
+    wait_budget_seconds: float = 600.0,
     cache: DiskCache | None = None,
 ) -> LLMClient:
     """Factory. Returns a NullLLMClient when no key is available."""
@@ -227,6 +262,9 @@ def build_llm_client(
             timeout=timeout,
             max_retries=max_retries,
             requests_per_minute=requests_per_minute,
+            on_rate_limit=on_rate_limit,
+            max_wait_seconds=max_wait_seconds,
+            wait_budget_seconds=wait_budget_seconds,
             cache=cache,
         )
     log.warning("Unknown LLM provider %r; falling back to deterministic-only.", provider)

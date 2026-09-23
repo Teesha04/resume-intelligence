@@ -175,6 +175,10 @@ class GitHubEnrichment(BaseModel):
     days_since_last_activity: int | None = None
     relevant_repos: list[str] = Field(default_factory=list)
     error: str | None = None
+    # True when enrichment could not be determined (rate-limited/error). Such
+    # profiles are *tagged* and receive a neutral placeholder instead of 0 so a
+    # rate limit is not mistaken for genuine inactivity.
+    flagged: bool = False
 
     def score(self) -> float:
         return round(self.recent_activity_score + self.repos_score, 2)
@@ -232,6 +236,7 @@ class CandidateResult(BaseModel):
     # Provenance / debugging
     source_file: str = ""
     parse_status: ParseStatus = ParseStatus.OK
+    llm_applied: bool = False
     warnings: list[str] = Field(default_factory=list)
 
 
@@ -248,6 +253,17 @@ class BatchSummary(BaseModel):
     github_enriched: int = 0
     github_failures: int = 0
     duration_seconds: float = 0.0
+
+    # Gate / LLM funnel visibility
+    llm_skipped_by_gate: int = 0   # rejected before any LLM call
+    llm_scored: int = 0            # survivors that received LLM scoring
+    llm_rate_limit_waits: int = 0
+    llm_wait_seconds: float = 0.0
+
+    # GitHub tagging (rate-limited/error profiles get a neutral placeholder)
+    github_tagged_rate_limited: int = 0
+    github_tagged_error: int = 0
+    github_no_profile: int = 0
 
 
 class ScreeningReport(BaseModel):

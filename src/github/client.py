@@ -70,6 +70,7 @@ class GitHubClient:
                 status=GitHubStatus.RATE_LIMITED,
                 username=username,
                 summary="GitHub rate limit already hit this run",
+                flagged=True,
             )
 
         try:
@@ -77,7 +78,7 @@ class GitHubClient:
         except Exception as exc:  # noqa: BLE001 - transport boundary
             log.warning("GitHub transport error for %s: %s", username, exc)
             return GitHubEnrichment(status=GitHubStatus.ERROR, username=username, error=str(exc),
-                                    summary="GitHub request failed")
+                                    summary="GitHub request failed", flagged=True)
 
         if status == 404:
             return GitHubEnrichment(status=GitHubStatus.NOT_FOUND, username=username,
@@ -86,10 +87,11 @@ class GitHubClient:
             self._rate_limited = True
             log.warning("GitHub rate limited (status %s); disabling further calls", status)
             return GitHubEnrichment(status=GitHubStatus.RATE_LIMITED, username=username,
-                                    summary="GitHub API rate limited")
+                                    summary="GitHub API rate limited", flagged=True)
         if status != 200 or not isinstance(profile, dict):
             return GitHubEnrichment(status=GitHubStatus.ERROR, username=username,
-                                    error=f"status {status}", summary="GitHub profile unavailable")
+                                    error=f"status {status}", summary="GitHub profile unavailable",
+                                    flagged=True)
 
         events: list[dict] = []
         repos: list[dict] = []

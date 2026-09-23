@@ -67,8 +67,15 @@ def render_console(report: ScreeningReport, top: int = 10) -> str:
         f"duplicates={s.duplicates_skipped}"
     )
     lines.append(
-        f" eligible={s.eligible}  rejected={s.rejected}  llm_used={s.llm_used}  "
-        f"github_ok={s.github_enriched}  github_failures={s.github_failures}"
+        f" eligible={s.eligible}  rejected={s.rejected}  llm_used={s.llm_used}"
+    )
+    lines.append(
+        f" funnel: skipped_by_gate={s.llm_skipped_by_gate}  llm_scored={s.llm_scored}  "
+        f"rate_limit_waits={s.llm_rate_limit_waits} ({s.llm_wait_seconds}s waited)"
+    )
+    lines.append(
+        f" github: ok={s.github_enriched}  no_profile={s.github_no_profile}  "
+        f"tagged(rate_limited={s.github_tagged_rate_limited}, error={s.github_tagged_error})"
     )
     lines.append(f" duration={s.duration_seconds}s")
     lines.append("")

@@ -85,9 +85,17 @@ class Settings(BaseSettings):
     llm_max_retries: int = 2
     # Free tiers enforce a low requests-per-minute quota; pace to stay under it.
     llm_requests_per_minute: int = 12
+    # On a per-minute quota error: "wait" (pause until it resets, then resume)
+    # or "fail" (give up on that call immediately).
+    llm_on_rate_limit: str = "wait"
+    llm_max_wait_seconds: float = 90.0     # cap for a single wait
+    llm_wait_budget_seconds: float = 600.0  # total wait budget per run
 
     # --- GitHub ---
     github_token: str | None = None
+    # Neutral placeholder (out of 10) for profiles tagged rate-limited/error,
+    # so an unknown is not scored as genuine inactivity.
+    github_rate_limited_placeholder: float = 5.0
 
     # --- Runtime ---
     max_concurrency: int = 5

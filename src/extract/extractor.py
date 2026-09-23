@@ -64,26 +64,40 @@ def _merge(base: ExtractedResume, llm: LLMExtraction) -> ExtractedResume:
 
 
 def extract_resume(doc: Document, client: LLMClient | None = None) -> ExtractedResume:
-    """Extract candidate info from a parsed document. Never raises."""
-    base = deterministic_extract(doc)
+    """Extract candidate info from a parsed document. Never raises.
 
+    Deterministic extraction always runs; the LLM optionally refines it. In the
+    pipeline, eligibility is decided on the deterministic result BEFORE this
+    refinement is applied to survivors.
+    """
+    base = deterministic_extract(doc)
     if not doc.text or not doc.text.strip():
         base.warnings.append("no_text_to_extract")
         return base
+    return refine_with_llm(base, doc.text, client)
 
-    if client is None or isinstance(client, NullLLMClient):
+
+def refine_with_llm(
+    base: ExtractedResume, text: str, client: LLMClient | None
+) -> ExtractedResume:
+    """Apply LLM extraction/scoring on top of a deterministic result.
+
+    Never raises: any failure is recorded as a warning and the deterministic
+    result is returned unchanged.
+    """
+    if client is None or isinstance(client, NullLLMClient) or not text.strip():
         return base
 
     try:
         data = client.generate_json(
             system=EXTRACTION_SYSTEM,
-            prompt=build_extraction_prompt(doc.text),
+            prompt=build_extraction_prompt(text),
             schema=LLMExtraction,
             temperature=0.0,
         )
         llm = LLMExtraction.model_validate(data)
     except (LLMError, ValidationError) as exc:
-        log.warning("LLM extraction failed for %s: %s", doc.filename, exc)
+        log.warning("LLM refinement failed: %s", exc)
         base.warnings.append(f"llm_extraction_failed:{type(exc).__name__}")
         return base
 

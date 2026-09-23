@@ -17,7 +17,6 @@ from .rubric import (
     score_ai_project_depth,
     score_cloud_fullstack,
     score_engineering_depth,
-    score_github,
     score_python_backend,
 )
 
@@ -40,7 +39,20 @@ def score_candidate(
     py_pts, py_reason = score_python_backend(extracted, w, th)
     cl_pts, cl_reason = score_cloud_fullstack(extracted, w, th)
     en_pts, en_reason = score_engineering_depth(extracted, w, th)
-    gh_pts, gh_reason = score_github(github.score(), w)
+
+    # GitHub: a rate-limited/errored profile is *unknown*, not inactive. Such
+    # profiles are tagged and receive a neutral placeholder instead of 0.
+    if github.flagged and github.username:
+        gh_value = settings.github_rate_limited_placeholder
+        gh_reason = [
+            f"GitHub unavailable ({github.status.value}); tagged — neutral "
+            f"placeholder {min(w.github, gh_value):.1f}/{w.github:.0f} applied"
+        ]
+    else:
+        gh_value = github.score()
+        gh_reason = [f"GitHub enrichment: {min(w.github, max(0.0, gh_value)):.1f}/{w.github:.0f}"]
+    gh_pts = round(min(w.github, max(0.0, gh_value)), 2)
+
     pen_pts, pen_reason = compute_penalties(extracted, th, settings.penalties)
 
     return ScoreBreakdown(
@@ -89,7 +101,9 @@ def derive_strengths_concerns(
 
     if breakdown.penalties < 0:
         concerns.append("Project-quality penalties applied (see score breakdown)")
-    if github.status.value == "ok" and github.score() >= 5:
+    if github.flagged:
+        concerns.append(f"GitHub unavailable ({github.status.value}) — tagged, neutral placeholder applied")
+    elif github.status.value == "ok" and github.score() >= 5:
         strengths.append("Active, relevant public GitHub")
     elif github.username and github.status.value != "ok":
         concerns.append(f"GitHub not enriched ({github.status.value})")

@@ -22,7 +22,7 @@ from pathlib import Path
 
 from .config import Settings, get_settings
 from .eligibility import evaluate_eligibility
-from .extract import build_llm_client, extract_resume
+from .extract import NullLLMClient, build_llm_client, deterministic_extract, refine_with_llm
 from .github import GitHubClient
 from .ingest import load_documents
 from .schemas import (
@@ -68,7 +68,12 @@ def _process_document(
         return result
 
     try:
-        extracted = extract_resume(doc, llm_client)
+        # 1) Deterministic extraction (cheap; always runs).
+        extracted = deterministic_extract(doc)
+
+        # 2) HARD GATE — eligibility is decided HERE, before any network call,
+        #    using only raw-text evidence. Eliminated candidates never reach
+        #    GitHub or the LLM.
         eligibility = evaluate_eligibility(extracted, has_text=bool(doc.text.strip()))
 
         result.candidate_name = extracted.candidate_name
@@ -76,26 +81,38 @@ def _process_document(
         result.matched_skills = eligibility.matched_skills
         result.rejection_reasons = eligibility.rejection_reasons
         result.project_summary = _project_summary(extracted)
-        result.warnings = extracted.warnings
+        result.warnings = list(extracted.warnings)
 
         if not eligibility.eligible:
-            # No scoring / GitHub for ineligible candidates.
             result.github = GitHubEnrichment(
                 status=GitHubStatus.DISABLED,
                 username=extracted.github_username,
-                summary="Not enriched (candidate ineligible)",
+                summary="Not enriched (eliminated by hard gate)",
             )
             return result
 
+        # 3) GitHub enrichment — runs BEFORE the LLM. Never eliminates; a
+        #    missing/private/rate-limited profile is tagged, not fatal.
         github = github_client.enrich(extracted.github_username)
         result.github = github
         result.github_summary = github.summary
 
-        breakdown = score_candidate(extracted, eligibility, github, settings)
+        # 4) LLM refinement/scoring — only for gate survivors. Adds project
+        #    quality + evidence on top of the deterministic baseline.
+        refined = refine_with_llm(extracted, doc.text, llm_client)
+        result.warnings = list(refined.warnings)
+        result.candidate_name = refined.candidate_name
+        result.project_summary = _project_summary(refined)
+        result.llm_applied = llm_client is not None and not isinstance(
+            llm_client, NullLLMClient
+        ) and not any(w.startswith("llm_extraction_failed") for w in refined.warnings)
+
+        # 5) Score (eligibility stays frozen from step 2).
+        breakdown = score_candidate(refined, eligibility, github, settings)
         result.score_breakdown = breakdown
         result.total_score = breakdown.total()
 
-        strengths, concerns = derive_strengths_concerns(extracted, breakdown, github, settings)
+        strengths, concerns = derive_strengths_concerns(refined, breakdown, github, settings)
         result.strengths = strengths
         result.concerns = concerns
 
@@ -144,6 +161,9 @@ def run_screening(
         timeout=settings.request_timeout_seconds,
         max_retries=settings.llm_max_retries,
         requests_per_minute=settings.llm_requests_per_minute,
+        on_rate_limit=settings.llm_on_rate_limit,
+        max_wait_seconds=settings.llm_max_wait_seconds,
+        wait_budget_seconds=settings.llm_wait_budget_seconds,
         cache=cache,
     )
     owns_github = github_client is None
@@ -186,14 +206,17 @@ def run_screening(
 
     _rank(results)
 
+    parsed_ok = sum(1 for d in documents if d.parse_status == ParseStatus.OK)
+    eligible = sum(1 for r in results if r.eligible)
+
     summary = BatchSummary(
         total_resumes=len(documents),
-        parsed_ok=sum(1 for d in documents if d.parse_status == ParseStatus.OK),
+        parsed_ok=parsed_ok,
         parse_failed=sum(
             1 for d in documents if d.parse_status in (ParseStatus.FAILED, ParseStatus.EMPTY)
         ),
         duplicates_skipped=duplicates,
-        eligible=sum(1 for r in results if r.eligible),
+        eligible=eligible,
         rejected=sum(1 for r in results if not r.eligible),
         llm_used=bool(settings.llm_available),
         github_enriched=sum(1 for r in results if r.github.status == GitHubStatus.OK),
@@ -201,6 +224,16 @@ def run_screening(
             1 for r in results
             if r.github.status in (GitHubStatus.RATE_LIMITED, GitHubStatus.ERROR)
         ),
+        # Funnel: parsed documents that failed the hard gate never reached the LLM.
+        llm_skipped_by_gate=max(0, parsed_ok - eligible),
+        llm_scored=sum(1 for r in results if r.llm_applied),
+        llm_rate_limit_waits=int(getattr(llm_client, "rate_limit_waits", 0)),
+        llm_wait_seconds=round(float(getattr(llm_client, "total_wait_seconds", 0.0)), 1),
+        github_tagged_rate_limited=sum(
+            1 for r in results if r.github.status == GitHubStatus.RATE_LIMITED
+        ),
+        github_tagged_error=sum(1 for r in results if r.github.status == GitHubStatus.ERROR),
+        github_no_profile=sum(1 for r in results if r.github.status == GitHubStatus.NO_PROFILE),
         duration_seconds=round(time.perf_counter() - start, 2),
     )
 

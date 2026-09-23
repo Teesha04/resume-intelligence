@@ -94,18 +94,27 @@ tests/fixtures/generate_resumes.py   synthetic resume generator (dev + tests)
 ### Data flow
 
 ```
-resumes/ ──▶ ingest (isolated parse) ──▶ deterministic extract ──▶ LLM refine (optional)
-                                              │
-                                              ▼
-                                   HARD eligibility filter (no LLM)
-                                              │
-                        ┌─────────────────────┴─────────────────────┐
-                        ▼ (eligible)                                ▼ (ineligible)
-              score rubric + GitHub enrichment              reject with reasons
-                        │
-                        ▼
-                 rank ──▶ results.json (+ summary, rationale)
+resumes/ ──▶ ingest (isolated parse)
+              │
+              ▼
+        deterministic extract            (cheap; always runs)
+              │
+              ▼
+        HARD GATE: Python AND AI         ← eliminates here (no network)
+              │
+      ┌───────┴────────────────────────┐
+      ▼ (eliminated)                   ▼ (survivors)
+ reject with reasons            GitHub enrichment (if username)
+                                      │  never eliminates; tags failures
+                                      ▼
+                                 LLM scoring (project quality + evidence)
+                                      │  wait-and-resume on rate limits
+                                      ▼
+                                 score + rank
 ```
+
+Eliminated candidates never reach GitHub or the LLM — the model only ever sees
+candidates that can actually rank.
 
 ---
 
@@ -158,8 +167,14 @@ A candidate is **eligible only if both** hold, evaluated by deterministic code
    ML/CV/NLP).
 
 Additional rules:
-- JavaScript/Java/React are **not** grounds for rejection when Python + AI are
-  also present (explicitly required by the spec).
+- **The gate runs first**: eligibility is decided before GitHub and before the
+  LLM, so eliminated candidates never consume an API call.
+- **Positive-only**: the gate asks only "is Python present?" and "is AI
+  present?". JavaScript/Java/React/Next.js are never grounds for rejection —
+  they only contribute supporting score and appear in `matched_skills`.
+- **Rejection reasons name only the unmet requirement** (e.g. "No evidence of
+  Python stack"), never the presence of an "unwanted" skill.
+- `matched_skills` is populated for **every** candidate, eligible or not.
 - A generic AI *skill* with no project (e.g. `PyTorch` listed but nothing built)
   is deliberately **not** enough to satisfy the AI condition.
 - The hard filter is kept **out of the LLM** entirely.
@@ -218,11 +233,17 @@ The LLM is an **optional accelerator, never a dependency**:
 - **Adapter pattern**: all provider-specific code lives in
   `src/extract/client.py` behind a one-method interface; adding OpenAI/Claude is
   a new class, nothing else changes.
+- **Scope**: the LLM's main job is **AI/Agentic project depth** — it scores each
+  AI project and returns a short **rationale** plus the **cited evidence** that
+  justifies the score. Python/cloud/engineering stay deterministic. A score
+  without a rationale/citation is discarded and the deterministic value is used.
 - **Rate limiting**: free LLM tiers enforce a low requests-per-minute quota, so
-  the adapter paces calls (`LLM_REQUESTS_PER_MINUTE`) and honours the server's
-  own `retryDelay` on 429s. Without this, a 50-resume batch trips the quota and
-  silently falls back to deterministic scoring for most candidates, producing
-  inconsistent results.
+  the adapter paces calls (`LLM_REQUESTS_PER_MINUTE`) and, on a quota error,
+  **waits for the reset and resumes the same request** rather than falling back
+  to deterministic scoring (which would make rankings inconsistent). It prints a
+  clear "waiting Ns for the quota to reset" message; `LLM_ON_RATE_LIMIT=fail`
+  disables waiting. Only after the wait budget is spent does a single resume
+  degrade to its deterministic score.
 - **Response caching**: successful extractions are cached by content hash, so
   reruns and re-scoring are near-instant and don't re-spend quota.
 - **Failure isolation**: `LLMError`/validation errors are caught per resume; one
@@ -241,11 +262,16 @@ signal-based quality estimate, so the system is fully usable with zero keys.
   `pushed_at`), count of recent events, number of maintained repositories, and
   repositories that are Python/AI-relevant.
 - **Cap 10 points**: `0-5` activity + `0-5` repositories.
-- **Never fatal**: `no_profile`, `not_found`, `rate_limited`, and `error` are
-  recorded as statuses and score 0. A 403/429 trips an in-run circuit breaker so
-  we stop burning the rate limit.
-- **Cached** per username, and only fetched for eligible candidates (GitHub only
-  feeds scoring).
+- **Never fatal, never eliminates**: `no_profile`, `not_found`, `rate_limited`,
+  and `error` are recorded as statuses and never affect eligibility. A 403/429
+  trips an in-run circuit breaker so we stop burning the rate limit.
+- **Tagging (Option A)**: a `rate_limited`/`error` profile is **unknown**, not
+  inactive, so it is **tagged** (`github.flagged = true`) and receives a
+  deterministic **neutral placeholder** (default `5.0/10`, configurable) instead
+  of 0. A candidate with genuinely **no** GitHub still scores 0 (`no_profile`) —
+  a known fact. No random values (they would break reproducibility/explainability).
+- **Cached** per username, and only fetched for gate survivors (GitHub only
+  feeds scoring, so eliminated candidates are skipped).
 
 ### 4.5 Reliability
 

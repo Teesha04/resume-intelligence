@@ -9,7 +9,14 @@
     "llm_used": true,
     "github_enriched": 15,
     "github_failures": 0,
-    "duration_seconds": 139.87
+    "duration_seconds": 10.58,
+    "llm_skipped_by_gate": 9,
+    "llm_scored": 41,
+    "llm_rate_limit_waits": 0,
+    "llm_wait_seconds": 0.0,
+    "github_tagged_rate_limited": 0,
+    "github_tagged_error": 0,
+    "github_no_profile": 25
   },
   "candidates": [
     {
@@ -69,22 +76,10 @@
         "Caching",
         "Observability",
         "Failure Handling",
-        "Performance",
-        "React Native",
-        "NestJS",
-        "Electron",
-        "Vercel AI SDK",
-        "Prisma",
-        "QStash",
-        "GitHub Actions",
-        "Playwright",
-        "Sentry",
-        "Elasticsearch",
-        "Kibana",
-        "Turborepo"
+        "Performance"
       ],
       "project_summary": "Construct IDE: An AI-native teaching IDE that converts project goals into a personalized coding workspace. It features generated lessons, concept checks, implementation tasks, hidden tests, and persistent learner state across project steps.",
-      "github_summary": "last public activity ~0d ago; 59 event(s) in 90d; relevant repos: hackathon-datahub-schemaguard, fxpnt, xitecoin",
+      "github_summary": "last public activity ~0d ago; 60 event(s) in 90d; relevant repos: hackathon-datahub-schemaguard, fxpnt, xitecoin",
       "strengths": [
         "Strong AI/agentic project depth",
         "Solid Python/backend engineering evidence",
@@ -96,7 +91,7 @@
       "github": {
         "status": "ok",
         "username": "AbhinavMishra32",
-        "summary": "last public activity ~0d ago; 59 event(s) in 90d; relevant repos: hackathon-datahub-schemaguard, fxpnt, xitecoin",
+        "summary": "last public activity ~0d ago; 60 event(s) in 90d; relevant repos: hackathon-datahub-schemaguard, fxpnt, xitecoin",
         "recent_activity_score": 5.0,
         "repos_score": 5.0,
         "public_repos": 61,
@@ -106,10 +101,12 @@
           "fxpnt",
           "xitecoin"
         ],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_10.pdf",
       "parse_status": "ok",
+      "llm_applied": true,
       "warnings": []
     },
     {
@@ -176,15 +173,7 @@
         "Tailwind",
         "Firebase",
         "Testing",
-        "Concurrency",
-        "C",
-        "React.js",
-        "React Native",
-        "Express.js",
-        "Material-UI",
-        "Git",
-        "GitHub",
-        "Figma"
+        "Concurrency"
       ],
       "project_summary": "Foundrly: A platform featuring real-time swipe, match, and chat workflows built with a Node.js and MongoDB backend. It incorporates Gemini-powered AI pipelines for idea generation and pitch rewriting using multi-step prompt orchestration.",
       "github_summary": "last public activity ~7d ago; 96 event(s) in 90d; relevant repos: Understudy, PitchPerfect, hinglish-turn-detector",
@@ -216,10 +205,12 @@
           "camera-control-app",
           "RedFlag"
         ],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_37.pdf",
       "parse_status": "ok",
+      "llm_applied": true,
       "warnings": []
     },
     {
@@ -281,16 +272,7 @@
         "Architecture",
         "Observability",
         "Concurrency",
-        "Performance",
-        "Vue.js",
-        "Nuxt.js",
-        "HTML",
-        "CSS",
-        "REST APIs",
-        "LLM Integration",
-        "ClickHouse",
-        "Linux",
-        "Rust"
+        "Performance"
       ],
       "project_summary": "AI Research Copilot (LangGraph): A production-style AI research assistant featuring a multi-node workflow for planning, research, analysis, and report generation. It utilizes shared graph state, conditional routing, and session persistence to manage complex research tasks.",
       "github_summary": "last public activity ~5d ago; 1 event(s) in 90d; relevant repos: Dossier",
@@ -313,10 +295,12 @@
         "relevant_repos": [
           "Dossier"
         ],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_44.pdf",
       "parse_status": "ok",
+      "llm_applied": true,
       "warnings": []
     },
     {
@@ -390,17 +374,7 @@
         "Observability",
         "Concurrency",
         "Failure Handling",
-        "Performance",
-        "REST APIs",
-        "Async Python",
-        "Azure OpenAI",
-        "Semantic Search",
-        "Git",
-        "GitHub",
-        "GitLab CI",
-        "Jenkins",
-        "Prometheus",
-        "ElasticSearch"
+        "Performance"
       ],
       "project_summary": "Enterprise HRMS AI Agent Workflows: Developed multi-step AI agent workflows for enterprise HRMS using LangChain and MCP tools. The system incorporates semantic retrieval, structured output validation with Redis-backed state management, and asynchronous streaming to handle com",
       "github_summary": "No GitHub profile on resume",
@@ -420,10 +394,12 @@
         "public_repos": null,
         "days_since_last_activity": null,
         "relevant_repos": [],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_30.pdf",
       "parse_status": "ok",
+      "llm_applied": true,
       "warnings": []
     },
     {
@@ -496,29 +472,7 @@
         "Architecture",
         "Observability",
         "Failure Handling",
-        "Performance",
-        "GPT-4o",
-        "GPT-4o-mini",
-        "Chainlit",
-        "Duffel API",
-        "SerpAPI",
-        "AWS EKS",
-        "Neo4j",
-        "Cypher",
-        "LCEL",
-        "AWS EC2",
-        "AWS Lambda",
-        "Amazon ECR",
-        "Amazon ECS Fargate",
-        "Amazon RDS",
-        "AWS Secrets Manager",
-        "AWS IAM",
-        "Amazon CloudWatch",
-        "PySpark",
-        "AWS Step Functions",
-        "AWS Glue",
-        "Teradata",
-        "AWS Redshift"
+        "Performance"
       ],
       "project_summary": "Multi-Agent Travel Planning System: An agentic travel planning and booking system that orchestrates specialized nodes for flight search, hotel recommendations, and itinerary generation. It features human-in-the-loop workflows for booking confirmation and stateful conversation",
       "github_summary": "No GitHub profile on resume",
@@ -538,10 +492,12 @@
         "public_repos": null,
         "days_since_last_activity": null,
         "relevant_repos": [],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_43.pdf",
       "parse_status": "ok",
+      "llm_applied": true,
       "warnings": []
     },
     {
@@ -609,30 +565,10 @@
         "Architecture",
         "Observability",
         "Concurrency",
-        "Performance",
-        "REST APIs",
-        "Async Python",
-        "Uvicorn",
-        "LLMs",
-        "RAG Pipelines",
-        "Ollama",
-        "Speech-to-Text",
-        "Text-to-Speech",
-        "Voice AI",
-        "Grafana",
-        "Loki",
-        "Promtail",
-        "Webhooks",
-        "Linux",
-        "Git",
-        "SSH",
-        "Redfish API",
-        "InfiniBand",
-        "iDRAC/BMC",
-        "Paramiko"
+        "Performance"
       ],
       "project_summary": "AI Voice Appointment Assistant: A real-time, multilingual voice AI agent for healthcare appointment management. It supports booking, canceling, and rescheduling appointments over WebRTC using a tool-calling architecture to ensure grounded, auditable outputs.",
-      "github_summary": "last public activity ~46d ago; relevant repos: voice-ai-backend, python-low-level-design, medical-ai-assistant",
+      "github_summary": "last public activity ~47d ago; relevant repos: voice-ai-backend, python-low-level-design, medical-ai-assistant",
       "strengths": [
         "Strong AI/agentic project depth",
         "Solid Python/backend engineering evidence",
@@ -643,11 +579,11 @@
       "github": {
         "status": "ok",
         "username": "prajwalas1",
-        "summary": "last public activity ~46d ago; relevant repos: voice-ai-backend, python-low-level-design, medical-ai-assistant",
+        "summary": "last public activity ~47d ago; relevant repos: voice-ai-backend, python-low-level-design, medical-ai-assistant",
         "recent_activity_score": 3.0,
         "repos_score": 5.0,
         "public_repos": 32,
-        "days_since_last_activity": 46,
+        "days_since_last_activity": 47,
         "relevant_repos": [
           "voice-ai-backend",
           "python-low-level-design",
@@ -655,10 +591,12 @@
           "HPC-Chatbot-Public",
           "HPC-Monitoring-Framework"
         ],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_22.pdf",
       "parse_status": "ok",
+      "llm_applied": true,
       "warnings": []
     },
     {
@@ -740,26 +678,7 @@
         "Architecture",
         "Observability",
         "Concurrency",
-        "Performance",
-        "REST API Design",
-        "Async Programming",
-        "SSE",
-        "Socket.io",
-        "LiteLLM",
-        "OpenAI API",
-        "RAG Pipelines",
-        "Tool & Function Calling",
-        "Semantic Search",
-        "HuggingFace",
-        "AWS S3",
-        "Uvicorn",
-        "DigitalOcean",
-        "GitHub Actions",
-        "Playwright",
-        "Git",
-        "Vue",
-        "Nuxt",
-        "Tailwind CSS"
+        "Performance"
       ],
       "project_summary": "500Agents: A Component Intelligence Platform featuring a Journey Builder and Component Registry. It utilizes MCP-based data source integrations to deploy conversational AI agents with dynamic UI rendering. The system handles over 2 million conversatio",
       "github_summary": "No GitHub profile on resume",
@@ -779,10 +698,12 @@
         "public_repos": null,
         "days_since_last_activity": null,
         "relevant_repos": [],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_41.pdf",
       "parse_status": "ok",
+      "llm_applied": true,
       "warnings": []
     },
     {
@@ -861,10 +782,7 @@
         "Observability",
         "Failure Handling",
         "Performance",
-        "Security",
-        "Express.js",
-        "React.js",
-        "Git"
+        "Security"
       ],
       "project_summary": "Adaptive Agentic RAG - Multi-Agent Research System: An agentic system using LangGraph for conditional routing between local vector stores and web search. It features self-correction nodes for hallucination detection and persistent semantic user profiling.",
       "github_summary": "No GitHub profile on resume",
@@ -884,10 +802,12 @@
         "public_repos": null,
         "days_since_last_activity": null,
         "relevant_repos": [],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_35.pdf",
       "parse_status": "ok",
+      "llm_applied": true,
       "warnings": []
     },
     {
@@ -970,29 +890,7 @@
         "Observability",
         "Concurrency",
         "Failure Handling",
-        "Performance",
-        "AsyncIO",
-        "REST",
-        "WebSockets",
-        "Microservices",
-        "Salesforce",
-        "SMTP",
-        "Bash",
-        "LoRA",
-        "QLoRA",
-        "PEFT",
-        "Multi-Agent Orchestration",
-        "Evals",
-        "vLLM",
-        "pandas",
-        "MLflow",
-        "Bedrock",
-        "SageMaker",
-        "Lambda",
-        "EC2",
-        "S3",
-        "Vertex AI",
-        "BigQuery"
+        "Performance"
       ],
       "project_summary": "CopyGuard: A serverless GenAI code detection platform designed to handle burst traffic. It utilizes infrastructure as code to maintain 99.9% uptime and sub-2s response times.",
       "github_summary": "last public activity ~3d ago; 2 event(s) in 90d; relevant repos: face-verification-resnet50, pg-reliability-agent",
@@ -1015,10 +913,12 @@
           "face-verification-resnet50",
           "pg-reliability-agent"
         ],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_13.pdf",
       "parse_status": "ok",
+      "llm_applied": true,
       "warnings": []
     },
     {
@@ -1086,20 +986,7 @@
         "Observability",
         "Failure Handling",
         "Performance",
-        "Security",
-        "REST APIs",
-        "RBAC",
-        "OAuth 2.0",
-        "microservices",
-        "multi-tenant architecture",
-        "RAG systems",
-        "prompt engineering",
-        "Git",
-        "GitHub",
-        "Tailwind CSS",
-        "Postman",
-        "spaCy",
-        "Microsoft Presidio"
+        "Security"
       ],
       "project_summary": "Privacy Risk Intelligence Platform: A 3-layer privacy-risk analysis system that detects PII using NLP, classifies risk levels using a Random Forest model, and generates remediation advice via an LLM. The system selectively invokes the LLM for complex cases to optimize perform",
       "github_summary": "No GitHub profile on resume",
@@ -1119,10 +1006,12 @@
         "public_repos": null,
         "days_since_last_activity": null,
         "relevant_repos": [],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_28.pdf",
       "parse_status": "ok",
+      "llm_applied": true,
       "warnings": []
     },
     {
@@ -1197,30 +1086,7 @@
         "Architecture",
         "Concurrency",
         "Performance",
-        "Security",
-        "HTML5",
-        "CSS3",
-        "React Native",
-        "Expo",
-        "Vite",
-        "Tailwind CSS",
-        "Zustand",
-        "Jotai",
-        "Redux",
-        "Framer Motion",
-        "Three.js",
-        "GSAP",
-        "Chart.js",
-        "Express.js",
-        "SQLite",
-        "OpenAI GPT-4o",
-        "Gemini AI",
-        "Hugging Face Transformers",
-        "WebRTC",
-        "Jitsi SDK",
-        "Leaflet.js",
-        "Turf.js",
-        "PostGIS"
+        "Security"
       ],
       "project_summary": "IRLYSM – AI-Powered Real-Time Social Networking App: A production-grade geosocial platform enabling proximity-based discovery across 15+ activity categories. It features instant peer messaging, live interactions, and interactive map rendering engines with spatial indexing.",
       "github_summary": "last public activity ~123d ago",
@@ -1240,10 +1106,12 @@
         "public_repos": 3,
         "days_since_last_activity": 123,
         "relevant_repos": [],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_26.pdf",
       "parse_status": "ok",
+      "llm_applied": true,
       "warnings": []
     },
     {
@@ -1312,25 +1180,7 @@
         "CI/CD",
         "React",
         "Next.js",
-        "Concurrency",
-        "HTML",
-        "CSS",
-        "Data Structures",
-        "Algorithms",
-        "OOP",
-        "Distributed Systems",
-        "Multi-threading",
-        "Software Design",
-        "REST API Design",
-        "LLMs",
-        "Agentic AI",
-        "Scikit-Learn",
-        "Django REST",
-        "ReactJS",
-        "Excel",
-        "Data Visualization",
-        "Git",
-        "GitHub"
+        "Concurrency"
       ],
       "project_summary": "AI-Powered Resume Screening & Job Matching System: An end-to-end resume screening tool that utilizes BERT embeddings and NLP for semantic matching. The system features a Django REST backend for stateless session handling and a ReactJS dashboard for recruiters. It includes a custom ranking e",
       "github_summary": "last public activity ~6d ago; 4 event(s) in 90d; relevant repos: primetrade_assignment, Claude-Code-Qwen3-Assignment, Medical-RAG-System-for-Healthcare-Knowledge-Access",
@@ -1354,10 +1204,12 @@
           "Claude-Code-Qwen3-Assignment",
           "Medical-RAG-System-for-Healthcare-Knowledge-Access"
         ],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_08.pdf",
       "parse_status": "ok",
+      "llm_applied": true,
       "warnings": []
     },
     {
@@ -1433,15 +1285,7 @@
         "Architecture",
         "Queues",
         "Concurrency",
-        "Security",
-        "R",
-        "HTML",
-        "CSS",
-        "Bootstrap",
-        "REST API",
-        "Matplotlib",
-        "Seaborn",
-        "Plotly"
+        "Security"
       ],
       "project_summary": "AI Document Intelligence: A document platform utilizing RAG to improve retrieval accuracy. The system incorporates async processing and embeddings, with a Dockerized architecture ready for AWS deployment.",
       "github_summary": "No GitHub profile on resume",
@@ -1461,10 +1305,12 @@
         "public_repos": null,
         "days_since_last_activity": null,
         "relevant_repos": [],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_50.pdf",
       "parse_status": "ok",
+      "llm_applied": true,
       "warnings": []
     },
     {
@@ -1530,23 +1376,7 @@
         "Queues",
         "Observability",
         "Failure Handling",
-        "Security",
-        "C",
-        "C#",
-        "NodeJS",
-        "NestJS",
-        "ExpressJS",
-        "ASP.NET",
-        "ReactJS",
-        "LLM Integration",
-        "AWS S3",
-        "EC2",
-        "ElastikBeanStalk",
-        "GitHub Actions",
-        "Apache Kafka",
-        "OpenAI",
-        "Stripe",
-        "Microsoft Graph API"
+        "Security"
       ],
       "project_summary": "AI Workflow Orchestration Engine: A distributed AI workflow engine designed to execute multi-step LLM pipelines using an event-driven architecture. It integrates OpenAI, Gemini, and RAG for context-aware tasks, utilizing Kafka and Redis for asynchronous job processing and m",
       "github_summary": "No GitHub profile on resume",
@@ -1566,10 +1396,12 @@
         "public_repos": null,
         "days_since_last_activity": null,
         "relevant_repos": [],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_40.pdf",
       "parse_status": "ok",
+      "llm_applied": true,
       "warnings": []
     },
     {
@@ -1633,17 +1465,7 @@
         "CI/CD",
         "React",
         "Next.js",
-        "Security",
-        "Scikit-learn",
-        "CNNs",
-        "REST APIs",
-        "Git",
-        "GitHub",
-        "Jenkins",
-        "HTML",
-        "CSS",
-        "React.js",
-        "Playwright"
+        "Security"
       ],
       "project_summary": "Automated Evaluation System (AutoEval): A full-stack AI-powered evaluation system featuring role-based access control for students, faculty, and administrators. It utilizes a React/Next.js frontend connected to Django/FastAPI backends and integrates LLaMA for automated grading an",
       "github_summary": "last public activity ~5d ago; 46 event(s) in 90d; relevant repos: lenny-growth-assistant, handwritten-number-recognition, image_recognition",
@@ -1667,10 +1489,12 @@
           "handwritten-number-recognition",
           "image_recognition"
         ],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_38.pdf",
       "parse_status": "ok",
+      "llm_applied": true,
       "warnings": []
     },
     {
@@ -1743,23 +1567,7 @@
         "Observability",
         "Concurrency",
         "Performance",
-        "Security",
-        "REST APIs",
-        "Microservices Architecture",
-        "GPT-4",
-        "Hugging Face Transformers",
-        "Ollama",
-        "Conversational AI",
-        "ChromaDB",
-        "Agentic AI",
-        "SQLite",
-        "Git",
-        "Postman",
-        "Asyncio",
-        "Anaconda",
-        "Beautiful Soup",
-        "HTML",
-        "CSS"
+        "Security"
       ],
       "project_summary": "AI-Powered Healthcare Interaction Management System: A healthcare interaction management system that allows field representatives to manage HCP interactions via structured forms and a conversational AI assistant. The system utilizes a LangGraph-based agent to automate logging, follow-up sched",
       "github_summary": "No GitHub profile on resume",
@@ -1778,10 +1586,12 @@
         "public_repos": null,
         "days_since_last_activity": null,
         "relevant_repos": [],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_33.pdf",
       "parse_status": "ok",
+      "llm_applied": true,
       "warnings": []
     },
     {
@@ -1843,17 +1653,7 @@
         "Supabase",
         "Architecture",
         "Caching",
-        "Performance",
-        "HTML",
-        "CSS",
-        "React Native",
-        "Express.js",
-        "Figma",
-        "Git",
-        "GitHub",
-        "Postman",
-        "Expo",
-        "Tailwind CSS"
+        "Performance"
       ],
       "project_summary": "MicroScroll: An AI-powered microlearning platform that converts documents into interactive study decks. It features semantic chunking, automated card generation, and a snap-scrolling study feed with active recall mechanisms.",
       "github_summary": "No GitHub profile on resume",
@@ -1873,10 +1673,12 @@
         "public_repos": null,
         "days_since_last_activity": null,
         "relevant_repos": [],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_03.pdf",
       "parse_status": "ok",
+      "llm_applied": true,
       "warnings": []
     },
     {
@@ -1937,19 +1739,7 @@
         "Next.js",
         "Architecture",
         "Performance",
-        "Security",
-        "ReAct",
-        "Multi-Agent Systems",
-        "Evals",
-        "LLMOPS",
-        "Express.js",
-        "REST APIs",
-        "Redux Toolkit",
-        "TailwindCSS",
-        "shadcn/ui",
-        "S3",
-        "ChromaDB",
-        "Elasticsearch"
+        "Security"
       ],
       "project_summary": "Agentic RAG Assistant: A multi-agent chat system built on LangGraph that uses a supervisor to route tasks across specialized search, summary, and parallel agents. It features hybrid retrieval using Elasticsearch, persistent state management via Redis, and human-i",
       "github_summary": "No GitHub profile on resume",
@@ -1968,10 +1758,12 @@
         "public_repos": null,
         "days_since_last_activity": null,
         "relevant_repos": [],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_07.pdf",
       "parse_status": "ok",
+      "llm_applied": true,
       "warnings": []
     },
     {
@@ -2042,29 +1834,7 @@
         "REST API",
         "CI/CD",
         "Testing",
-        "Performance",
-        "SQLite",
-        "Gemini API",
-        "Microsoft AutoGen",
-        "Ollama",
-        "vLLM",
-        "LlamaParse",
-        "Semantic Search",
-        "OCR",
-        "Metadata Extraction",
-        "Scikit-learn",
-        "Hugging Face Transformers",
-        "LightGBM",
-        "DistilBERT",
-        "RoBERTa",
-        "TF-IDF",
-        "REST APIs",
-        "GitHub Actions",
-        "Git",
-        "LiveKit",
-        "Cartesia",
-        "Playwright",
-        "Gradio"
+        "Performance"
       ],
       "project_summary": "Automated Stock News AI Agent: An AI news agent that aggregates financial RSS feeds and generates concise stock-market summaries using the Gemini API. It includes similarity filtering and deduplication to ensure unique content delivery via Telegram.",
       "github_summary": "No GitHub profile on resume",
@@ -2083,10 +1853,12 @@
         "public_repos": null,
         "days_since_last_activity": null,
         "relevant_repos": [],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_12.pdf",
       "parse_status": "ok",
+      "llm_applied": true,
       "warnings": []
     },
     {
@@ -2136,13 +1908,7 @@
         "JavaScript",
         "Azure",
         "React",
-        "Security",
-        "React.js",
-        "REST APIs",
-        "OpenAI APIs",
-        "Microsoft Azure",
-        "Git",
-        "GitHub"
+        "Security"
       ],
       "project_summary": "AI-FIRST CRM SYSTEMS USING LANGGRAPH AND LLM: Designed an AI-driven CRM system that converts natural language into structured data. The system utilizes LangGraph for workflow management and integrates with Groq LLM, FastAPI, and React.js to streamline CRM operations.",
       "github_summary": "GitHub profile not found",
@@ -2163,10 +1929,12 @@
         "public_repos": null,
         "days_since_last_activity": null,
         "relevant_repos": [],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_23.pdf",
       "parse_status": "ok",
+      "llm_applied": true,
       "warnings": []
     },
     {
@@ -2230,17 +1998,7 @@
         "Testing",
         "Queues",
         "Concurrency",
-        "Performance",
-        "RESTful APIs",
-        "Microservices",
-        "Semantic Search",
-        "ClickHouse",
-        "Milvus",
-        "Neo4j",
-        "OpenSearch",
-        "NGINX",
-        "GitHub Actions",
-        "Git"
+        "Performance"
       ],
       "project_summary": "SMILE: A full-stack platform designed to manage donor and patient data. It optimizes database performance to support active users and automates infrastructure deployment using CI/CD pipelines.",
       "github_summary": "last public activity ~2d ago; 1 event(s) in 90d",
@@ -2261,10 +2019,12 @@
         "public_repos": 21,
         "days_since_last_activity": 2,
         "relevant_repos": [],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_17.pdf",
       "parse_status": "ok",
+      "llm_applied": true,
       "warnings": []
     },
     {
@@ -2323,22 +2083,7 @@
         "TypeScript",
         "JavaScript",
         "React",
-        "Performance",
-        "Three.js",
-        "Leaflet.js",
-        "REST APIs",
-        "Hibernate",
-        "JDBC",
-        "J2EE",
-        "Nvidia NIM",
-        "Tesseract OCR",
-        "Google Earth Engine",
-        "Vector DB",
-        "Git",
-        "Linux",
-        "Jitsi",
-        "VS Code",
-        "PyCharm"
+        "Performance"
       ],
       "project_summary": "NAL — New Age Land: A real estate intelligence platform featuring a 3D property explorer and geospatial analysis. It includes a voice-driven assistant for property search and an OCR pipeline for document verification. The system integrates satellite history an",
       "github_summary": "No GitHub profile on resume",
@@ -2359,10 +2104,12 @@
         "public_repos": null,
         "days_since_last_activity": null,
         "relevant_repos": [],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_06.pdf",
       "parse_status": "ok",
+      "llm_applied": true,
       "warnings": []
     },
     {
@@ -2425,27 +2172,10 @@
         "Observability",
         "Concurrency",
         "Failure Handling",
-        "Security",
-        "Go",
-        "Gin",
-        "GORM",
-        "Express.js",
-        "LLMs",
-        "Ollama",
-        "REST APIs",
-        "SSE",
-        "JWT",
-        "React.js",
-        "React Native",
-        "Chart.js",
-        "vector search",
-        "OpenStack",
-        "Git",
-        "GitHub",
-        "Postman"
+        "Security"
       ],
       "project_summary": "Timesheet Bot: A conversational assistant designed to translate natural-language requests into CRUD operations for employee timesheets. It utilizes multi-step workflows to automate task classification and time allocation.",
-      "github_summary": "last public activity ~39d ago",
+      "github_summary": "last public activity ~40d ago",
       "strengths": [
         "Solid Python/backend engineering evidence"
       ],
@@ -2454,16 +2184,18 @@
       "github": {
         "status": "ok",
         "username": "Vivek1592002",
-        "summary": "last public activity ~39d ago",
+        "summary": "last public activity ~40d ago",
         "recent_activity_score": 3.0,
         "repos_score": 0.8,
         "public_repos": 15,
-        "days_since_last_activity": 39,
+        "days_since_last_activity": 40,
         "relevant_repos": [],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_39.pdf",
       "parse_status": "ok",
+      "llm_applied": true,
       "warnings": []
     },
     {
@@ -2529,19 +2261,7 @@
         "Docker",
         "React",
         "Observability",
-        "Performance",
-        "C",
-        "HTML5",
-        "CSS3",
-        "Scikit-learn",
-        "OpenCV",
-        "Transformers",
-        "Librosa",
-        "Git",
-        "GitHub",
-        "Jupyter",
-        "Ollama",
-        "pyttsx3"
+        "Performance"
       ],
       "project_summary": "Cognitive Resonance AI: A deep learning system integrating cognitive modeling with real-time emotional uncertainty quantification. It focuses on context adaptation for human-centric AI applications.",
       "github_summary": "No GitHub profile on resume",
@@ -2559,10 +2279,12 @@
         "public_repos": null,
         "days_since_last_activity": null,
         "relevant_repos": [],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_19.pdf",
       "parse_status": "ok",
+      "llm_applied": true,
       "warnings": []
     },
     {
@@ -2619,11 +2341,7 @@
         "CI/CD",
         "Architecture",
         "Observability",
-        "Security",
-        "R",
-        "Scikit-learn",
-        "GitHub",
-        "Jenkins"
+        "Security"
       ],
       "project_summary": "Property Management System for LandLords: A full-stack web application designed to manage land and landlord records. It includes features for user authentication, property listings, and communication between buyers, brokers, and landowners.",
       "github_summary": "No GitHub profile on resume",
@@ -2642,10 +2360,12 @@
         "public_repos": null,
         "days_since_last_activity": null,
         "relevant_repos": [],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_04.pdf",
       "parse_status": "ok",
+      "llm_applied": true,
       "warnings": []
     },
     {
@@ -2709,18 +2429,7 @@
         "Nginx",
         "React",
         "Architecture",
-        "Queues",
-        "Vector DB",
-        "STT Models",
-        "OpenSource LLMs",
-        "Copilot Studio",
-        "Deepagents architecture",
-        "React.js",
-        "Express.js",
-        "SQLite",
-        "Apache Kafka",
-        "Cloudflare",
-        "Git"
+        "Queues"
       ],
       "project_summary": "PR Sentinel – AI: An LLM-driven workflow engine built with LangGraph to analyze live GitHub pull requests and generate automated review or escalation decisions. It integrates MCP-based tool calling for Jira and Slack, and includes a full-stack dashboard to v",
       "github_summary": "No GitHub profile on resume",
@@ -2741,10 +2450,12 @@
         "public_repos": null,
         "days_since_last_activity": null,
         "relevant_repos": [],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_16.pdf",
       "parse_status": "ok",
+      "llm_applied": true,
       "warnings": []
     },
     {
@@ -2809,20 +2520,7 @@
         "Concurrency",
         "Failure Handling",
         "Performance",
-        "Security",
-        "Spring Data JPA",
-        "Spring Security",
-        "Microservices Architecture",
-        "REST APIs",
-        "System Design",
-        "Spring AI",
-        "Git",
-        "Maven",
-        "Postman",
-        "Swagger",
-        "JWT Authentication",
-        "Razorpay",
-        "Kotlin"
+        "Security"
       ],
       "project_summary": "AI-Powered Resume Screener: A Java-based backend system that automates resume screening by integrating the OpenAI API via Spring AI. It features an asynchronous pipeline for processing bulk document uploads and provides endpoints for job creation and LLM-ranked candid",
       "github_summary": "No GitHub profile on resume",
@@ -2840,10 +2538,12 @@
         "public_repos": null,
         "days_since_last_activity": null,
         "relevant_repos": [],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_09.pdf",
       "parse_status": "ok",
+      "llm_applied": true,
       "warnings": []
     },
     {
@@ -2897,31 +2597,7 @@
         "Architecture",
         "Observability",
         "Concurrency",
-        "Performance",
-        "EC2",
-        "ASG",
-        "ELB",
-        "S3",
-        "EBS",
-        "EFS",
-        "RDS",
-        "Aurora",
-        "DynamoDB",
-        "Lambda",
-        "API Gateway",
-        "ECR",
-        "CloudWatch",
-        "IAM",
-        "VPC",
-        "CloudFront",
-        "Route 53",
-        "ArgoCD",
-        "Jenkins",
-        "GitHub Actions",
-        "Git",
-        "GitHub",
-        "Ansible",
-        "Linux"
+        "Performance"
       ],
       "project_summary": "Cloud-Native CI/CD & GitOps Platform with AI-Based Jenkins Log Analysis: This project implements an end-to-end GitOps CI/CD pipeline using Jenkins, ArgoCD, and Kubernetes to automate application deployment. It features an integrated OpenAI-powered log analyzer that automatically diagnoses build failures and sugg",
       "github_summary": "No GitHub profile on resume",
@@ -2942,10 +2618,12 @@
         "public_repos": null,
         "days_since_last_activity": null,
         "relevant_repos": [],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_29.pdf",
       "parse_status": "ok",
+      "llm_applied": true,
       "warnings": []
     },
     {
@@ -2996,31 +2674,7 @@
         "React",
         "Architecture",
         "Performance",
-        "Security",
-        "HTML5",
-        "CSS3",
-        "React.js",
-        "React Hooks",
-        "Axios",
-        "Spring MVC",
-        "Spring Core",
-        "Spring Data JPA",
-        "Hibernate",
-        "Spring Security",
-        "REST APIs",
-        "JDBC",
-        "Servlets",
-        "JSP",
-        "Git",
-        "GitHub",
-        "Postman",
-        "Maven",
-        "STS4",
-        "IntelliJ IDEA",
-        "Eclipse",
-        "VS Code",
-        "TensorFlow Lite",
-        "OpenCV"
+        "Security"
       ],
       "project_summary": "Book My Stay: A full-stack accommodation booking web application featuring room browsing, user registration, and booking management. It utilizes a RESTful backend for data operations and a responsive frontend for user interaction.",
       "github_summary": "last public activity ~41d ago; relevant repos: AI-Powered-Task-Management-Portal",
@@ -3041,10 +2695,12 @@
         "relevant_repos": [
           "AI-Powered-Task-Management-Portal"
         ],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_48.pdf",
       "parse_status": "ok",
+      "llm_applied": true,
       "warnings": []
     },
     {
@@ -3105,16 +2761,7 @@
         "Azure",
         "Docker",
         "React",
-        "Architecture",
-        "HTML",
-        "CSS",
-        "Gen AI",
-        "Power BI",
-        "OpenCV",
-        "React.js",
-        "Matplotlib",
-        "YOLOv8",
-        "InsightFace"
+        "Architecture"
       ],
       "project_summary": "Skin Cancer Detection using Deep Learning: A deep learning system designed to classify skin lesions as malignant or benign using dermatoscopic images from the ISIC dataset. The project involved preprocessing, data augmentation, and model evaluation using CNNs.",
       "github_summary": "No GitHub profile on resume",
@@ -3132,10 +2779,12 @@
         "public_repos": null,
         "days_since_last_activity": null,
         "relevant_repos": [],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_15.pdf",
       "parse_status": "ok",
+      "llm_applied": true,
       "warnings": []
     },
     {
@@ -3188,20 +2837,10 @@
         "JavaScript",
         "React",
         "Tailwind",
-        "Security",
-        "C",
-        "HTML",
-        "CSS",
-        "React.js",
-        "Express.js",
-        "Tailwind CSS",
-        "JWT",
-        "Git",
-        "GitHub",
-        "SQLite"
+        "Security"
       ],
       "project_summary": "Electrical Vehicle Knowledge Bot: An AI-powered application providing information and guidance about electric vehicles. It utilizes a Flask backend with a chatbot API and a React frontend. The system implements RAG techniques to answer user queries regarding EV types, charg",
-      "github_summary": "last public activity ~11d ago; 2 event(s) in 90d; relevant repos: Car_Price_Prediction, Electric-vehicle-knowledge-bot-, BugSpotter-AI-Powered-Code-Reviewer",
+      "github_summary": "last public activity ~12d ago; 2 event(s) in 90d; relevant repos: Car_Price_Prediction, Electric-vehicle-knowledge-bot-, BugSpotter-AI-Powered-Code-Reviewer",
       "strengths": [
         "Solid Python/backend engineering evidence",
         "Active, relevant public GitHub"
@@ -3211,20 +2850,22 @@
       "github": {
         "status": "ok",
         "username": "Nagorisaifali",
-        "summary": "last public activity ~11d ago; 2 event(s) in 90d; relevant repos: Car_Price_Prediction, Electric-vehicle-knowledge-bot-, BugSpotter-AI-Powered-Code-Reviewer",
+        "summary": "last public activity ~12d ago; 2 event(s) in 90d; relevant repos: Car_Price_Prediction, Electric-vehicle-knowledge-bot-, BugSpotter-AI-Powered-Code-Reviewer",
         "recent_activity_score": 4.5,
         "repos_score": 5.0,
         "public_repos": 26,
-        "days_since_last_activity": 11,
+        "days_since_last_activity": 12,
         "relevant_repos": [
           "Car_Price_Prediction",
           "Electric-vehicle-knowledge-bot-",
           "BugSpotter-AI-Powered-Code-Reviewer"
         ],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_36.pdf",
       "parse_status": "ok",
+      "llm_applied": true,
       "warnings": []
     },
     {
@@ -3283,22 +2924,7 @@
         "JavaScript",
         "AWS",
         "React",
-        "Security",
-        "HTML",
-        "CSS",
-        "React.js",
-        "REST APIs",
-        "C",
-        "SAP ABAP",
-        "Linux",
-        "LLMs",
-        "Git",
-        "GitHub",
-        "VS Code",
-        "Power BI",
-        "Excel",
-        "Federated Learning",
-        "Vision Transformer"
+        "Security"
       ],
       "project_summary": "Talkwise AI: A proof-of-concept AI meeting assistant that integrates LLMs, RAG, and real-time Speech-to-Text. It provides live transcription and contextual Q&A during meetings.",
       "github_summary": "No GitHub profile on resume",
@@ -3317,10 +2943,12 @@
         "public_repos": null,
         "days_since_last_activity": null,
         "relevant_repos": [],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_49.pdf",
       "parse_status": "ok",
+      "llm_applied": true,
       "warnings": []
     },
     {
@@ -3371,15 +2999,7 @@
         "C++",
         "JavaScript",
         "React",
-        "Security",
-        "REST APIs",
-        "PHP",
-        "React.js",
-        "HTML",
-        "CSS",
-        "Git",
-        "JWT",
-        "OAuth 2.0"
+        "Security"
       ],
       "project_summary": "Soil Classification for Sustainable Agriculture: A machine learning web application that classifies soil types based on engineering properties like texture, pH, and moisture content. The system includes a data preprocessing pipeline and a Flask-based web interface for real-time inference.",
       "github_summary": "No GitHub profile on resume",
@@ -3399,10 +3019,12 @@
         "public_repos": null,
         "days_since_last_activity": null,
         "relevant_repos": [],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_05.pdf",
       "parse_status": "ok",
+      "llm_applied": true,
       "warnings": []
     },
     {
@@ -3453,11 +3075,7 @@
         "Machine Learning",
         "Artificial Intelligence",
         "Generative AI",
-        "JavaScript",
-        "Agentic AI",
-        "Large Language Models",
-        "Streamlit",
-        "Logistic Regression"
+        "JavaScript"
       ],
       "project_summary": "Diabetes AI – Hybrid Predictive System: A machine learning system designed to predict diabetes risk using a dataset of 100,000 patient records. The project involved data preprocessing, feature engineering, and the development of a Streamlit-based web application for real-time ris",
       "github_summary": "last public activity ~108d ago; relevant repos: Diabetes-Prediction-ML, hate-speech-detection-tweets-ml",
@@ -3481,10 +3099,12 @@
           "Diabetes-Prediction-ML",
           "hate-speech-detection-tweets-ml"
         ],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_24.pdf",
       "parse_status": "ok",
+      "llm_applied": true,
       "warnings": []
     },
     {
@@ -3534,22 +3154,7 @@
         "JavaScript",
         "AWS",
         "React",
-        "Performance",
-        "C",
-        "Data Cleaning",
-        "Data Visualization",
-        "Statistical Analysis",
-        "Power BI",
-        "Tableau",
-        "React.js",
-        "HTML5",
-        "CSS3",
-        "REST APIs",
-        "Git",
-        "VS Code",
-        "IntelliJ",
-        "Jupyter",
-        "Canva"
+        "Performance"
       ],
       "project_summary": "Job Shop Scheduling Using SGO: Developed a novel population-based meta-heuristic algorithm (SGO) inspired by human social behavior to solve NP-hard Job Shop Scheduling problems. The project outperformed traditional AI methods like GA, PSO, and ACO by improving solution q",
       "github_summary": "No GitHub profile on resume",
@@ -3567,10 +3172,12 @@
         "public_repos": null,
         "days_since_last_activity": null,
         "relevant_repos": [],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_14.pdf",
       "parse_status": "ok",
+      "llm_applied": true,
       "warnings": []
     },
     {
@@ -3626,19 +3233,7 @@
         "REST API",
         "C++",
         "GCP",
-        "Render",
-        "C",
-        "HTML",
-        "CSS",
-        "RESTful APIs",
-        "Large Language Models",
-        "Scikit-learn",
-        "Git",
-        "GitHub",
-        "VS Code",
-        "Jupyter Notebook",
-        "Google Cloud Platform",
-        "Google Colab"
+        "Render"
       ],
       "project_summary": "SmartATS: An AI-powered resume screening application that analyzes resumes against job descriptions. It calculates matching scores and provides actionable feedback to streamline recruitment pipelines.",
       "github_summary": "No GitHub profile on resume",
@@ -3658,10 +3253,12 @@
         "public_repos": null,
         "days_since_last_activity": null,
         "relevant_repos": [],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_25.pdf",
       "parse_status": "ok",
+      "llm_applied": true,
       "warnings": []
     },
     {
@@ -3724,29 +3321,7 @@
         "Queues",
         "Concurrency",
         "Performance",
-        "Security",
-        "React.js",
-        "Redux",
-        "PHP",
-        "C",
-        "HTML5",
-        "CSS3",
-        "Tailwind CSS",
-        "Bootstrap",
-        "Vite",
-        "Flutter",
-        "Express.js",
-        "RESTful APIs",
-        "AWS S3",
-        "Microsoft Azure",
-        "Git",
-        "GitHub",
-        "GitHub Actions",
-        "Claude AI",
-        "Cursor",
-        "GitHub Copilot",
-        "Linux",
-        "Shell Scripting"
+        "Security"
       ],
       "project_summary": "Smart Travel Booking Platform with Real-Time Search & Secure Authentication: A full-featured booking platform featuring real-time search filters and JWT-based authentication. The system was built to improve user engagement and booking success rates.",
       "github_summary": "No GitHub profile on resume",
@@ -3767,10 +3342,12 @@
         "public_repos": null,
         "days_since_last_activity": null,
         "relevant_repos": [],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_45.pdf",
       "parse_status": "ok",
+      "llm_applied": true,
       "warnings": []
     },
     {
@@ -3827,23 +3404,7 @@
         "REST API",
         "Java",
         "React",
-        "Testing",
-        "C",
-        "Scikit-learn",
-        "CNN",
-        "Transfer Learning",
-        "Matplotlib",
-        "Feature Engineering",
-        "Data Preprocessing",
-        "EDA",
-        "Model Evaluation",
-        "Git",
-        "GitHub",
-        "VS Code",
-        "Google Colab",
-        "Jupyter Notebook",
-        "Netlify",
-        "REST APIs"
+        "Testing"
       ],
       "project_summary": "Image-Based Goat and Sheep Classification using Deep Learning: Developed an image classification system to distinguish between goats and sheep using Deep Learning. Trained and evaluated five deep learning models including CNN, MobileNet, ResNet, VGG-16, and ConvNeXt, and deployed the final model on Hug",
       "github_summary": "No GitHub profile on resume",
@@ -3861,10 +3422,12 @@
         "public_repos": null,
         "days_since_last_activity": null,
         "relevant_repos": [],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_21.pdf",
       "parse_status": "ok",
+      "llm_applied": true,
       "warnings": []
     },
     {
@@ -3911,15 +3474,7 @@
         "JavaScript",
         "React",
         "Architecture",
-        "Observability",
-        "HTML",
-        "CSS",
-        "Bootstrap",
-        "React Native",
-        "Git",
-        "Visual Studio Code",
-        "Jupyter Notebook",
-        "Google Colab"
+        "Observability"
       ],
       "project_summary": "Air Quality Index Prediction using Machine Learning: This project predicts the Air Quality Index (AQI) using PM2.5 levels and various machine learning algorithms. It includes a web-based interface for users to visualize and interact with the predictive models.",
       "github_summary": "last public activity ~204d ago",
@@ -3937,10 +3492,12 @@
         "public_repos": 6,
         "days_since_last_activity": 204,
         "relevant_repos": [],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_20.pdf",
       "parse_status": "ok",
+      "llm_applied": true,
       "warnings": []
     },
     {
@@ -4006,16 +3563,7 @@
         "Tailwind",
         "Architecture",
         "Observability",
-        "Performance",
-        "C",
-        "Docling",
-        "PyPDF2",
-        "Hugging Face Transformers",
-        "Claude Agent SDK",
-        "Claude Code",
-        "Git",
-        "GitHub",
-        "Tailwind CSS"
+        "Performance"
       ],
       "project_summary": "Code Review Agent: A multi-agent code review API that orchestrates three specialist agents for logic, security, and style analysis. It features a supervisor synthesis node and supports multiple LLM providers via a unified environment configuration. The system",
       "github_summary": "last public activity ~35d ago; relevant repos: code-review-agent",
@@ -4040,10 +3588,12 @@
         "relevant_repos": [
           "code-review-agent"
         ],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_47.pdf",
       "parse_status": "ok",
+      "llm_applied": true,
       "warnings": []
     },
     {
@@ -4091,17 +3641,7 @@
         "Java",
         "Spring Boot",
         "JavaScript",
-        "CI/CD",
-        "SAP CAP",
-        "Git",
-        "GitHub",
-        "GitHub Copilot",
-        "Bruno",
-        "Kibana",
-        "Splunk",
-        "Claude Code",
-        "Playwright",
-        "JIRA"
+        "CI/CD"
       ],
       "project_summary": "Automated Complaint Classification: Developed a system using SAP CAP to manage complaint classification and status updates. The project exposes OData V4 services and utilizes AI for classifying complaints and validating status transitions.",
       "github_summary": "No GitHub profile on resume",
@@ -4120,10 +3660,12 @@
         "public_repos": null,
         "days_since_last_activity": null,
         "relevant_repos": [],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_34.pdf",
       "parse_status": "ok",
+      "llm_applied": true,
       "warnings": []
     },
     {
@@ -4146,25 +3688,9 @@
         "Testing",
         "Caching",
         "Performance",
-        "Security",
-        "React Native",
-        "Javascript",
-        "TailwindCSS",
-        "HTML5",
-        "CSS3",
-        "Express.js",
-        "REST APIs",
-        "Nest.js",
-        "Git",
-        "GitHub",
-        "Postman",
-        "Jira",
-        "Zoho",
-        "Jenkins",
-        "Playwright",
-        "Angular"
+        "Security"
       ],
-      "project_summary": "StrataHire SaaS Hiring Platform: A SaaS recruitment platform designed to streamline end-to-end hiring workflows for staffing agencies and internal HR teams. It features candidate pipelines, job posting management, and interview tracking to improve recruiter productivity. T",
+      "project_summary": "StrataHire SaaS Hiring Platform Node.js, PostgreSQL, React.js, Google Cloud bucket: • SaaS recruitment platform streamlining end-to-end hiring workflows for staffing agencies and internal HR teams. • ImplementedscalableReact/Node.jsfeaturessuchascandidatepipelines,jobpostingmanagement,andinterviewtracking, improving recrui",
       "github_summary": "",
       "strengths": [],
       "concerns": [],
@@ -4175,21 +3701,23 @@
       "github": {
         "status": "disabled",
         "username": null,
-        "summary": "Not enriched (candidate ineligible)",
+        "summary": "Not enriched (eliminated by hard gate)",
         "recent_activity_score": 0.0,
         "repos_score": 0.0,
         "public_repos": null,
         "days_since_last_activity": null,
         "relevant_repos": [],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_46.pdf",
       "parse_status": "ok",
+      "llm_applied": false,
       "warnings": []
     },
     {
       "rank": null,
-      "candidate_name": "Anjali Patil",
+      "candidate_name": "ANJALI PATIL",
       "eligible": false,
       "total_score": null,
       "score_breakdown": null,
@@ -4207,26 +3735,9 @@
         "Caching",
         "Observability",
         "Failure Handling",
-        "Security",
-        "Java 8",
-        "Spring MVC",
-        "Spring Data JPA",
-        "Apache Camel",
-        "Microservices",
-        "REST APIs",
-        "ActiveMQ",
-        "Hibernate",
-        "HTML",
-        "CSS",
-        "Git",
-        "GitHub",
-        "Maven",
-        "IntelliJ IDEA",
-        "Eclipse",
-        "VS Code",
-        "Postman"
+        "Security"
       ],
-      "project_summary": "Learn Sphere – Online Learning Platform: An online learning platform featuring secure authentication and payment processing. The project integrates Razorpay for handling online transactions and focuses on optimized API performance.",
+      "project_summary": "Learn Sphere – Online Learning Platform Mar 2025 – Jul 2025: • Built an online learning platform using Java, Spring Boot, MySQL, Razorpay, HTML, CSS, and JavaScript. • Implemented secure authentication, payment integration, and optimized API performance.",
       "github_summary": "",
       "strengths": [],
       "concerns": [],
@@ -4237,16 +3748,18 @@
       "github": {
         "status": "disabled",
         "username": null,
-        "summary": "Not enriched (candidate ineligible)",
+        "summary": "Not enriched (eliminated by hard gate)",
         "recent_activity_score": 0.0,
         "repos_score": 0.0,
         "public_repos": null,
         "days_since_last_activity": null,
         "relevant_repos": [],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_42.pdf",
       "parse_status": "ok",
+      "llm_applied": false,
       "warnings": []
     },
     {
@@ -4273,20 +3786,9 @@
         "Testing",
         "Architecture",
         "Failure Handling",
-        "Security",
-        "React.js",
-        "HTML5",
-        "CSS3",
-        "Tailwind CSS",
-        "Express.js",
-        "Git",
-        "GitHub",
-        "Vite",
-        "Postman",
-        "Bootstrap",
-        "Framer Motion"
+        "Security"
       ],
-      "project_summary": "SecureRide-AI: A full-stack, multi-tier car booking platform featuring a customer-facing booking flow and an administrative dashboard. It includes secure REST APIs, JWT authentication, and role-based authorization.",
+      "project_summary": "SecureRide-AI — MERN Car Booking Platform: React.js, Node.js, Express.js, MongoDB, Mongoose, JWT, JavaScript, HTML5, CSS3, Git/GitHub ● Designed and developed a full-stack, multi-tier car booking platform with a customer-facing booking flow and an administrative dashboard. ● Impleme",
       "github_summary": "",
       "strengths": [],
       "concerns": [],
@@ -4296,16 +3798,18 @@
       "github": {
         "status": "disabled",
         "username": null,
-        "summary": "Not enriched (candidate ineligible)",
+        "summary": "Not enriched (eliminated by hard gate)",
         "recent_activity_score": 0.0,
         "repos_score": 0.0,
         "public_repos": null,
         "days_since_last_activity": null,
         "relevant_repos": [],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_27.pdf",
       "parse_status": "ok",
+      "llm_applied": false,
       "warnings": []
     },
     {
@@ -4338,15 +3842,9 @@
         "Caching",
         "Observability",
         "Failure Handling",
-        "Performance",
-        "React Native",
-        "Tailwind CSS",
-        "Concourse CI",
-        "Splunk",
-        "Grafana",
-        "Git"
+        "Performance"
       ],
-      "project_summary": "Askie: An AI-powered Q&A platform built with a microservices architecture. It provides context-aware answer generation, tagging, and factual validation, while integrating secure payment workflows.",
+      "project_summary": "Askie: • Built an AI-powered Q&A platform with microservices, enabling context-aware answer generation, tagging, and factual validation. • Reduced API latency by 50% using Redis caching, rate limiting, and optimized data-fetching pipelines. • Impr",
       "github_summary": "",
       "strengths": [],
       "concerns": [],
@@ -4357,16 +3855,18 @@
       "github": {
         "status": "disabled",
         "username": null,
-        "summary": "Not enriched (candidate ineligible)",
+        "summary": "Not enriched (eliminated by hard gate)",
         "recent_activity_score": 0.0,
         "repos_score": 0.0,
         "public_repos": null,
         "days_since_last_activity": null,
         "relevant_repos": [],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_18.pdf",
       "parse_status": "ok",
+      "llm_applied": false,
       "warnings": []
     },
     {
@@ -4391,22 +3891,9 @@
         "Tailwind",
         "Architecture",
         "Performance",
-        "Security",
-        "HTML5",
-        "CSS3",
-        "React.js",
-        "Express.js",
-        "Tailwind CSS",
-        "Zustand",
-        "Redux",
-        "REST APIs",
-        "Git",
-        "GitHub",
-        "Postman",
-        "Swagger",
-        "Razorpay"
+        "Security"
       ],
-      "project_summary": "Background Removal SaaS: An AI-driven image processing engine that allows users to remove backgrounds from images. It includes secure transaction handling via Razorpay API and automated user profile updates.",
+      "project_summary": "Background Removal SaaS: • Built an AI-driven image processing engine with Razorpay API integration for secure transaction handling and automated user profile updates. • Optimized asset loading via CDN integration, resulting in a 30% improvement in initial page loa",
       "github_summary": "",
       "strengths": [],
       "concerns": [],
@@ -4417,16 +3904,18 @@
       "github": {
         "status": "disabled",
         "username": "KS1745",
-        "summary": "Not enriched (candidate ineligible)",
+        "summary": "Not enriched (eliminated by hard gate)",
         "recent_activity_score": 0.0,
         "repos_score": 0.0,
         "public_repos": null,
         "days_since_last_activity": null,
         "relevant_repos": [],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_01.pdf",
       "parse_status": "ok",
+      "llm_applied": false,
       "warnings": []
     },
     {
@@ -4462,27 +3951,9 @@
         "Architecture",
         "Observability",
         "Performance",
-        "Security",
-        "HTML5",
-        "CSS3",
-        "JSON",
-        "React.js",
-        "Vite",
-        "Tailwind CSS",
-        "Express.js",
-        "Deno",
-        "InfluxDB",
-        "AWS Lambda",
-        "AWS Step Functions",
-        "Git",
-        "GitHub",
-        "Postman",
-        "Netlify",
-        "Grafana",
-        "Razorpay API",
-        "Stripe API"
+        "Security"
       ],
-      "project_summary": "NearAid - Real-Time Emergency Assistance Platform: A geospatial emergency assistance platform that utilizes MongoDB 2dsphere indexing for real-time location discovery of nearby help requests. It features live messaging, location sharing, and secure authentication using JWT and protected rou",
+      "project_summary": "NearAid - Real-Time Emergency Assistance Platform AI, Data Engineering & Enterprise Solutions",
       "github_summary": "",
       "strengths": [],
       "concerns": [],
@@ -4492,16 +3963,18 @@
       "github": {
         "status": "disabled",
         "username": "Azizul-11",
-        "summary": "Not enriched (candidate ineligible)",
+        "summary": "Not enriched (eliminated by hard gate)",
         "recent_activity_score": 0.0,
         "repos_score": 0.0,
         "public_repos": null,
         "days_since_last_activity": null,
         "relevant_repos": [],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_11.pdf",
       "parse_status": "ok",
+      "llm_applied": false,
       "warnings": []
     },
     {
@@ -4530,20 +4003,9 @@
         "Caching",
         "Concurrency",
         "Failure Handling",
-        "Performance",
-        "Express.js",
-        "React.js",
-        "React Native",
-        "Prisma ORM",
-        "Mongoose",
-        "AWS S3",
-        "GitHub Actions",
-        "Git",
-        "GitHub",
-        "Postman",
-        "REST APIs"
+        "Performance"
       ],
-      "project_summary": "Devix: A browser-based cloud IDE providing isolated Docker containers for each project with a live Monaco editor and integrated bash terminal. It features real-time synchronization via WebSockets and a hybrid storage layer for low-latency I/O. The",
+      "project_summary": "Devix: • Built a browser-based cloud IDE where each project gets an isolated Docker container with a live Monaco editor, real ﬁle tree, and an integrated bash terminal all synced over WebSockets • Engineered a bidirectional terminal relay using So",
       "github_summary": "",
       "strengths": [],
       "concerns": [],
@@ -4553,21 +4015,23 @@
       "github": {
         "status": "disabled",
         "username": "mukulpal03",
-        "summary": "Not enriched (candidate ineligible)",
+        "summary": "Not enriched (eliminated by hard gate)",
         "recent_activity_score": 0.0,
         "repos_score": 0.0,
         "public_repos": null,
         "days_since_last_activity": null,
         "relevant_repos": [],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_32.pdf",
       "parse_status": "ok",
+      "llm_applied": false,
       "warnings": []
     },
     {
       "rank": null,
-      "candidate_name": "Shivam Raj",
+      "candidate_name": "SHIVAM RAJ",
       "eligible": false,
       "total_score": null,
       "score_breakdown": null,
@@ -4588,29 +4052,9 @@
         "Testing",
         "Architecture",
         "Observability",
-        "Performance",
-        "React.js",
-        "HTML5",
-        "CSS3",
-        "Tailwind CSS",
-        "Redux",
-        "Redux Toolkit",
-        "Express.js",
-        "REST APIs",
-        "Axios",
-        "Razorpay",
-        "GitHub Actions",
-        "Azure DevOps",
-        "CloudPanel",
-        "Figma",
-        "GSAP",
-        "AOS",
-        "Material UI",
-        "React Query",
-        "Webpack",
-        "Babel"
+        "Performance"
       ],
-      "project_summary": "BNRDA — Internal Enterprise Platform: An internal platform featuring employee and department management modules with real-time chat and alert systems. It includes data visualization dashboards for monitoring business KPIs and utilizes automated CI/CD pipelines for deployment.",
+      "project_summary": "BNRDA — Internal Enterprise Platform: • Built employee and department management modules with real-time chat and instant alert systems, improving internal communication efficiency for 200+ users. • Developed data visualization dashboards integrating multiple organizational data",
       "github_summary": "",
       "strengths": [],
       "concerns": [],
@@ -4621,16 +4065,18 @@
       "github": {
         "status": "disabled",
         "username": null,
-        "summary": "Not enriched (candidate ineligible)",
+        "summary": "Not enriched (eliminated by hard gate)",
         "recent_activity_score": 0.0,
         "repos_score": 0.0,
         "public_repos": null,
         "days_since_last_activity": null,
         "relevant_repos": [],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_02.pdf",
       "parse_status": "ok",
+      "llm_applied": false,
       "warnings": []
     },
     {
@@ -4661,23 +4107,9 @@
         "Observability",
         "Failure Handling",
         "Performance",
-        "Security",
-        "React.js",
-        "Redux",
-        "Bootstrap",
-        "Tailwind CSS",
-        "HTML5",
-        "CSS3",
-        "Express.js",
-        "REST APIs",
-        "Apache Kafka",
-        "Resilience4j",
-        "Git",
-        "GitHub",
-        "Postman",
-        "Maven"
+        "Security"
       ],
-      "project_summary": "Property Hub: A full-stack real estate marketplace built on the MERN stack. It supports property listing, buying, renting, and leasing workflows with role-based access control. The system includes real-time messaging via WebSockets and advanced search/fi",
+      "project_summary": "Property Hub: • Built a full-stack real estate marketplace on the MERN stack supporting property listing, buying, renting, and leasing workflows with role-based access control for buyers and sellers. • Implemented Google OAuth and JWT-based authenticatio",
       "github_summary": "",
       "strengths": [],
       "concerns": [],
@@ -4687,16 +4119,18 @@
       "github": {
         "status": "disabled",
         "username": null,
-        "summary": "Not enriched (candidate ineligible)",
+        "summary": "Not enriched (eliminated by hard gate)",
         "recent_activity_score": 0.0,
         "repos_score": 0.0,
         "public_repos": null,
         "days_since_last_activity": null,
         "relevant_repos": [],
-        "error": null
+        "error": null,
+        "flagged": false
       },
       "source_file": "resumes/candidate_31.pdf",
       "parse_status": "ok",
+      "llm_applied": false,
       "warnings": []
     }
   ]
