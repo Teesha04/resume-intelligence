@@ -25,6 +25,40 @@ def content_hash(raw: bytes) -> str:
 
 _CID_RE = re.compile(r"\(cid:\d+\)")  # pdfplumber glyph artefact for icon fonts
 
+# Common English/resume words used to score extraction quality. A good
+# extraction yields more recognisable words and fewer glued/garbled tokens.
+_COMMON_WORDS: frozenset[str] = frozenset(
+    """
+    the and for with using built build developed develop experience project projects
+    skills skill summary education work intern internship engineer engineering software
+    data machine learning model models system systems application applications web app
+    design designed implemented implementation created create managed led team tools
+    technologies technology framework frameworks api backend frontend database server
+    client user users feature features deployed deployment cloud docker python java
+    javascript react node software analysis analytics platform service services
+    research presented conference published award awards university institute degree
+    bachelor master gpa cgpa location email phone linkedin github portfolio personal
+    details current responsibilities achieved improved reduced increased optimized
+    testing test tests integration unit performance scalable architecture real time
+    """.split()
+)
+
+
+def _text_quality(text: str) -> float:
+    """Heuristic quality score for choosing between two PDF extractions.
+
+    Rewards recognisable words (separated, real) and penalises long glued
+    tokens ("andbuildingproduction") that indicate lost spacing.
+    """
+    words = re.findall(r"[A-Za-z]{2,}", text.lower())
+    if not words:
+        return -1.0
+    common = sum(1 for w in words if w in _COMMON_WORDS)
+    glued = sum(1 for tok in text.split() if len(tok) > 20)
+    no_separator = len(text.split())
+    # Prefer more separated tokens, more common words, fewer glued tokens.
+    return common * 2.0 + no_separator * 0.05 - glued * 5.0
+
 
 def _clean(text: str) -> str:
     """Normalise whitespace without destroying line structure."""
@@ -66,22 +100,41 @@ def _parse_pdf_pypdf(path: Path) -> tuple[str, int | None]:
 
 
 def _parse_pdf(path: Path) -> tuple[str, int | None]:
-    """Try pdfplumber (better layout), fall back to pypdf.
+    """Run both extractors and keep the higher-quality text.
 
-    Multi-column resumes sometimes defeat one extractor but not the other,
-    so a cheap second attempt meaningfully improves recall.
+    Neither extractor dominates: pdfplumber usually handles layout better, but
+    pypdf often recovers correct reading order for multi-column resumes and
+    preserves spaces when pdfplumber glues words together. We therefore score
+    both outputs and pick the best, which is a cheap, general robustness win.
     """
+    candidates: list[tuple[str, str, int | None]] = []
     errors: list[str] = []
     for name, fn in (("pdfplumber", _parse_pdf_plumber), ("pypdf", _parse_pdf_pypdf)):
         try:
             text, pages = fn(path)
             if text and text.strip():
-                return text, pages
-            errors.append(f"{name}: no text")
+                candidates.append((name, text, pages))
+            else:
+                errors.append(f"{name}: no text")
         except Exception as exc:  # noqa: BLE001 - deliberate broad catch
             errors.append(f"{name}: {exc.__class__.__name__}: {exc}")
             log.debug("PDF parse via %s failed for %s", name, path.name)
-    raise RuntimeError("; ".join(errors) or "unknown PDF error")
+
+    if not candidates:
+        raise RuntimeError("; ".join(errors) or "unknown PDF error")
+    if len(candidates) == 1:
+        return candidates[0][1], candidates[0][2]
+
+    # Prefer pdfplumber (better layout/ordering) unless pypdf is clearly better,
+    # to avoid switching on negligible score differences.
+    best_name, best_text, best_pages = candidates[0]
+    best_q = _text_quality(best_text)
+    for name, text, pages in candidates[1:]:
+        q = _text_quality(text)
+        if q > best_q * 1.15:
+            best_name, best_text, best_pages, best_q = name, text, pages, q
+    log.debug("Chose %s extraction for %s", best_name, path.name)
+    return best_text, best_pages
 
 
 # ---------------------------------------------------------------------------

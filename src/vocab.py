@@ -49,7 +49,8 @@ AI_TERMS: dict[str, list[str]] = {
     "Anthropic": ["anthropic", "claude api", "claude"],
     "Gemini": ["gemini", "google ai studio", "vertex ai"],
     "Hugging Face": ["hugging face", "huggingface", "transformers"],
-    "RAG": ["rag", "retrieval-augmented", "retrieval augmented", "retrieval pipeline"],
+    "RAG": ["rag", "retrieval-augmented", "retrieval augmented", "retrieval pipeline",
+            "semantic chunking", "semantic search"],
     "Embeddings": ["embedding", "embeddings"],
     "Vector Search": ["vector search", "vector database", "vector store", "similarity search"],
     "Pinecone": ["pinecone"],
@@ -71,6 +72,15 @@ AI_TERMS: dict[str, list[str]] = {
     "Diffusers": ["diffusers", "stable diffusion"],
     "Computer Vision": ["computer vision", "opencv", "image classification", "yolo"],
     "NLP": ["nlp", "natural language processing", "named entity", "text classification"],
+    # General AI / ML / DS (counts as an AI *project*, but scores low on the
+    # agentic depth rubric unless there is real system depth).
+    "Machine Learning": ["machine learning", "machinelearning", "supervised learning", "ml model", "ml models"],
+    "Deep Learning": ["deep learning", "deeplearning", "neural network", "neural networks", "cnn", "rnn", "lstm"],
+    "Artificial Intelligence": ["artificial intelligence", "artificialintelligence"],
+    "XGBoost": ["xgboost", "lightgbm", "gradient boosting"],
+    "Keras": ["keras"],
+    "Data Science": ["data science"],
+    "Generative AI": ["gen ai", "genai", "generative ai"],
 }
 
 # --- Supporting: backend / data -----------------------------------------
@@ -147,6 +157,8 @@ AGENTIC_CORE_TERMS: set[str] = {
 # strong "agentic" evidence. A project using these still counts as an AI project.
 GENERAL_AI_TERMS: set[str] = {
     "PyTorch", "TensorFlow", "Computer Vision", "NLP", "Diffusers",
+    "Machine Learning", "Deep Learning", "Artificial Intelligence",
+    "XGBoost", "Keras", "Data Science", "Generative AI",
 }
 
 # Category -> canonical terms, used to bucket matched skills for output.

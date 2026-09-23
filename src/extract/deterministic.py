@@ -34,7 +34,7 @@ from ..vocab import (
     ENGINEERING_TERMS,
     PYTHON_TERMS,
 )
-from .sections import line_assignments, split_sections
+from .sections import _match_section, line_assignments, split_sections
 
 EMAIL_RE = re.compile(r"[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}")
 GITHUB_RE = re.compile(r"github\.com/([A-Za-z0-9_\-]+)", re.IGNORECASE)
@@ -79,8 +79,31 @@ ROLE_WORDS = {
 }
 
 
-def extract_name(text: str, fallback_filename: str = "") -> str:
-    """Best-effort name: first plausible 'human name' line, else filename."""
+def _name_from_contact_line(text: str, email: str | None) -> str | None:
+    """Recover a name from a line like 'Prathamesh +91 73490 41840 | Bangalore'.
+
+    Uses the leading name token plus the email local part to reconstruct the
+    surname when the resume splits the name across lines.
+    """
+    for line in text.splitlines()[:6]:
+        m = re.match(r"^\s*([A-Za-z][A-Za-z.'\-]*)\s+[+|]?\s*\+?\d", line)
+        if not m:
+            continue
+        first = m.group(1)
+        if first.lower() in ROLE_WORDS:
+            continue
+        if email:
+            local = re.sub(r"\d+", "", email.split("@")[0]).lower()
+            if local.startswith(first.lower()) and len(local) > len(first) + 1:
+                surname = local[len(first):]
+                if surname.isalpha():
+                    return f"{first.title()} {surname.title()}"
+        return first.title()
+    return None
+
+
+def extract_name(text: str, fallback_filename: str = "", email: str | None = None) -> str:
+    """Best-effort name: first plausible 'human name' line, else email, else filename."""
     for line in text.splitlines()[:15]:
         candidate = line.strip()
         if not candidate or "@" in candidate or "http" in candidate.lower():
@@ -96,6 +119,12 @@ def extract_name(text: str, fallback_filename: str = "") -> str:
         lowered = candidate.lower()
         if any(bad in lowered for bad in ("resume", "curriculum", "vitae", "profile", "summary")):
             continue
+        # Names are capitalised; reject lowercase sentence fragments.
+        if candidate == lowered:
+            continue
+        # Never accept a section heading (e.g. "TECHNICAL SKILLS").
+        if _match_section(candidate) is not None:
+            continue
         # Reject role/tech lines such as "Python developer" or "Backend Engineer".
         if set(re.findall(r"[a-z]+", lowered)) & ROLE_WORDS:
             continue
@@ -106,9 +135,21 @@ def extract_name(text: str, fallback_filename: str = "") -> str:
             continue
         return candidate
 
+    # Fall back to the email local part (handles names split across lines by a
+    # phone number, e.g. "Prathamesh +91 ... | Bangalore").
+    contact_name = _name_from_contact_line(text, email)
+    if contact_name:
+        return contact_name
+
+    if email:
+        local = email.split("@")[0]
+        tokens = [t for t in re.split(r"[._\-]+|\d+", local) if len(t) >= 2]
+        if len(tokens) >= 2:
+            return " ".join(t.title() for t in tokens)
+
     stem = Path(fallback_filename).stem
     cleaned = re.sub(r"[_\-]+", " ", stem)
-    cleaned = re.sub(r"\b(resume|cv|final|updated|new|\d+)\b", "", cleaned, flags=re.IGNORECASE)
+    cleaned = re.sub(r"\b(resume|cv|final|updated|new|\d+|candidate)\b", "", cleaned, flags=re.IGNORECASE)
     cleaned = re.sub(r"\s+", " ", cleaned).strip()
     return cleaned.title() if cleaned else "Unknown Candidate"
 
@@ -216,13 +257,14 @@ def deterministic_extract(doc: Document) -> ExtractedResume:
     sections = split_sections(text)
     python_ev, ai_ev, other_ev = extract_evidence(text)
     github_url, github_username = extract_github(text)
+    email = extract_email(text)
 
     experience = [sections["experience"]] if sections.get("experience") else []
     education = [sections["education"]] if sections.get("education") else []
 
     return ExtractedResume(
-        candidate_name=extract_name(text, doc.filename),
-        email=extract_email(text),
+        candidate_name=extract_name(text, doc.filename, email),
+        email=email,
         github_url=github_url,
         github_username=github_username,
         skills=extract_all_skills(text),
